@@ -36,7 +36,8 @@ export default function Login(props) {
           onPress={() => props.navigation.navigate('LoginConfirm')}>   
             <Text style={Style.boxLoginText}>L O G I N</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={Style.boxLogin}>
+          <TouchableOpacity style={Style.boxLogin}
+          onPress={() => props.navigation.navigate('Cadastro')}>
             <Text style={Style.boxLoginText}>C A D A S T R A R</Text>
           </TouchableOpacity>
         <View style={Style.containerBoxLogin}>

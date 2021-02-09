@@ -3,6 +3,7 @@ import 'react-native-gesture-handler';
 import Login from './views/login';
 import Home from './views/home';
 import LoginConfirm from './views/loginconfirm';
+import Cadastro from './views/cadastro';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
@@ -20,6 +21,7 @@ function Stackers() {
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="LoginConfirm" component={LoginConfirm} />
+      <Stack.Screen name="Cadastro" component={Cadastro} />
     </Stack.Navigator>
   );
 }

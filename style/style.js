@@ -153,12 +153,12 @@ export default StyleSheet.create({
     borderWidth: 1,
     justifyContent: 'center',
     flexDirection: 'row',
+    alignItems: 'center',
   },
   userText: {
     color: '#fff',
     fontSize: 12,
     textAlign: 'left',
     marginLeft: 15,
-    top: 11,
   },
 })
