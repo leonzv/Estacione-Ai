@@ -4,7 +4,7 @@ import {View, Image, TextInput, Text, TouchableOpacity} from 'react-native';
 import Style from '../style/style.js';
 import react from 'react';
 
-export default function Cadastro(props) {
+export default function CadastroConfirm(props) {
     const [nome, setNome] = react.useState('');
     const [cpf, setCpf] = react.useState('');
     const [rg, setRg] = react.useState('');
@@ -12,23 +12,20 @@ export default function Cadastro(props) {
     const [estado, setEstado] = react.useState('');
     const [pais, setPais] = react.useState('');
     const [placa, setPlaca] = react.useState('');
-    const [modelo, setModelo] = react.useState('');
-    const [senha, setSenha] = react.useState('');
-    const [senhaConfirm, setSenhaConfirm] = react.useState('');
   return (
     <View style={Style.container}>
       <View style={{
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'white',
-        height: '19%',
+        backgroundColor: 'red',
+        height: '16%',
         flexDirection: 'row',
       }}>
         <Image
           style={Style.car}
           source={require('../img/carro.png')}
         />
-        <Text style={{fontSize: 24, fontWeight: 'bold', color: '#000'}}>Estacione Aí</Text>
+        <Text style={{fontSize: 24, fontWeight: 'bold', color: '#fff'}}>Estacione Aí</Text>
       </View>
         <View style={Style.boxLoginConfirm}>
             <Text style={Style.userText}>N o m e:</Text>
@@ -93,41 +90,56 @@ export default function Cadastro(props) {
               placeholderTextColor="#fff"
             />
         </View>
-        <View style={Style.boxLoginConfirm}>
-            <Text style={Style.userText}>M o d e l o:</Text>
-            <TextInput
-              style={{width: '83%', height: '100%', color: '#fff',}}
-              onChangeText={(text) => setModelo(text)}
-              value={modelo}
-              placeholderTextColor="#fff"
-            />
-        </View>
-        <View style={Style.boxLoginConfirm}>
-            <Text style={Style.userText}>S e n h a:</Text>
-            <TextInput
-              style={{width: '83%', height: '100%', color: '#fff',}}
-              onChangeText={(text) => setSenha(text)}
-              value={senha}
-              placeholderTextColor="#fff"
-            />
-        </View>
-        <View style={Style.boxLoginConfirm}>
-            <Text style={{
-                color: '#fff',
-                fontSize: 12,
-                textAlign: 'left',
-                marginLeft: 15,
-                left: 40,}}>C o n f i r m a r  S e n h a:</Text>
-            <TextInput
-              style={{width: '83%', height: '100%', color: '#fff',}}
-              onChangeText={(text) => setSenhaConfirm(text)}
-              value={senhaConfirm}
-              placeholderTextColor="#fff"
-            />
+        <View>
+            <View style={{flexDirection: 'row',}}>
+                <TouchableOpacity style={Style.carOption}>
+                    <Image
+                    style={Style.carBmw}
+                    source={require('../img/carrobmw.png')}
+                    />
+                    <Text style={Style.textCar}>Bmw Série 3 2020</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={Style.carOption}>
+                    <Image
+                    style={Style.carBmw}
+                    source={require('../img/carrobmw.png')}
+                    />
+                    <Text style={Style.textCar}>Bmw Série 3 2020</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={Style.carOption}>
+                    <Image
+                    style={Style.carBmw}
+                    source={require('../img/carrobmw.png')}
+                    />
+                    <Text style={Style.textCar}>Bmw Série 3 2020</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={{flexDirection: 'row',}}>
+            <TouchableOpacity style={Style.carOption}>
+                    <Image
+                    style={Style.carBmw}
+                    source={require('../img/carrobmw.png')}
+                    />
+                    <Text style={Style.textCar}>Bmw Série 3 2020</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={Style.carOption}>
+                    <Image
+                    style={Style.carBmw}
+                    source={require('../img/carrobmw.png')}
+                    />
+                    <Text style={Style.textCar}>Bmw Série 3 2020</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={Style.carOption}>
+                    <Image
+                    style={Style.carBmw}
+                    source={require('../img/carrobmw.png')}
+                    />
+                    <Text style={Style.textCar}>Bmw Série 3 2020</Text>
+            </TouchableOpacity>
+            </View>
         </View>
         <View style={Style.containerBoxLogin}>
-        <TouchableOpacity style={Style.boxLeftLoginConfirm}
-        onPress={() => props.navigation.navigate('CadastroConfirm')}>
+        <TouchableOpacity style={Style.boxLeftLoginConfirm}>
         <Text style={Style.loginEntrarText}>A V A N Ç A R</Text>
         </TouchableOpacity>
           <TouchableOpacity style={Style.boxRightLoginConfirm}

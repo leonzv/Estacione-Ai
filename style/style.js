@@ -161,4 +161,23 @@ export default StyleSheet.create({
     textAlign: 'left',
     marginLeft: 15,
   },
+  carOption:{
+    backgroundColor: '#000',
+    width: 132,
+    height: 77,
+    borderRightWidth: 0.2,
+    borderColor: 'gray',
+  },
+  carBmw:{
+    resizeMode: 'contain',
+    width: 100,
+    height: 60,
+    alignSelf: 'center',
+  },
+  textCar:{
+    color: 'white',
+    fontSize: 12,
+    textAlign: 'center',
+    marginBottom: 2,
+  }
 })
