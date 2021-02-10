@@ -2,7 +2,7 @@ import * as React from 'react';
 import 'react-native-gesture-handler';
 import Login from './views/login';
 import Home from './views/home';
-import LoginConfirm from './views/loginConfirm';
+import LoginConfirm from './views/loginconfirm';
 import Cadastro from './views/cadastro';
 import CadastroConfirm from './views/cadastroConfirm';
 import LocationEnable from './views/locationEnable';

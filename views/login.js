@@ -20,7 +20,7 @@ export default function Login(props) {
           colors={['#FF002B','#FF5510']}
           style={Style.linearGradient}
         >
-        <Swiper style={Style.wrapper} loop={false}>
+        <Swiper style={Style.wrapper} loop={true}>
           <View style={Style.swiperLogin}>
             <Text style={Style.swiperText}> Estacione seu carro ou moto de um jeito fácil e intuitivo</Text>
           </View>
