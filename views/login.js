@@ -1,8 +1,7 @@
 import React from 'react';
 import 'react-native-gesture-handler';
-import {View, Image, TextInput, Text, TouchableOpacity} from 'react-native';
+import {View, Image, Text, TouchableOpacity} from 'react-native';
 import Style from '../style/style.js';
-import react from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import Swiper from 'react-native-swiper';
 
@@ -21,7 +20,7 @@ export default function Login(props) {
           colors={['#FF002B','#FF5510']}
           style={Style.linearGradient}
         >
-        <Swiper style={Style.wrapper} loop={true}>
+        <Swiper style={Style.wrapper} loop={false}>
           <View style={Style.swiperLogin}>
             <Text style={Style.swiperText}> Estacione seu carro ou moto de um jeito fácil e intuitivo</Text>
           </View>
