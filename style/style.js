@@ -274,5 +274,19 @@ export default StyleSheet.create({
     alignSelf: 'center',
     color: '#fff',
   },
-  style
+  headerGps: {
+    width: '85%',
+    height: 60,
+    backgroundColor: 'black',
+    alignSelf: 'flex-end',  
+    position: 'absolute',
+    bottom: 660,
+    justifyContent: 'center',
+  },
+  textGps:{
+    fontSize: 20,
+    color: 'white',
+    textAlign: 'left',
+    marginLeft: 20,
+  }
 })

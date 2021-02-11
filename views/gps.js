@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import 'react-native-gesture-handler';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 import Style from '../style/style.js';
 import MapView, { PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import markerImage from '../img/marker.png';
+import Geolocation from '@react-native-community/geolocation';
 
 var GOOGLE_MAPS_APIKEY = 'AIzaSyCVi8UToRxa35GXIConEw7JTIJKQT400CI';
 var mapStyle = [
@@ -213,6 +214,10 @@ var mapStyle = [
   }
 ]
 export default class Map extends Component {
+    constructor(props) {
+    super(props);
+    this.state = { data: [] };
+  }
   state = {
     region: null,
     destination: null,
@@ -221,7 +226,7 @@ export default class Map extends Component {
   };
   
       async componentDidMount() {
-        navigator.geolocation.getCurrentPosition(
+        Geolocation.getCurrentPosition(
           async ({ coords: { latitude, longitude } }) => {
             const response = await Geocoder.from({ latitude, longitude });
             const address = response.results[0].formatted_address;
@@ -270,7 +275,7 @@ export default class Map extends Component {
         return (
           <View style={{ flex: 1 }}>
             <MapView
-              style={{ flex: 1 }}
+              style={{ flex: 1 ,}}
               region={region}
               showsUserLocation
               loadingEnabled
@@ -312,9 +317,11 @@ export default class Map extends Component {
               )}
             </MapView>
             <View>
-                    
+                <View style={Style.headerGps}>
+                    <Text style={Style.textGps}>Bem vindo João</Text>
+                </View>
+            <View style={{flexDirection: 'column',}}>
             </View>
-            <View style={{flexDirection = 'column',}}>
 
             </View>
           </View>
