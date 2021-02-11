@@ -4,9 +4,8 @@ import {View, Text} from 'react-native';
 import Style from '../style/style.js';
 import MapView, { PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import markerImage from '../img/marker.png';
-import Geolocation from '@react-native-community/geolocation';
+import Geocoder from "react-native-geocoding";
 
-var GOOGLE_MAPS_APIKEY = 'AIzaSyCVi8UToRxa35GXIConEw7JTIJKQT400CI';
 var mapStyle = [
   {
     "elementType": "geometry",
@@ -213,6 +212,9 @@ var mapStyle = [
     ]
   }
 ]
+
+Geocoder.init("AIzaSyCVi8UToRxa35GXIConEw7JTIJKQT400CI");
+
 export default class Map extends Component {
     constructor(props) {
     super(props);
@@ -226,7 +228,7 @@ export default class Map extends Component {
   };
   
       async componentDidMount() {
-        Geolocation.getCurrentPosition(
+        navigator.geolocation.getCurrentPosition(
           async ({ coords: { latitude, longitude } }) => {
             const response = await Geocoder.from({ latitude, longitude });
             const address = response.results[0].formatted_address;
@@ -321,6 +323,12 @@ export default class Map extends Component {
                     <Text style={Style.textGps}>Bem vindo João</Text>
                 </View>
             <View style={{flexDirection: 'column',}}>
+            <View style={Style.boxGps}>
+              <Text style={Style.textBoxTop}>B U S C A R  N O V A M E N T E</Text>
+            </View>
+            <View style={Style.boxGps}>
+              <Text style={Style.textBoxBot}>S A I R  D O  A P P</Text>
+            </View>
             </View>
 
             </View>

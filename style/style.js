@@ -288,5 +288,24 @@ export default StyleSheet.create({
     color: 'white',
     textAlign: 'left',
     marginLeft: 20,
-  }
+  },
+  boxGps: {
+  width: '100%',
+    height: 50,
+    backgroundColor: '#000',
+    borderBottomColor: '#111',
+    borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  textBoxTop:{
+    fontSize: 16,
+    color: 'green',
+    textAlign: 'center',
+  },
+  textBoxBot:{
+    fontSize: 16,
+    color: 'red',
+    textAlign: 'center',
+  },
 })
