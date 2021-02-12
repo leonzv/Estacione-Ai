@@ -151,7 +151,7 @@ export default StyleSheet.create({
     backgroundColor: '#000',
     borderBottomColor: '#222',
     borderWidth: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -159,7 +159,7 @@ export default StyleSheet.create({
     color: '#fff',
     fontSize: 12,
     textAlign: 'left',
-    marginLeft: 15,
+    marginLeft: 12,
   },
   carOption:{
     backgroundColor: '#000',

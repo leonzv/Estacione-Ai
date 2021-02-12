@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import 'react-native-gesture-handler';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import Style from '../style/style.js';
 import MapView, { PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import markerImage from '../img/marker.png';
@@ -323,12 +323,12 @@ export default class Map extends Component {
                     <Text style={Style.textGps}>Bem vindo João</Text>
                 </View>
             <View style={{flexDirection: 'column',}}>
-            <View style={Style.boxGps}>
+            <TouchableOpacity style={Style.boxGps}>
               <Text style={Style.textBoxTop}>B U S C A R  N O V A M E N T E</Text>
-            </View>
-            <View style={Style.boxGps}>
+            </TouchableOpacity>
+            <TouchableOpacity style={Style.boxGps}>
               <Text style={Style.textBoxBot}>S A I R  D O  A P P</Text>
-            </View>
+            </TouchableOpacity>
             </View>
 
             </View>

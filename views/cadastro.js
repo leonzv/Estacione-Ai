@@ -117,7 +117,7 @@ export default function Cadastro(props) {
                 fontSize: 12,
                 textAlign: 'left',
                 marginLeft: 15,
-                left: 40,}}>C o n f i r m a r  S e n h a:</Text>
+                }}>C o n f i r m a r  S e n h a:</Text>
             <TextInput
               style={{width: '83%', height: '100%', color: '#fff',}}
               onChangeText={(text) => setSenhaConfirm(text)}
