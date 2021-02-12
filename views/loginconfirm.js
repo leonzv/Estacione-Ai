@@ -53,7 +53,8 @@ export default function LoginConfirm(props) {
             />
         </View>
         <View style={Style.containerBoxLogin}>
-        <TouchableOpacity style={Style.boxLeftLoginConfirm}>
+        <TouchableOpacity style={Style.boxLeftLoginConfirm}
+        onPress={() => props.navigation.navigate('LocationEnable')}>
         <Text style={Style.loginEntrarText}>E N T R A R</Text>
         </TouchableOpacity>
           <TouchableOpacity style={Style.boxRightLoginConfirm}

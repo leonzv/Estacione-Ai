@@ -1,9 +1,9 @@
 {
-  "name": "estaciona-ai",
-  "displayName": "estaciona-ai",
+  "name": "estacioneai",
+  "displayName": "estacioneai",
   "expo": {
-    "name": "estaciona-ai",
-    "slug": "estaciona-ai",
+    "name": "estacioneai",
+    "slug": "estacioneai",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"

@@ -1,8 +1,7 @@
 import React from 'react';
 import 'react-native-gesture-handler';
-import {View, Image, TextInput, Text, TouchableOpacity} from 'react-native';
+import {View, Image, Text, TouchableOpacity} from 'react-native';
 import Style from '../style/style.js';
-import react from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import Swiper from 'react-native-swiper';
 
