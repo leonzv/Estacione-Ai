@@ -17,7 +17,7 @@ export default function CadastroConfirm(props) {
       <View style={{
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'red',
+        backgroundColor: 'white',
         height: '16%',
         flexDirection: 'row',
       }}>
@@ -25,7 +25,7 @@ export default function CadastroConfirm(props) {
           style={Style.car}
           source={require('../img/carro.png')}
         />
-        <Text style={{fontSize: 24, fontWeight: 'bold', color: '#fff'}}>Estacione Aí</Text>
+        <Text style={{fontSize: 24, fontWeight: 'bold', color: '#000'}}>Estacione Aí</Text>
       </View>
         <View style={Style.boxLoginConfirm}>
             <Text style={Style.userText}>N o m e:</Text>
@@ -144,7 +144,7 @@ export default function CadastroConfirm(props) {
         <Text style={Style.loginEntrarText}>A V A N Ç A R</Text>
         </TouchableOpacity>
           <TouchableOpacity style={Style.boxRightLoginConfirm}
-          onPress={() => props.navigation.navigate('LocationEnable')}>
+          onPress={() => props.navigation.navigate('Login')}>
           <Text style={Style.loginSocialText}>C A N C E L A R</Text>
           </TouchableOpacity>
         </View>

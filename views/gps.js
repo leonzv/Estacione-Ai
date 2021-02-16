@@ -323,7 +323,8 @@ export default class Map extends Component {
                     <Text style={Style.textGps}>Bem vindo João</Text>
                 </View>
             <View style={{flexDirection: 'column',}}>
-            <TouchableOpacity style={Style.boxGps}>
+            <TouchableOpacity style={Style.boxGps}
+            onPress={() => props.navigation.navigate('Load')}>
               <Text style={Style.textBoxTop}>B U S C A R  N O V A M E N T E</Text>
             </TouchableOpacity>
             <TouchableOpacity style={Style.boxGps}>

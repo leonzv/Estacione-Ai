@@ -246,6 +246,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     height: 200,
     width: 200,
+    marginTop: 60,
   },
   segundaRoda: {
     position: 'absolute',
