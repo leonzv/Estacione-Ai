@@ -1,119 +1,27 @@
-import React from "react";
-import "react-native-gesture-handler";
-import { View, Text, Image, TouchableOpacity } from "react-native";
-import Style from "../style/style";
-import Swiper from "react-native-swiper";
+import React from 'react';
+import 'react-native-gesture-handler';
+import Style from '../style/style.js';
+import {View, Text, ScrollView} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
-export default function Home({ navigation }, props) {
+export default function Home(props) {
   return (
-    <View style={Style.container}>
-      <View style={{ flexDirection: "row" }}>
-        <TouchableOpacity style={Style.circle}>
-          <TouchableOpacity
-            style={Style.circle2}
-            title="Toggle drawer"
-            onPress={() => navigation.toggleDrawer()}
-          />
-        </TouchableOpacity>
-        <Text style={Style.textCircle}>Bem vindo, Emerson!</Text>
-        <Image
-          style={{
-            alignSelf: "flex-end",
-            resizeMode: "contain",
-            width: 80,
-            marginRight: 18.5,
-            bottom: 20,
-          }}
-          source={require("../img/vai-vex-logo.png")}
-        />
-      </View>
-      <Text
-        style={{
-          fontSize: 22,
-          marginLeft: 30,
-          textAlign: "left",
-          marginRight: 90,
-          marginTop: 60,
-          color: "#000",
-        }}
-      >
-        {" "}
-        Escolha o serviço desejado abaixo
-      </Text>
-      <Swiper style={Style.wrapper} loop={false}>
-        <TouchableOpacity
-          style={Style.retanguloAzulHome}
-          onPress={() => navigation.navigate("Procurar")}
-        >
-          <Image
-            style={Style.imgHome}
-            source={require("../img/bicicleta.png")}
-          />
-          <Text style={Style.textRetanguloHome}> Bicicleta</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={Style.retanguloAzulHome}
-          onPress={() => navigation.navigate("Procurar")}
-        >
-          <Image
-            style={Style.imgHome}
-            source={require("../img/moto-branca.png")}
-          />
-          <Text style={Style.textRetanguloHome}> Moto </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={Style.retanguloAzulHome}
-          onPress={() => navigation.navigate("Procurar")}
-        >
-          <Image
-            style={Style.imgHome}
-            source={require("../img/moto-branca.png")}
-          />
-          <Text style={Style.textRetanguloHome}> VUC </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={Style.retanguloAzulHome}
-          onPress={() => navigation.navigate("Procurar")}
-        >
-          <Image
-            style={Style.imgHome}
-            source={require("../img/moto-branca.png")}
-          />
-          <Text style={Style.textRetanguloHome}> Caminhão </Text>
-        </TouchableOpacity>
-      </Swiper>
-      <View>
-        <Text
-          style={{
-            fontSize: 22,
-            marginLeft: 30,
-            textAlign: "left",
-            marginRight: 90,
-            color: "#000",
-            marginBottom: 5,
-          }}
-        >
-          Corridas
-        </Text>
-        <View style={Style.grayBox}>
-          <View>
-            <Text style={Style.grayBoxBigText}>25</Text>
-            <Text style={Style.grayBoxSmallText}>Entregas</Text>
-            <Text style={Style.grayBoxSmallText}>Realizadas</Text>
-          </View>
-          <View>
-            <Text style={Style.grayBoxBigText}>25</Text>
-            <Text style={Style.grayBoxSmallText}>Pedidos</Text>
-            <Text style={Style.grayBoxSmallText}>Realizados</Text>
-          </View>
-          <TouchableOpacity
-            style={Style.btnAdmin}
-            onPress={() => navigation.navigate("Procurar")}
-          >
-            <Text style={Style.btnAdminFont}> Ir para o admin </Text>
+    <View>
+      <ScrollView style={Style.scrollView}>
+        <View style={Style.container}>
+          <TouchableOpacity style={Style.blueCircle}>
+            <View style={Style.blueCircle2} />
           </TouchableOpacity>
+          <Text style={Style.homeBemvindo}>Bem vindo, João</Text>
+          <Text style={Style.homeText}>Seus dados de acesso</Text>
+          <View style={Style.grayBox}>
+            <Text style={Style.grayBoxBigText}> 26 </Text>
+            <Text style={Style.grayBoxSmallText}>
+              Acesso nos últimos 7 dias
+            </Text>
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </View>
   );
 }

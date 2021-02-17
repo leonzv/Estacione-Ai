@@ -1,9 +1,9 @@
 {
-  "name": "VaptVupt",
-  "displayName": "VaptVupt",
+  "name": "estacioneai",
+  "displayName": "estacioneai",
   "expo": {
-    "name": "VaptVupt",
-    "slug": "VaptVupt",
+    "name": "estacioneai",
+    "slug": "estacioneai",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
