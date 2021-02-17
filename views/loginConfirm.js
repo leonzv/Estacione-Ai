@@ -1,81 +1,70 @@
-import React from 'react';
-import 'react-native-gesture-handler';
-import {View, Image, TextInput, Text, TouchableOpacity} from 'react-native';
-import Style from '../style/style.js';
-import react from 'react';
-import LinearGradient from 'react-native-linear-gradient';
-import Swiper from 'react-native-swiper';
+import "react-native-gesture-handler";
+import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import Style from "../style/style";
+import * as React from "react";
+import react from "react";
+import Swiper from "react-native-swiper";
 
-export default function LoginConfirm(props) {
-    const [usuario, setUsuario] = react.useState('');
-    const [senha, setSenha] = react.useState('');
+export default function Cadastro(props) {
+  const [usuario, setUsuario] = react.useState("");
+  const [senha, setSenha] = react.useState("");
   return (
     <View style={Style.container}>
-      <View style={Style.topContainerConfirm}>
+      <View>
         <Image
-          style={Style.car}
-          source={require('../img/carro.png')}
+          style={Style.vaiVexImg}
+          source={require("../img/vai-vex-logo.png")}
         />
-        <Text style={{fontSize: 24, fontWeight: 'bold', color: '#000'}}>Estacione Aí</Text>
       </View>
-      <View style={Style.botContainer}>
-        <LinearGradient
-          colors={['#FF002B','#FF5510']}
-          style={Style.linearGradient}
+      <Swiper style={Style.wrapper} loop={false}>
+        <View style={Style.retanguloAzul1}>
+          <Text style={Style.loginText}>
+            {" "}
+            Um jeito simples e descomplicado de fazer entregas
+          </Text>
+          <Image
+            style={Style.firstImg}
+            source={require("../img/moto-branca.png")}
+          />
+        </View>
+        <View style={Style.retanguloVermelho1}>
+          <Text style={Style.loginText}>
+            {" "}
+            Uma simplicidade que cabe na sua mão
+          </Text>
+          <Image
+            style={Style.firstImg}
+            source={require("../img/dinheiro.png")}
+          />
+        </View>
+      </Swiper>
+      <View style={Style.textBox1}>
+        <Text style={Style.textBoxFontCadastro}>Usuário:</Text>
+        <TextInput
+          style={Style.textBoxFont}
+          onChangeText={(text) => setUsuario(text)}
+          value={usuario}
+          placeholderTextColor="#fff"
+          autoCapitalize="words"
+        />
+      </View>
+      <View style={Style.textBox2}>
+        <Text style={Style.textBoxFontCadastro}>Senha:</Text>
+        <TextInput
+          style={Style.textBoxFont}
+          onChangeText={(text) => setSenha(text)}
+          value={senha}
+          placeholderTextColor="#fff"
+          autoCapitalize="words"
+        />
+        </View>
+        <TouchableOpacity
+          style={Style.btnCadastrar}
+          onPress={() => props.navigation.navigate("Home")}
         >
-        <Swiper style={Style.wrapper} loop={false}>
-          <View style={Style.swiperLogin}>
-            <Text style={Style.swiperText}> Estacione seu carro ou moto de um jeito fácil e intuitivo</Text>
-          </View>
-          <View style={Style.swiperLogin}>
-            <Text style={Style.swiperText}> Chame um carro de forma simples e escolha o valor que pode pagar</Text>
-          </View>
-        </Swiper>
-        </LinearGradient>
-        <View style={Style.boxLoginConfirm}>
-            <Text style={Style.userText}>U s u á r i o:</Text>
-            <TextInput
-              style={{width: '80%', height: '100%', color: '#fff',}}
-              onChangeText={(text) => setUsuario(text)}
-              value={usuario}
-              placeholderTextColor="#fff"
-              autoCapitalize="words"
-            />
-        </View>
-        <View style={Style.boxLoginConfirm}>
-            <Text style={Style.userText}>S e n h a:</Text>
-            <TextInput
-              style={{width: '83%', height: '100%', color: '#fff',}}
-              onChangeText={(text) => setSenha(text)}
-              value={senha}
-              placeholderTextColor="#fff"
-              autoCapitalize="words"
-            />
-        </View>
-        <View style={Style.containerBoxLogin}>
-        <TouchableOpacity style={Style.boxLeftLoginConfirm}
-        onPress={() => props.navigation.navigate('Load')}>
-        <Text style={Style.loginEntrarText}>E N T R A R</Text>
+          <Text style={Style.btnCadastrarFont}> Entrar </Text>
         </TouchableOpacity>
-          <TouchableOpacity style={Style.boxRightLoginConfirm}
-          onPress={() => props.navigation.navigate('Login')}>
-          <Text style={Style.loginSocialText}>C A N C E L A R</Text>
-          </TouchableOpacity>
-        </View>
-          <TouchableOpacity style={Style.boxLogin}
-          onPress={() => props.navigation.navigate('Cadastro')}>
-            <Text style={Style.boxLoginText}>C A D A S T R A R</Text>
-          </TouchableOpacity>
-        <View style={Style.containerBoxLogin}>
-          <TouchableOpacity style={Style.boxLoginFacebook}>
-          <Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={Style.boxLoginGoogle}>
-          <Text style={Style.loginSocialText}>LOGIN COM GOOGLE</Text>
-          </TouchableOpacity>
-        </View>
-        
-      </View>
+      
     </View>
   );
 }

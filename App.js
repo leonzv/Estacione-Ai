@@ -1,116 +1,58 @@
-import * as React from 'react';
-import 'react-native-gesture-handler';
-import { Text, View, ScrollView } from 'react-native';
-import Login from './views/login';
-import Home from './views/home';
-import LoginConfirm from './views/loginConfirm';
-import Cadastro from './views/cadastro';
-import CadastroConfirm from './views/cadastroConfirm';
-import LocationEnable from './views/locationEnable';
-import BuscarVaga from './views/buscarVaga';
-import Gps from './views/gps';
-import Load from './views/load';
-import Favoritos from './views/favoritos';
-import Settings from './views/settings';
-import Sobre from './views/sobre';
-import EditarDados from './views/editarDados';
-import Fakeload from './views/fakeload';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
-import {createDrawerNavigator, DrawerItems} from '@react-navigation/drawer';
-import LinearGradient from 'react-native-linear-gradient';
-
+import * as React from "react";
+import "react-native-gesture-handler";
+import Login from "./views/login";
+import Home from "./views/home";
+import Cadastro from "./views/cadastro";
+import LoadHome from "./views/loadHome";
+import Procurar from "./views/procurar";
+import Condutores from "./views/condutores";
+import Contato from "./views/contato";
+import Pagamentos from "./views/pagamentos";
+import Configuracoes from "./views/configuracoes";
+import Sobre from "./views/sobre";
+import Mapa from "./views/mapa";
+import Chamar from "./views/chamar";
+import LoginConfirm from "./views/loginConfirm";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
 Stack.Navigator.defaultProps = {
-  headerMode: 'none',
+  headerMode: "none",
 };
-
-function CustomDrawerContent(props) {
-  return (
-    <View style={{ flex: 1 }}>
-
-        <ScrollView>
-          <SafeAreaView
-            style={styles.container}
-            forceInset={{ top: 'always', horizontal: 'never' }}
-          >
-            <View style={[ styles.containHeader, { backgroundColor: theme.pri700 }]}>
-              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                <Avatar size='large' rounded icon={{ name: 'user-circle-o', type: 'font-awesome', size: 80 }} />
-                <Text style={{ color: '#f9f9f9', marginTop: '3%', fontFamily: 'sans-serif-condensed' }}>{`Hi ${user.firstname}`}</Text>
-                <Text style={{ color: '#f9f9f9', fontFamily: 'sans-serif-condensed' }}>{`${user.email}`}</Text>
-              </View>
-            </View>
-
-            <DrawerItems {...this.props} />
-
-            <View>
-              <View style={{ marginTop: '2%' }}>
-                <Divider style={{ backgroundColor: '#777f7c90' }} />
-              </View>
-              <View style={{ marginTop: '3%' }}>
-                <ColorPalette />
-              </View>
-              <View style={{ marginTop: '5%' }}>
-                <Divider style={{ backgroundColor: '#777f7c90' }} />
-              </View>
-            </View>
-          </SafeAreaView>
-        </ScrollView>
-
-        <View elevation={6} style={{ backgroundColor: '#ffffff' }}>
-          <TouchableNativeFeedback background={ripple}>
-            <View style={styles.containDrawerOption}>
-              <Icon
-                name='logout'
-                type='simple-line-icon'
-                size={20}
-                color={theme.pri700}
-                containerStyle={{ marginRight: '10%' }}
-              />
-              <Text style={{ color: 'black', fontFamily: 'sans-serif-medium' }}>Logout</Text>
-            </View>
-          </TouchableNativeFeedback>
-
-          <TouchableNativeFeedback background={ripple}>
-            <View style={styles.containDrawerOption}>
-              <Icon
-                name='user-secret'
-                type='font-awesome'
-                size={24}
-                color={theme.pri700}
-                containerStyle={{ marginRight: '10%' }}
-              />
-              <Text style={{ color: 'black', fontFamily: 'sans-serif-medium' }}>Developer</Text>
-            </View>
-          </TouchableNativeFeedback>
-        </View>
-
-      </View>
-  );
-}
 
 function Stackers() {
   return (
     <Stack.Navigator initialRouteName="Login">
-      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="LoginConfirm" component={LoginConfirm} />
+      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Cadastro" component={Cadastro} />
-      <Stack.Screen name="CadastroConfirm" component={CadastroConfirm} />
-      <Stack.Screen name="LocationEnable" component={LocationEnable} />
-      <Stack.Screen name="BuscarVaga" component={BuscarVaga} />
-      <Stack.Screen name="Gps" component={Gps} />
-      <Stack.Screen name="Load" component={Load} />
-      <Stack.Screen name="Favoritos" component={Favoritos} />
-      <Stack.Screen name="Settings" component={Settings} />
+      <Stack.Screen name="LoadHome" component={LoadHome} />
+      <Stack.Screen name="Procurar" component={Procurar} />
+      <Stack.Screen name="Condutores" component={Condutores} />
+      <Stack.Screen name="Contato" component={Contato} />
+      <Stack.Screen name="Configuracoes" component={Configuracoes} />
       <Stack.Screen name="Sobre" component={Sobre} />
-      <Stack.Screen name="EditarDados" component={EditarDados} />
-      <Stack.Screen name="Fakeload" component={Fakeload} />
+      <Stack.Screen name="Pagamentos" component={Pagamentos} />
+      <Stack.Screen name="Mapa" component={Mapa} />
+      <Stack.Screen name="LoginConfirm" component={LoginConfirm} />
+      <Stack.Screen name="Chamar" component={Chamar} />
     </Stack.Navigator>
+  );
+}
+
+function CustomDrawerContent(props) {
+  return (
+    <DrawerContentScrollView {...props}>
+      <DrawerItemList {...props} />
+      <DrawerItem
+        label="Toggle drawer"
+        onPress={() => props.navigation.toggleDrawer()}
+      />
+    </DrawerContentScrollView>
   );
 }
 
@@ -119,28 +61,29 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator
         drawerStyle={{
-        backgroundColor: '#FF5510',
-        width: 300,
-      }}
-      drawerContentOptions={{
-          activeTintColor: '#FF002B',
-          activeBackgroundColor: '#FF002B',
-          inactiveTintColor: '#FF002B',
-          inactiveBackgroundColor: '#FF002B',
-          marginTop: 80,
-          labelStyle:{
+          backgroundColor: "#00298F",
+          width: 320,
+        }}
+        drawerContentOptions={{
+          activeTintColor: "#00298F",
+          activeBackgroundColor: "#00298F",
+          inactiveTintColor: "#00298F",
+          inactiveBackgroundColor: "#00298F",
+          labelStyle: {
             marginLeft: 5,
-            color: '#fff',
-            fontSize: 16,
-          }
-        }}>
-        <Drawer.Screen name="PÁGINA INICIAL" component={Stackers} />
-        <Drawer.Screen name="EDITAR DADOS" component={EditarDados} />
-        <Drawer.Screen name="BUSCAR VAGA" component={Load}/>
-        <Drawer.Screen name="FAVORITOS" component={Favoritos} />
-        <Drawer.Screen name="CONFIGURAÇÕES" component={Settings} />
-        <Drawer.Screen name="SOBRE" component={Sobre} />
-        <Drawer.Screen name="S A I R  D O  A P P" component={Login} />
+            color: "#fff",
+            fontSize: 24,
+          },
+        }}
+      >
+        <Drawer.Screen name="Início" component={Stackers} />
+        <Drawer.Screen name="Condutores" component={Condutores} />
+        <Drawer.Screen name="Mapa" component={Mapa} />
+        <Drawer.Screen name="Configurações" component={Configuracoes} />
+        <Drawer.Screen name="Pagamentos" component={Pagamentos} />
+        <Drawer.Screen name="Contato" component={Contato} />
+        <Drawer.Screen name="Sobre" component={Sobre} />
+        <Drawer.Screen name="Sair" component={Login} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
