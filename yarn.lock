@@ -2253,6 +2253,11 @@
     sudo-prompt "^9.0.0"
     wcwidth "^1.0.1"
 
+"@react-native-community/slider@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.npmjs.org/@react-native-community/slider/-/slider-3.0.3.tgz#830167fd757ba70ac638747ba3169b2dbae60330"
+  integrity sha512-8IeHfDwJ9/CTUwFs6x90VlobV3BfuPgNLjTgC6dRZovfCWigaZwVNIFFJnHBakK3pW2xErAPwhdvNR4JeNoYbw==
+
 "@react-navigation/core@^5.15.1":
   version "5.15.1"
   resolved "https://registry.npmjs.org/@react-navigation/core/-/core-5.15.1.tgz#dab5192277c606d9acbea511dac407c2834b5fbe"
@@ -11759,12 +11764,6 @@ react-native-maps@^0.27.1:
   version "0.27.1"
   resolved "https://registry.npmjs.org/react-native-maps/-/react-native-maps-0.27.1.tgz#2f10cd417bb2fd938c9e015b1c9b6d9b1a44b97f"
   integrity sha512-HygBkZBecTnIVRYrSiLRAvu4OmXOYso/A7c6Cy73HkOh9CgGV8Ap5eBea24tvmFGptjj5Hg8AJ94/YbmWK1Okw==
-
-"react-native-modal-dropdown@https://github.com/siemiatj/react-native-modal-dropdown":
-  version "0.7.5"
-  resolved "https://github.com/siemiatj/react-native-modal-dropdown#619ca1aaeb5fb100d34f2598eca38f532777285a"
-  dependencies:
-    prop-types "^15.6.0"
 
 react-native-paper@^4.7.1:
   version "4.7.1"

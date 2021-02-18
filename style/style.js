@@ -3,6 +3,8 @@ import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
+    width: '100%',
+    height: '100%',
     flexDirection: 'column',
     backgroundColor: 'white',
   },
@@ -155,6 +157,18 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  codeBox: {
+    width: '100%',
+    height: '6%',
+    backgroundColor: '#000',
+    borderBottomColor: '#222',
+    borderTopColor: '#222',
+    borderWidth: 1,
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 15,
+  },
   boxLoginConfirmModal: {
     width: '100%',
     height: 45,
@@ -180,6 +194,12 @@ export default StyleSheet.create({
     fontSize: 12,
     textAlign: 'left',
     marginLeft: 12,
+  },
+  codeText: {
+    color: '#fff',
+    fontSize: 12,
+    textAlign: 'left',
+    marginLeft: 28,
   },
   carOption:{
     backgroundColor: '#000',
@@ -337,7 +357,7 @@ export default StyleSheet.create({
   },
   headerEditar: {
     width: '85%',
-    height: 60,
+    height: '8%',
     backgroundColor: 'black',
     alignSelf: 'flex-end',  
     justifyContent: 'center',
@@ -443,12 +463,36 @@ export default StyleSheet.create({
     fontSize: 14,
     color: 'white',
     textAlign: 'left',
-    marginLeft: 30,
+    marginLeft: '7%',
+    marginTop: '10%',
+
   },
   textSettingsTop:{
     fontSize: 28,
     color: 'white',
     textAlign: 'left',
-    marginLeft: 30,
+    marginLeft: '7%',
+    marginTop: '7%',
   },
-})
+  switchBtn:{
+    alignSelf: 'flex-start',
+    marginLeft: '7%',
+    marginTop: '5%',
+    marginBottom: '6%',
+  },
+  voltarBoxCode:{
+    height: '9%',
+    width: '100%',
+    backgroundColor: '#0da500',
+    justifyContent: 'center',
+    marginTop: '40%',
+  },
+  textFavoritosTop:{
+    fontSize: 14,
+    color: 'white',
+    textAlign: 'left',
+    marginLeft: '7%',
+    marginTop: '1%',
+    marginBottom: '9%',
+  },
+  })
