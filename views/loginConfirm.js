@@ -62,10 +62,6 @@ export default function LoginConfirm(props) {
           <Text style={Style.loginSocialText}>C A N C E L A R</Text>
           </TouchableOpacity>
         </View>
-          <TouchableOpacity style={Style.boxLogin}
-          onPress={() => props.navigation.navigate('Cadastro')}>
-            <Text style={Style.boxLoginText}>C A D A S T R A R</Text>
-          </TouchableOpacity>
         <View style={Style.containerBoxLogin}>
           <TouchableOpacity style={Style.boxLoginFacebook}>
           <Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text>

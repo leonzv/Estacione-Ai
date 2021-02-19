@@ -12,8 +12,13 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    height: '45%',
+    height: '50%',
     flexDirection: 'row',
+  },
+  botContainer:{
+    justifyContent: 'center',
+    backgroundColor: 'white',
+    height: '55%',
   },
   textBox: {
     color: '#fff',
@@ -86,7 +91,7 @@ export default StyleSheet.create({
   },
   boxLogin: {
     width: '100%',
-    height: 45,
+    height: '22%',
     backgroundColor: '#000',
     borderBottomColor: '#222',
     borderWidth: 1,
@@ -99,7 +104,7 @@ export default StyleSheet.create({
   },
   containerBoxLogin: {
     flexDirection: 'row',
-  },
+},
   boxLoginFacebook:{
     alignSelf: 'flex-start',
     width: '50%',
@@ -144,7 +149,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    height: '33%',
+    height: '42%',
     flexDirection: 'row',
   },
   boxLoginConfirm: {
