@@ -5,7 +5,7 @@ import Style from "../style/style";
 export default function Favoritos() {
   const [modalVisible, setModalVisible] = useState(false);
   return (
-    <View style={Style.container}>
+    <View style={Style.containerDraw}>
       <View style={Style.headerEditar}>
         <Text style={Style.textGps}>Bem vindo, João!</Text>
       </View>
@@ -14,11 +14,11 @@ export default function Favoritos() {
         <Text style={Style.textFavoritosTop}>
           Aqui estão seus estacionamentos salvos
         </Text>
-        <View style={Style.boxLoginConfirm}>
-          <Text style={Style.userText}>A t u a l i z a r M o d e l o</Text>
+        <View style={Style.boxFavoritos}>
+          <Text style={Style.userText}>A t u a l i z a r  M o d e l o</Text>
         </View>
-        <View style={Style.boxLoginConfirm}>
-          <Text style={Style.userText}>A t u a l i z a r M o d e l o</Text>
+        <View style={Style.boxFavoritos}>
+          <Text style={Style.userText}>A t u a l i z a r  M o d e l o</Text>
           <View style={Style.centeredView}>
             <Modal
               animationType="slide"
@@ -36,7 +36,7 @@ export default function Favoritos() {
                 <View style={Style.modalView}>
                   <Text style={Style.topModalText}>Modelo do carro</Text>
                   <Text style={Style.botModalText}>Bmw Série 3 2020</Text>
-                  <View style={Style.boxLoginConfirm}>
+                  <View style={Style.boxFavoritos}>
                     <Text style={Style.userText}>
                       A t u a l i z a r M o d e l o:
                     </Text>
@@ -55,10 +55,15 @@ export default function Favoritos() {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={Style.boxLoginConfirm}>
-          <Text style={Style.userText}>A t u a l i z a r M o d e l o:</Text>
+        <View style={Style.boxFavoritos}>
+          <Text style={Style.userText}>A t u a l i z a r  M o d e l o</Text>
         </View>
       </View>
+        <View style={{flex: 1, justifyContent: 'flex-end',}}>
+          <TouchableOpacity style={Style.voltarBoxCode}>
+            <Text style={Style.textVoltar}>V O L T A R</Text>
+          </TouchableOpacity>
+        </View>
     </View>
   );
 }

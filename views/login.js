@@ -20,7 +20,7 @@ export default function Login(props) {
           colors={['#FF002B','#FF5510']}
           style={Style.linearGradient}
         >
-        <Swiper style={Style.wrapper} loop={true}>
+        <Swiper style={Style.wrapper} loop={false}>
           <View style={Style.swiperLogin}>
             <Text style={Style.swiperText}> Estacione seu carro ou moto de um jeito fácil e intuitivo</Text>
           </View>
@@ -29,7 +29,7 @@ export default function Login(props) {
           </View>
         </Swiper>
         </LinearGradient>
-        <View>
+        <View style={{flexDirection: 'column',flex:1,}}>
           <TouchableOpacity 
           style={Style.boxLogin}
           onPress={() => props.navigation.navigate('LoginConfirm')}>   
@@ -39,10 +39,10 @@ export default function Login(props) {
           onPress={() => props.navigation.navigate('Cadastro')}>
             <Text style={Style.boxLoginText}>C A D A S T R A R</Text>
           </TouchableOpacity>
+        </View>
         <View style={Style.containerBoxLogin}>
           <TouchableOpacity style={Style.boxLoginFacebook}><Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text></TouchableOpacity>
           <TouchableOpacity style={Style.boxLoginGoogle}><Text style={Style.loginSocialText}>LOGIN COM GOOGLE</Text></TouchableOpacity>
-        </View>
         </View>
       </View>
     </View>

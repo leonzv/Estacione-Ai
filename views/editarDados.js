@@ -126,7 +126,7 @@ export default function EditarDados(props) {
                     source={require("../img/carrobmw.png")}
                   />
                   <Text style={Style.botModalText}>Bmw Série 3 2020</Text>
-                  <View style={Style.boxLoginConfirm}>
+                  <View style={Style.editarDadosTextBox}>
                     <Text style={Style.userText}>
                       A t u a l i z a r  M o d e l o:
                     </Text>

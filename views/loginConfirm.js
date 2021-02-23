@@ -21,7 +21,7 @@ export default function LoginConfirm(props) {
       <View style={Style.botContainer}>
         <LinearGradient
           colors={['#FF002B','#FF5510']}
-          style={Style.linearGradient}
+          style={Style.linearGradientConfirm}
         >
         <Swiper style={Style.wrapper} loop={false}>
           <View style={Style.swiperLogin}>
@@ -61,12 +61,15 @@ export default function LoginConfirm(props) {
           onPress={() => props.navigation.navigate('Login')}>
           <Text style={Style.loginSocialText}>C A N C E L A R</Text>
           </TouchableOpacity>
-        </View>
+        </View>       
+        <View style={Style.boxLoginCadastroConfirm}>
+            <Text style={Style.boxLoginTextConfirm}>C A D A S T R A R</Text>
+          </View>
         <View style={Style.containerBoxLogin}>
-          <TouchableOpacity style={Style.boxLoginFacebook}>
+          <TouchableOpacity style={Style.boxLoginFacebookConfirm}>
           <Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={Style.boxLoginGoogle}>
+          <TouchableOpacity style={Style.boxLoginGoogleConfirm}>
           <Text style={Style.loginSocialText}>LOGIN COM GOOGLE</Text>
           </TouchableOpacity>
         </View>

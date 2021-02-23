@@ -8,7 +8,7 @@ export default function Settings() {
   const [codigo, setCodigo] = useState("");
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
   return (
-    <View style={Style.container}>
+    <View style={Style.containerDraw}>
       <View style={Style.headerEditar}>
         <Text style={Style.textGps}>Bem vindo, João!</Text>
       </View>
@@ -52,10 +52,12 @@ export default function Settings() {
             placeholderTextColor="#fff"
           />
         </View>
-        <TouchableOpacity style={Style.voltarBoxCode}>
-          <Text style={Style.textVoltar}>V O L T A R</Text>
-        </TouchableOpacity>
       </View>
+        <View style={{flex: 1, justifyContent: 'flex-end',}}>
+          <TouchableOpacity style={Style.voltarBoxCode}>
+            <Text style={Style.textVoltar}>V O L T A R</Text>
+          </TouchableOpacity>
+        </View>
     </View>
   );
 }

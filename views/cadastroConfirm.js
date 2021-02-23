@@ -140,7 +140,7 @@ export default function CadastroConfirm(props) {
         </View>
         <View style={Style.containerBoxLogin}>
         <TouchableOpacity style={Style.boxLeftLoginConfirm}
-        onPress={() => props.navigation.navigate('Load')}>
+        onPress={() => props.navigation.navigate('LocationEnable')}>
         <Text style={Style.loginEntrarText}>A V A N Ç A R</Text>
         </TouchableOpacity>
           <TouchableOpacity style={Style.boxRightLoginConfirm}
