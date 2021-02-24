@@ -317,27 +317,23 @@ export default class Map extends Component {
             </Fragment>
           )}
         </MapView>
-        <View>
-          <View style={Style.headerGps}>
-            <Text style={Style.textGps}>Bem vindo, João!</Text>
-          </View>
+        <View style={Style.headerGps}>
+          <Text style={Style.textGps}>Bem vindo, João!</Text>
+        </View>
 
-          <View style={{ flexDirection: "column" }}>
-            <TouchableOpacity
-              style={Style.boxGps}
-              onPress={() => this.props.navigation.navigate("Load")}
-            >
-              <Text style={Style.textBoxTop}>
-                B U S C A R N O V A M E N T E
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={Style.boxGps}
-              onPress={() => this.props.navigation.navigate("EditarDados")}
-            >
-              <Text style={Style.textBoxBot}>S A I R D O A P P</Text>
-            </TouchableOpacity>
-          </View>
+        <View style={{ flexDirection: "column" }}>
+          <TouchableOpacity
+            style={Style.boxGps}
+            onPress={() => this.props.navigation.navigate("Load")}
+          >
+            <Text style={Style.textBoxTop}>B U S C A R  N O V A M E N T E</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={Style.boxGps}
+            onPress={() => this.props.navigation.navigate("EditarDados")}
+          >
+            <Text style={Style.textBoxBot}>S A I R  D O  A P P</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );

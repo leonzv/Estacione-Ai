@@ -5,7 +5,7 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     backgroundColor: "black",
-  },  
+  },
   container: {
     flex: 1,
     flexDirection: "column",
@@ -16,23 +16,23 @@ export default StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
     maxHeight: "40%",
-    minHeight: '30%',
+    minHeight: "30%",
     flexDirection: "row",
-    flex:1,
+    flex: 1,
   },
   topContainerConfirm: {
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
     maxHeight: "35%",
-    minHeight: '30%',
+    minHeight: "30%",
     flexDirection: "row",
-    flex:1,
+    flex: 1,
   },
   botContainer: {
     backgroundColor: "white",
     maxHeight: "100%",
-    flex:1,
+    flex: 1,
   },
   textBox: {
     color: "#fff",
@@ -90,15 +90,15 @@ export default StyleSheet.create({
   car: {
     resizeMode: "contain",
     width: 130,
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   linearGradient: {
     maxHeight: "100%",
-    minHeight: '40%',
+    minHeight: "40%",
   },
   linearGradientConfirm: {
     maxHeight: "100%",
-    minHeight: '30%',
+    minHeight: "30%",
   },
   wrapper: {},
   swiperLogin: {
@@ -116,7 +116,7 @@ export default StyleSheet.create({
     borderBottomColor: "#222",
     borderWidth: 1,
     justifyContent: "center",
-    flex:1,
+    flex: 1,
   },
   boxLoginCadastroConfirm: {
     width: "100%",
@@ -126,7 +126,7 @@ export default StyleSheet.create({
     borderBottomColor: "#222",
     borderWidth: 1,
     justifyContent: "center",
-    flex:1,
+    flex: 1,
   },
   boxLoginText: {
     color: "#FF311B",
@@ -141,7 +141,7 @@ export default StyleSheet.create({
   },
   containerBoxLogin: {
     flexDirection: "row",
-    backgroundColor: 'rgba(0,0,0,0.2)',
+    backgroundColor: "rgba(0,0,0,0.2)",
   },
   boxLoginFacebook: {
     alignSelf: "flex-start",
@@ -149,7 +149,7 @@ export default StyleSheet.create({
     minHeight: 45,
     backgroundColor: "#2746E3",
     justifyContent: "center",
-    flex:1,
+    flex: 1,
   },
   boxLoginGoogle: {
     alignSelf: "flex-end",
@@ -157,7 +157,7 @@ export default StyleSheet.create({
     minHeight: 45,
     backgroundColor: "#E32727",
     justifyContent: "center",
-    flex:1,
+    flex: 1,
   },
   boxLoginFacebookConfirm: {
     alignSelf: "flex-start",
@@ -165,7 +165,7 @@ export default StyleSheet.create({
     minHeight: 45,
     backgroundColor: "#2746E3",
     justifyContent: "center",
-    flex:1,
+    flex: 1,
   },
   boxLoginGoogleConfirm: {
     alignSelf: "flex-end",
@@ -173,7 +173,7 @@ export default StyleSheet.create({
     minHeight: 45,
     backgroundColor: "#E32727",
     justifyContent: "center",
-    flex:1,
+    flex: 1,
   },
   loginSocialText: {
     fontSize: 12,
@@ -210,7 +210,7 @@ export default StyleSheet.create({
     justifyContent: "flex-start",
     flexDirection: "row",
     alignItems: "center",
-    flex:1,
+    flex: 1,
   },
   boxFavoritos: {
     width: "100%",
@@ -221,7 +221,7 @@ export default StyleSheet.create({
     justifyContent: "flex-start",
     flexDirection: "row",
     alignItems: "center",
-    flex:1,
+    flex: 1,
   },
   boxSobre: {
     width: "100%",
@@ -232,11 +232,11 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "flex-start",
   },
-  editarDadosTextBox:{
+  editarDadosTextBox: {
     width: "100%",
     minHeight: 45,
     backgroundColor: "#000",
-    borderTopColor: '#222',
+    borderTopColor: "#222",
     borderWidth: 1,
     justifyContent: "flex-start",
     flexDirection: "row",
@@ -244,7 +244,7 @@ export default StyleSheet.create({
   },
   codeBox: {
     width: "100%",
-    height: "6%",
+    minHeight: 45,
     backgroundColor: "#000",
     borderBottomColor: "#222",
     borderTopColor: "#222",
@@ -296,13 +296,23 @@ export default StyleSheet.create({
   },
   carOption1: {
     backgroundColor: "#000",
-    width: "101%",
+    width: "10%",
     height: "100%",
     borderRightWidth: 0.2,
     borderColor: "gray",
     borderBottomWidth: 0.2,
     flexDirection: "row",
     justifyContent: "center",
+  },
+  carModal: {
+    backgroundColor: "#000",
+    width: "100%",    
+    minHeight: 80,
+    borderColor: "gray",
+    borderBottomWidth: 0.2,
+    flexDirection: "row",
+    justifyContent: "center",
+    flex: 1,
   },
   carBmw: {
     resizeMode: "contain",
@@ -314,15 +324,14 @@ export default StyleSheet.create({
     resizeMode: "contain",
     width: 100,
     height: 60,
-    alignSelf: "center",
-    justifyContent: "center",
-    marginLeft: 20,
+    alignSelf: "flex-start",
+    top: 10,
   },
   carBmwModal: {
     resizeMode: "contain",
     width: 300,
     height: 80,
-    alignSelf: "center",
+    alignSelf: 'center',
   },
   textCar: {
     color: "white",
@@ -334,7 +343,7 @@ export default StyleSheet.create({
     color: "white",
     fontSize: 12,
     textAlign: "center",
-    marginVertical: 30,
+    alignSelf: "center",
     marginLeft: 15,
   },
   blackground: {
@@ -432,13 +441,13 @@ export default StyleSheet.create({
     alignSelf: "center",
     color: "#fff",
   },
-  headerGps: {  
+  headerGps: {
     width: "85%",
     height: 60,
     backgroundColor: "black",
     alignSelf: "flex-end",
     justifyContent: "center",
-    top:0,
+    position: "absolute",
   },
   headerEditar: {
     width: "85%",
@@ -492,29 +501,36 @@ export default StyleSheet.create({
   },
   centeredView: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "flex-end",
     alignItems: "center",
-    marginTop: 22,
+    backgroundColor: "rgba(0,0,0,0.8)",
   },
   modalView: {
     backgroundColor: "black",
     width: "100%",
     height: 470,
+    position: "absolute",
+    borderTopColor: "#222",
+    borderWidth: 1,
   },
   button: {
     backgroundColor: "#0087ff",
-    borderRadius: 100,
-    width: 35,
-    height: 35,
+    borderRadius: 40,
+    width: 40,
+    height: 40,
     alignSelf: "flex-end",
-    marginRight: 20,
-    bottom: 10,
+    justifyContent: "center",
+    bottom: 20,
+    marginLeft: 90,
+    marginRight: 15,
   },
   buttonOpen: {
     backgroundColor: "#0087ff",
+    justifyContent: "center",
   },
   buttonClose: {
     backgroundColor: "#0087ff",
+    justifyContent: "center",
   },
   textStyle: {
     color: "white",
@@ -541,7 +557,7 @@ export default StyleSheet.create({
   editarDados: {
     backgroundColor: "black",
     width: "100%",
-    height: "12%",
+    height: 55,
     justifyContent: "center",
   },
   textSettings: {

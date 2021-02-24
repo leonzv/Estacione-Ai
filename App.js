@@ -14,6 +14,7 @@ import Favoritos from './views/favoritos';
 import Settings from './views/settings';
 import Sobre from './views/sobre';
 import EditarDados from './views/editarDados';
+import LoadFoto from './views/loadFoto';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator, DrawerItems} from '@react-navigation/drawer';

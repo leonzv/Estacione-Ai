@@ -98,60 +98,56 @@ export default function EditarDados(props) {
           placeholderTextColor="#fff"
         />
       </View>
-      <View style={{ flexDirection: "row" }}>
-        <View style={Style.carOption1}>
+      <View style={Style.carModal}>
+        <Image style={Style.carBmw1} source={require("../img/carrobmw.png")} />
+        <Text style={Style.textCar1}>Bmw Série 3 2020</Text>
+        <TouchableOpacity
+          style={[Style.button, Style.buttonOpen]}
+          onPress={() => setModalVisible(true)}
+        >
           <Image
-            style={Style.carBmw1}
-            source={require("../img/carrobmw.png")}
-          />
-          <Text style={Style.textCar1}>Bmw Série 3 2020</Text>
-          <View style={Style.centeredView}>
-            <Modal
-              animationType="slide"
-              transparent={true}
-              visible={modalVisible}
-              onRequestClose={() => {
-                Alert.alert("Modal has been closed.");
-                setModalVisible(!modalVisible);
-              }}
-            >
-              <View style={Style.centeredView}>
-                <View
-                  style={{ flex: 1, backgroundColor: "black", opacity: 0.5 }}
-                />
-                <View style={Style.modalView}>
-                  <Text style={Style.topModalText}>Modelo do carro</Text>
-                  <Image
-                    style={Style.carBmwModal}
-                    source={require("../img/carrobmw.png")}
-                  />
-                  <Text style={Style.botModalText}>Bmw Série 3 2020</Text>
-                  <View style={Style.editarDadosTextBox}>
-                    <Text style={Style.userText}>
-                      A t u a l i z a r  M o d e l o:
-                    </Text>
-                    <TextInput
-                      style={{ width: "83%", height: "100%", color: "#fff" }}
-                      onChangeText={(text) => setModelo(text)}
-                      value={modelo}
-                      placeholderTextColor="#fff"
-                    />
-                  </View>
-                  <TouchableOpacity style={Style.modalBox}>
-                    <Text style={Style.loginEntrarText}>A T U A L I Z A R</Text>
-                  </TouchableOpacity>
-                </View>
-              </View>
-            </Modal>
-            <TouchableOpacity
-              style={[Style.button, Style.buttonOpen]}
-              onPress={() => setModalVisible(true)}
-            >
-              <Text style={Style.textStyle}></Text>
+            style={{
+              width: 35,
+              height: 35,
+              alignSelf: "center",
+              resizeMode: 'contain',
+            }}
+            source={require("../img/note.png")}
+          /> 
+        </TouchableOpacity>
+      </View>
+      <Modal
+        transparent={true}
+        animationType="slide"
+        visible={modalVisible}
+        onRequestClose={() => {
+          Alert.alert("Modal has been closed.");
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={Style.centeredView}>
+          <View style={Style.modalView}>
+            <Text style={Style.topModalText}>Modelo do carro</Text>
+            <Image
+              style={Style.carBmwModal}
+              source={require("../img/carrobmw.png")}
+            />
+            <Text style={Style.botModalText}>Bmw Série 3 2020</Text>
+            <View style={Style.editarDadosTextBox}>
+              <Text style={Style.userText}>A t u a l i z a r  M o d e l o:</Text>
+              <TextInput
+                style={{ width: "83%", height: "100%", color: "#fff" }}
+                onChangeText={(text) => setModelo(text)}
+                value={modelo}
+                placeholderTextColor="#fff"
+              />
+            </View>
+            <TouchableOpacity style={Style.modalBox}>
+              <Text style={Style.loginEntrarText}>A T U A L I Z A R</Text>
             </TouchableOpacity>
           </View>
         </View>
-      </View>
+      </Modal>
       <View style={Style.boxLoginConfirm}>
         <Text style={Style.userText}>A t u a l i z a r  s e n h a:</Text>
         <TextInput
