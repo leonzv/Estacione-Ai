@@ -15,6 +15,7 @@ import Settings from './views/settings';
 import Sobre from './views/sobre';
 import EditarDados from './views/editarDados';
 import LoadFoto from './views/loadFoto';
+import UpFoto from './views/upFoto';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator, DrawerItems} from '@react-navigation/drawer';
@@ -109,6 +110,7 @@ function Stackers() {
       <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen name="Sobre" component={Sobre} />
       <Stack.Screen name="EditarDados" component={EditarDados} />
+      <Stack.Screen name="UpFoto" component={UpFoto} />
     </Stack.Navigator>
   );
 }
@@ -139,6 +141,7 @@ export default function App() {
         <Drawer.Screen name="FAVORITOS" component={Favoritos} />
         <Drawer.Screen name="CONFIGURAÇÕES" component={Settings} />
         <Drawer.Screen name="SOBRE" component={Sobre} />
+        <Drawer.Screen name="LoadFoto" component={LoadFoto} />
         <Drawer.Screen name="S A I R  D O  A P P" component={Login} />
       </Drawer.Navigator>
     </NavigationContainer>

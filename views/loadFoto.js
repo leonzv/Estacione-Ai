@@ -14,7 +14,7 @@ export default function LoadFoto(props) {
             <Text style={Style.buscarSmallText}>Agora, precisamos tirar uma foto sua, para o seu perfil.</Text>
             <TouchableOpacity 
                 style={Style.localActive}
-                onPress={() => props.navigation.navigate('Load')}>   
+                onPress={() => props.navigation.navigate('UpFoto')}>   
                 <Text style={Style.localActiveText}>T I R A R  U M A  F O T O</Text>
             </TouchableOpacity>
         </View>
