@@ -1,0 +1,308 @@
+import React, { Component} from "react";
+import "react-native-gesture-handler";
+import { View, Text, TouchableOpacity } from "react-native";
+import Style from "../style/style.js";
+import MapView, { PROVIDER_GOOGLE} from "react-native-maps";
+import Geocoder from "react-native-geocoding";
+
+var mapStyle = [
+  {
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#212121",
+      },
+    ],
+  },
+  {
+    elementType: "labels.icon",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#757575",
+      },
+    ],
+  },
+  {
+    elementType: "labels.text.stroke",
+    stylers: [
+      {
+        color: "#212121",
+      },
+    ],
+  },
+  {
+    featureType: "administrative",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#757575",
+      },
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.country",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#9e9e9e",
+      },
+    ],
+  },
+  {
+    featureType: "administrative.locality",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#bdbdbd",
+      },
+    ],
+  },
+  {
+    featureType: "poi",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    featureType: "poi",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#757575",
+      },
+    ],
+  },
+  {
+    featureType: "poi.park",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#181818",
+      },
+    ],
+  },
+  {
+    featureType: "poi.park",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#616161",
+      },
+    ],
+  },
+  {
+    featureType: "poi.park",
+    elementType: "labels.text.stroke",
+    stylers: [
+      {
+        color: "#1b1b1b",
+      },
+    ],
+  },
+  {
+    featureType: "road",
+    elementType: "geometry.fill",
+    stylers: [
+      {
+        color: "#2c2c2c",
+      },
+    ],
+  },
+  {
+    featureType: "road",
+    elementType: "labels.icon",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    featureType: "road",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#8a8a8a",
+      },
+    ],
+  },
+  {
+    featureType: "road.arterial",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#373737",
+      },
+    ],
+  },
+  {
+    featureType: "road.highway",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#3c3c3c",
+      },
+    ],
+  },
+  {
+    featureType: "road.highway.controlled_access",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#4e4e4e",
+      },
+    ],
+  },
+  {
+    featureType: "road.local",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#616161",
+      },
+    ],
+  },
+  {
+    featureType: "transit",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    featureType: "transit",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#757575",
+      },
+    ],
+  },
+  {
+    featureType: "water",
+    elementType: "geometry",
+    stylers: [
+      {
+        color: "#000000",
+      },
+    ],
+  },
+  {
+    featureType: "water",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        color: "#3d3d3d",
+      },
+    ],
+  },
+];
+
+Geocoder.init("AIzaSyCVi8UToRxa35GXIConEw7JTIJKQT400CI");
+
+export default class Map extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { data: [] };
+  }
+  state = {
+    region: null,
+    destination: null,
+    duration: null,
+    location: null,
+  };
+
+  async componentDidMount() {
+    navigator.geolocation.getCurrentPosition(
+      async ({ coords: { latitude, longitude } }) => {
+        const response = await Geocoder.from({ latitude, longitude });
+        const address = response.results[0].formatted_address;
+        const location = address.substring(0, address.indexOf(","));
+
+        this.setState({
+          location,
+          region: {
+            latitude,
+            longitude,
+            latitudeDelta: 0.0143,
+            longitudeDelta: 0.0134,
+          },
+        });
+      }, //sucesso
+      () => {}, //erro
+      {
+        timeout: 2000,
+        enableHighAccuracy: true,
+        maximumAge: 1000,
+      }
+    );
+  }
+
+  handleLocationSelected = (data, { geometry }) => {
+    const {
+      location: { lat: latitude, lng: longitude },
+    } = geometry;
+
+    this.setState({
+      destination: {
+        latitude,
+        longitude,
+        title: data.structured_formatting.main_text,
+      },
+    });
+  };
+
+  handleBack = () => {
+    this.setState({ destination: null });
+  };
+
+  render() {
+    const { region } = this.state;
+
+    return (
+      <View style={{ flex: 1 }}>
+        <MapView
+          style={{ flex: 1 }}
+          region={region}
+          showsUserLocation
+          loadingEnabled
+          provider={PROVIDER_GOOGLE}
+          customMapStyle={mapStyle}
+        >
+        </MapView>
+        <View style={Style.headerGps}>
+          <Text style={Style.textGps}>Bem vindo, João!</Text>
+        </View>
+
+        <View style={{ flexDirection: "column" }}>
+          <TouchableOpacity
+            style={Style.boxGps}
+            onPress={() => this.props.navigation.navigate("Load")}
+          >
+            <Text style={Style.textBoxTop}>B U S C A R  N O V A M E N T E</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={Style.boxGps}
+            onPress={() => this.props.navigation.navigate("EditarDados")}
+          >
+            <Text style={Style.textBoxBot}>S A I R  D O  A P P</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+}
