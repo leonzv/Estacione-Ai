@@ -21,7 +21,7 @@ export default function UpFoto(props) {
         }}
       >
         <TouchableOpacity style={Style.tirarFotoBox}>
-          <Text style={Style.boxUp}>T I R A R F O T O</Text>
+          <Text style={Style.boxUp}>T I R A R  F O T O</Text>
         </TouchableOpacity>
         <TouchableOpacity style={Style.buscarBox}>
           <Text style={Style.boxUp}>B U S C A R</Text>

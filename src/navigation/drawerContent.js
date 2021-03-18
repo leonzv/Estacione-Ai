@@ -7,7 +7,7 @@ import LinearGradient from "react-native-linear-gradient";
 export function DrawerContent(props) {
   return (
     <View style={{ flex: 1 }}>
-      <LinearGradient colors={["#FF002B", "#FF5510"]} style={{ flex: 1 }}>
+      <LinearGradient colors={["#ff012b", "#f96d08"]} style={{ flex: 1 }}>
         <DrawerContentScrollView {...props}>
           <View style={Style.drawerContent}>
             <View style={{ flexDirection: "row" }}>
@@ -36,7 +36,7 @@ export function DrawerContent(props) {
               labelStyle={{
                 color: "white",
                 fontSize: 18,
-                fontFamily: "Renogare",
+                fontFamily: "Rubik-Regular",
               }}
               label="EDITAR DADOS"
               onPress={() => {
@@ -47,7 +47,7 @@ export function DrawerContent(props) {
               labelStyle={{
                 color: "white",
                 fontSize: 18,
-                fontFamily: "Renogare",
+                fontFamily: "Rubik-Regular",
               }}
               label="BUSCAR VAGA"
               onPress={() => {
@@ -58,7 +58,7 @@ export function DrawerContent(props) {
               labelStyle={{
                 color: "white",
                 fontSize: 18,
-                fontFamily: "Renogare",
+                fontFamily: "Rubik-Regular",
               }}
               label="CONFIGURAÇÕES"
               onPress={() => {
@@ -69,7 +69,7 @@ export function DrawerContent(props) {
               labelStyle={{
                 color: "white",
                 fontSize: 18,
-                fontFamily: "Renogare",
+                fontFamily: "Rubik-Regular",
               }}
               label="FAVORITOS"
               onPress={() => {
@@ -80,7 +80,7 @@ export function DrawerContent(props) {
               labelStyle={{
                 color: "white",
                 fontSize: 18,
-                fontFamily: "Renogare",
+                fontFamily: "Rubik-Regular",
               }}
               label="SOBRE"
               onPress={() => {
@@ -92,7 +92,7 @@ export function DrawerContent(props) {
       </LinearGradient>
       <View style={{ backgroundColor: "black" }}>
         <DrawerItem
-          labelStyle={{ textAlign: "center" }}
+          labelStyle={{ textAlign: "center" , fontFamily: "Rubik-Regular",}}
           label="S A I R    D O    A P P"
           inactiveTintColor="rgb(255,61,23)"
           onPress={() => {

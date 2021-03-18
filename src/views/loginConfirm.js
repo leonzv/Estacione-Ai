@@ -16,7 +16,7 @@ export default function LoginConfirm(props) {
           style={Style.car}
           source={require('../assets/img/carro.png')}
         />
-        <Text style={{fontSize: 24, fontWeight: 'bold', color: '#000'}}>Estacione Aí</Text>
+        <Text style={{fontSize: 24, fontFamily: "Rubik-Bold", color: '#000'}}>Estacione Aí</Text>
       </View>
       <View style={Style.botContainer}>
         <LinearGradient

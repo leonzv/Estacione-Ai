@@ -29,7 +29,7 @@ export default function EditarDados( {navigate}, props) {
         <Text style={Style.textGps}>Bem vindo, João!</Text>
       </View>
       <View style={Style.editarDados}>
-        <Text style={{ fontSize: 26, color: "white", marginLeft: 15 }}>
+        <Text style={{ fontSize: 26, color: "white", marginLeft: 15, fontFamily: "Renogare", }}>
           {" "}
           Editar Dados{" "}
         </Text>

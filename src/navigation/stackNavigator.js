@@ -1,13 +1,5 @@
 import * as React from "react";
 import "react-native-gesture-handler";
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  ScrollView,
-  Dimensions,
-} from "react-native";
 import Login from "../views/login";
 import LoginConfirm from "../views/loginConfirm";
 import Cadastro from "../views/cadastro";
@@ -25,8 +17,10 @@ import UpFoto from "../views/upFoto";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { DrawerContent } from './drawerContent';
+
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
+
 Stack.Navigator.defaultProps = {
   headerMode: "none",
 };
@@ -34,24 +28,8 @@ Stack.Navigator.defaultProps = {
 const StackDrawer = () => {
   return (
     <Drawer.Navigator
-      drawerContent={(props) => <DrawerContent {...props} />}
-      /*drawerStyle={{
-        backgroundColor: '#FF5510',
-        width: '75%',
-      }}
-      drawerContentOptions={{
-          activeTintColor: '#FF002B',
-          activeBackgroundColor: '#FF002B',
-          inactiveTintColor: '#FF002B',
-          inactiveBackgroundColor: '#FF002B',
-          marginTop: 80,
-          labelStyle:{
-            marginLeft: 5,
-            color: '#fff',
-            fontSize: 16,
-          }
-        }}*/
-    >
+      drawerStyle={{ width: '75%' }}
+      drawerContent={(props) => <DrawerContent {...props} />}>
       <Drawer.Screen name="Inicio" component={MainStackNavigator}/>      
     </Drawer.Navigator>
   );

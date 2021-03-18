@@ -13,7 +13,7 @@ export default function Login(props) {
           style={Style.car}
           source={require('../assets/img/carro.png')}
         />
-        <Text style={{fontSize: 24, fontWeight: 'bold', color: '#000', fontFamily: 'Renogare'}}>Estacione Aí</Text>
+        <Text style={{fontSize: 24, fontWeight: 'bold', color: '#000', fontFamily: "Rubik-Regular",}}>Estacione Aí</Text>
       </View>
       <View style={Style.botContainer}>
         <LinearGradient

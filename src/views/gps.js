@@ -3,8 +3,9 @@ import "react-native-gesture-handler";
 import { View, Text, TouchableOpacity } from "react-native";
 import Style from "../style/style.js";
 import MapView, { PROVIDER_GOOGLE} from "react-native-maps";
-import Geocoder from "react-native-geocoding";
-
+import Geolocation from 'react-native-geolocation-service';
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import { Google } from "expo";
 var mapStyle = [
   {
     elementType: "geometry",
@@ -212,72 +213,42 @@ var mapStyle = [
   },
 ];
 
-Geocoder.init("AIzaSyCVi8UToRxa35GXIConEw7JTIJKQT400CI");
-
-export default class Map extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { data: [] };
+const hasLocationPermission = true;
+async function requestPermissions() {
+  if (Platform.OS === 'ios') {
+    Geolocation.requestAuthorization();
+    Geolocation.setRNConfiguration({
+      skipPermissionRequests: false,
+     authorizationLevel: 'whenInUse',
+   });
   }
-  state = {
-    region: null,
-    destination: null,
-    duration: null,
-    location: null,
-  };
 
-  async componentDidMount() {
-    navigator.geolocation.getCurrentPosition(
-      async ({ coords: { latitude, longitude } }) => {
-        const response = await Geocoder.from({ latitude, longitude });
-        const address = response.results[0].formatted_address;
-        const location = address.substring(0, address.indexOf(","));
-
-        this.setState({
-          location,
-          region: {
-            latitude,
-            longitude,
-            latitudeDelta: 0.0143,
-            longitudeDelta: 0.0134,
-          },
-        });
-      }, //sucesso
-      () => {}, //erro
-      {
-        timeout: 2000,
-        enableHighAccuracy: true,
-        maximumAge: 1000,
-      }
+  if (Platform.OS === 'android') {
+    await PermissionsAndroid.request(
+      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
     );
   }
-
-  handleLocationSelected = (data, { geometry }) => {
-    const {
-      location: { lat: latitude, lng: longitude },
-    } = geometry;
-
-    this.setState({
-      destination: {
-        latitude,
-        longitude,
-        title: data.structured_formatting.main_text,
-      },
-    });
-  };
-
-  handleBack = () => {
-    this.setState({ destination: null });
-  };
-
-  render() {
-    const { region } = this.state;
-
+}
+export default class Map extends Component {
+  componentDidMount() {
+    if (hasLocationPermission) {
+      Geolocation.getCurrentPosition(
+        (position) => {
+          console.log(position);
+        },
+        (error) => {
+          // See error code charts below.
+          console.log(error.code, error.message);
+        },
+        { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+        );
+      }
+    }
+    render() {
     return (
       <View style={{ flex: 1 }}>
         <MapView
           style={{ flex: 1 }}
-          region={region}
           showsUserLocation
           loadingEnabled
           provider={PROVIDER_GOOGLE}
@@ -287,6 +258,71 @@ export default class Map extends Component {
         <View style={Style.headerGps}>
           <Text style={Style.textGps}>Bem vindo, João!</Text>
         </View>
+        <GooglePlacesAutocomplete
+        placeholder="Para onde?"
+        placeholderTextColor="#333"
+        onPress={(data, details) => {
+          console.log(data, details)
+        }}
+        query={{
+          key: 'AIzaSyCVi8UToRxa35GXIConEw7JTIJKQT400CI',
+          language: 'pt'
+        }}
+        textInputProps={{
+          autoCapitalize: 'none',
+          autoCorrect: false
+        }}
+        fetchDetails
+        enablePoweredByContainer={false}
+        styles={{
+          container:{
+            position: 'absolute',
+            top: 80,
+            width: '100%',
+            },
+          textInputContainer:{
+            flex: 1,
+            backgroundColor: 'transparent',
+            height: 55,
+            marginHorizontal: 20,
+            borderTopWidth: 0,
+            borderBottomWidth: 0,
+          },
+          textInput:{
+            height: 55,
+            margin: 0,
+            borderRadius: 0,
+            paddingTop: 0,
+            paddingBottom: 0,
+            paddingLeft: 0,
+            paddingRight: 0,
+            marginTop: 0,
+            marginLeft: 0,
+            marginRight: 0,
+            elevation: 5,
+            borderWidth: 1,
+            borderColor: "#DDD",
+            fontSize: 18,
+            fontFamily: 'Rubik-Regular',
+          },
+          listView:{
+            borderWidth: 1,
+            borderColor: '#DDD',
+            backgroundColor: '#fff',
+            elevation: 5,
+            marginTop: 10,
+          },
+          description:{
+            fontSize: 16,
+            fontFamily: 'Rubik-Regular',
+
+          },
+          row:{
+            padding: 20,
+            height: 58,
+          },
+        }}
+        />
 
         <View style={{ flexDirection: "column" }}>
           <TouchableOpacity

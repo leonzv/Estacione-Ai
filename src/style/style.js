@@ -52,12 +52,12 @@ export default StyleSheet.create({
     marginTop: 20,
   },
   swiperText: {
-    fontSize: 24,
+    fontSize: 22,
     color: "#fff",
-    fontWeight: "bold",
     textAlign: "left",
     alignSelf: "center",
     marginLeft: 30,
+    fontFamily: "Renogare",
   },
   entrarButton: {
     backgroundColor: "#3a3967",
@@ -132,6 +132,7 @@ export default StyleSheet.create({
     color: "#FF311B",
     fontSize: 16,
     textAlign: "center",
+    fontFamily: "Rubik-Regular",
   },
   boxLoginTextConfirm: {
     color: "#FF311B",
@@ -179,11 +180,13 @@ export default StyleSheet.create({
     fontSize: 12,
     textAlign: "center",
     color: "#fff",
+    fontFamily: "Rubik-Regular",
   },
   loginEntrarText: {
     fontSize: 12,
     textAlign: "center",
     color: "#00FF2B",
+    fontFamily: "Rubik-Regular",
   },
   boxLeftLoginConfirm: {
     alignSelf: "flex-end",
@@ -280,12 +283,14 @@ export default StyleSheet.create({
     fontSize: 14,
     textAlign: "left",
     marginLeft: 12,
+    fontFamily: "Rubik-Regular",
   },
   codeText: {
     color: "#fff",
     fontSize: 14,
     textAlign: "left",
     marginLeft: 28,
+    fontFamily: "Rubik-Regular",
   },
   carOption: {
     backgroundColor: "#000",
@@ -342,6 +347,7 @@ export default StyleSheet.create({
     fontSize: 12,
     textAlign: "center",
     marginBottom: 2,
+    fontFamily: "Rubik-Regular",
   },
   textCar1: {
     color: "white",
@@ -360,14 +366,14 @@ export default StyleSheet.create({
     color: "#fff",
     textAlign: "center",
     marginHorizontal: 100,
-    fontWeight: "bold",
+    fontFamily: "Rubik-Bold",
   },
   activeSmallText: {
     fontSize: 20,
     color: "#fff",
     textAlign: "center",
     marginHorizontal: 100,
-    fontWeight: "bold",
+    fontFamily: "Rubik-Regular",
     marginBottom: 40,
   },
   btnVerde: {
@@ -391,21 +397,22 @@ export default StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
     alignSelf: "center",
+    fontFamily: "Rubik-Regular",
   },
   buscarSmallText: {
     fontSize: 20,
     color: "#fff",
     textAlign: "center",
     marginHorizontal: 50,
-    fontWeight: "bold",
     marginBottom: 30,
+    fontFamily: "Rubik-Bold",
   },
   buscarBigText: {
     fontSize: 30,
     color: "#fff",
     textAlign: "center",
     marginHorizontal: 70,
-    fontWeight: "bold",
+    fontFamily: "Rubik-Regular",
   },
   primeiraRoda: {
     borderRadius: 200,
@@ -443,6 +450,7 @@ export default StyleSheet.create({
     textAlign: "center",
     alignSelf: "center",
     color: "#fff",
+    fontFamily: "Rubik-Regular",
   },
   headerGps: {
     width: "85%",
@@ -464,11 +472,13 @@ export default StyleSheet.create({
     color: "white",
     textAlign: "left",
     marginLeft: 20,
+    fontFamily: 'Renogare',
   },
   textDrawer: {
     fontSize: 20,
     color: "white",
     textAlign: "center",
+    fontFamily: "Renogare",
   },
   boxGps: {
     width: "100%",
@@ -483,11 +493,13 @@ export default StyleSheet.create({
     fontSize: 16,
     color: "green",
     textAlign: "center",
+    fontFamily: "Rubik-Regular",
   },
   textBoxBot: {
     fontSize: 16,
     color: "red",
     textAlign: "center",
+    fontFamily: "Rubik-Regular",
   },
   voltarBox: {
     height: 50,
@@ -506,6 +518,7 @@ export default StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     textAlign: "center",
+    fontFamily: "Rubik-Regular",
   },
   centeredView: {
     flex: 1,
@@ -554,12 +567,14 @@ export default StyleSheet.create({
     marginVertical: 30,
     textAlign: "center",
     fontSize: 26,
+    fontFamily: "Rubik-Regular",
   },
   botModalText: {
     color: "white",
     marginTop: 20,
     marginBottom: 80,
     textAlign: "center",
+    fontFamily: "Rubik-Regular",
     fontSize: 16,
   },
   editarDados: {
@@ -567,6 +582,7 @@ export default StyleSheet.create({
     width: "100%",
     height: 55,
     justifyContent: "center",
+   
   },
   textSettings: {
     fontSize: 14,
@@ -574,6 +590,7 @@ export default StyleSheet.create({
     textAlign: "left",
     marginLeft: 30,
     marginTop: "10%",
+    fontFamily: "Rubik-Regular",
   },
   textSettingsTop: {
     fontSize: 28,
@@ -581,6 +598,7 @@ export default StyleSheet.create({
     textAlign: "left",
     marginLeft: 30,
     marginTop: 30,
+    fontFamily: 'Renogare',
   },
   textSobreTop: {
     fontSize: 28,
@@ -589,6 +607,7 @@ export default StyleSheet.create({
     marginLeft: 30,
     marginTop: 30,
     marginBottom: 70,
+    fontFamily: 'Renogare',
   },
   switchBtn: {
     alignSelf: "flex-start",
@@ -609,6 +628,7 @@ export default StyleSheet.create({
     marginLeft: 30,
     marginTop: 10,
     marginBottom: 20,
+    fontFamily: "Rubik-Regular",
   },
   textFoto: {
     fontSize: 12,
@@ -617,6 +637,7 @@ export default StyleSheet.create({
     marginLeft: 30,
     marginTop: 50,
     marginBottom: 15,
+    fontFamily: "Rubik-Regular",
   },
   textFotoTop: {
     fontSize: 28,
@@ -624,6 +645,7 @@ export default StyleSheet.create({
     textAlign: "left",
     marginLeft: 30,
     marginTop: 60,
+    fontFamily: "Renogare",
   },
   cameraBox: {
     marginHorizontal: 15,
@@ -658,10 +680,12 @@ export default StyleSheet.create({
   concluirText: {
     textAlign: "center",
     color: "black",
+    fontFamily: "Rubik-Regular",
   },
   boxUp: {
     textAlign: "center",
     color: "white",
+    fontFamily: "Rubik-Regular",
   },
   drawerContent: {
     flex: 1,
