@@ -100,10 +100,12 @@ export default function EditarDados( {navigate}, props) {
       <View style={Style.carModal}>
         <Image style={Style.carBmw1} source={require("../assets/img/carrobmw.png")} />
         <Text style={Style.textCar1}>Bmw Série 3 2020</Text>
+        <View style={{alignItems: 'flex-start', flex: 1,}}>
         <TouchableOpacity
           style={[Style.button, Style.buttonOpen]}
           onPress={() => setModalVisible(true)}
-        >
+        >         
+        
           <Image
             style={{
               width: 35,
@@ -114,6 +116,7 @@ export default function EditarDados( {navigate}, props) {
             source={require("../assets/img/note.png")}
           /> 
         </TouchableOpacity>
+        </View>
       </View>
       <Modal
         transparent={true}

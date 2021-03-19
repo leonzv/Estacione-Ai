@@ -283,15 +283,15 @@ export default class Map extends Component {
           textInputContainer:{
             flex: 1,
             backgroundColor: 'transparent',
-            height: 55,
+            height: 45,
             marginHorizontal: 20,
             borderTopWidth: 0,
             borderBottomWidth: 0,
           },
           textInput:{
-            height: 55,
+            height: 45,
             margin: 0,
-            borderRadius: 0,
+            borderRadius: 5,
             paddingTop: 0,
             paddingBottom: 0,
             paddingLeft: 0,
