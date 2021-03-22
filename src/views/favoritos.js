@@ -3,6 +3,7 @@ import { Text, View, TouchableOpacity, Alert } from "react-native";
 import Style from "../style/style";
 import Modal from "../components/modal";
 
+
 export default function Favoritos() {
   const [modalVisible, setModalVisible] = useState(false);
   return (
