@@ -14,8 +14,21 @@ import style from "../style/style";
 
 export default function modal() {
   const [check, setCheck] = useState(false);
+  const [check1, setCheck1] = useState(false);
+  const [check2, setCheck2] = useState(false);
+  if(check == true){   
+    check1 == false
+  }
+  if(check1 == true){
+      check == false      
+  }
+  if(check1 && check == true){
+    alert("Apenas um pode ser selecionado")
+  }
+  if (check2 == true) {
+    alert("check2 foi pressionado");
+  }
   const [modalVisible, setModalVisible] = useState(false);
-  const [modelo, setModelo] = useState("");
   return (
     <View>
       <View>
@@ -107,7 +120,7 @@ export default function modal() {
                   marginTop: 20,
                   marginBottom: 35,
                 }}
-                onPress={(isChecked: check) => {}}
+                onPress={(newValue) => setCheck(newValue)}
               />
               <Text style={Style.checkTextLeft}>Dinheiro</Text>
               <BouncyCheckbox
@@ -121,7 +134,7 @@ export default function modal() {
                   marginTop: 20,
                   marginBottom: 35,
                 }}
-                onPress={(isChecked: check) => {}}
+                onPress={(newValue) => setCheck1(newValue)}
               />
               <Text style={Style.checkTextRight}>
                 Cartão de crédito ou débito
@@ -140,7 +153,7 @@ export default function modal() {
                   marginBottom: 35,
                   borderRadius: 0,
                 }}
-                onPress={(isChecked: check) => {}}
+                onPress={(newValue) => setCheck2(newValue)}
               />
               <Text style={Style.checkTextBottom}>
                 Repetir o mesmo processo nas próximos vezes
