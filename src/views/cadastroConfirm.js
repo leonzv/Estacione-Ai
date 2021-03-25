@@ -1,6 +1,6 @@
 import React from 'react';
 import 'react-native-gesture-handler';
-import {View, Image, TextInput, Text, TouchableOpacity} from 'react-native';
+import {View, Image, TextInput, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import Style from '../style/style.js';
 import react from 'react';
 
@@ -13,7 +13,7 @@ export default function CadastroConfirm(props) {
     const [pais, setPais] = react.useState('');
     const [placa, setPlaca] = react.useState('');
   return (
-    <View style={Style.container}>
+    <KeyboardAvoidingView style={Style.container}>
       <View style={{
         justifyContent: 'center',
         alignItems: 'center',
@@ -159,6 +159,6 @@ export default function CadastroConfirm(props) {
           <Text style={Style.loginSocialText}>LOGIN COM GOOGLE</Text>
           </TouchableOpacity>
         </View>
-    </View>
+    </KeyboardAvoidingView>
     );
 }

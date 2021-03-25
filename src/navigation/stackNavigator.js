@@ -13,7 +13,7 @@ import Settings from "../views/settings";
 import Sobre from "../views/sobre";
 import EditarDados from "../views/editarDados";
 import LoadFoto from "../views/loadFoto";
-import UpFoto from "../views/upFoto";
+import InserirFoto from "../views/inserirFoto";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { DrawerContent } from './drawerContent';
@@ -55,7 +55,7 @@ const MainStackNavigator = () => {
       <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen name="Sobre" component={Sobre} />
       <Stack.Screen name="EditarDados" component={EditarDados} />
-      <Stack.Screen name="UpFoto" component={UpFoto} />
+      <Stack.Screen name="InserirFoto" component={InserirFoto} />
     </Stack.Navigator>
   );
 };
