@@ -1,11 +1,11 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import "react-native-gesture-handler";
 import { View, Text, TouchableOpacity } from "react-native";
 import Style from "../style/style.js";
-import MapView, { PROVIDER_GOOGLE} from "react-native-maps";
-import Geolocation from 'react-native-geolocation-service';
-import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import { Google } from "expo";
+import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
+import Geolocation from "react-native-geolocation-service";
+import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
+import ModalGps from "../components/modalGps";
 var mapStyle = [
   {
     elementType: "geometry",
@@ -215,17 +215,17 @@ var mapStyle = [
 
 const hasLocationPermission = true;
 async function requestPermissions() {
-  if (Platform.OS === 'ios') {
+  if (Platform.OS === "ios") {
     Geolocation.requestAuthorization();
     Geolocation.setRNConfiguration({
       skipPermissionRequests: false,
-     authorizationLevel: 'whenInUse',
-   });
+      authorizationLevel: "whenInUse",
+    });
   }
 
-  if (Platform.OS === 'android') {
+  if (Platform.OS === "android") {
     await PermissionsAndroid.request(
-      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
     );
   }
 }
@@ -241,102 +241,109 @@ export default class Map extends Component {
           console.log(error.code, error.message);
         },
         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-        );
-      }
+      );
     }
-    render() {
+  }
+  render() {
     return (
       <View style={{ flex: 1 }}>
         <MapView
-          style={{ flex: 1 }}
+          style={{ width: '100%', height: '100%' }}
           showsUserLocation
           loadingEnabled
           provider={PROVIDER_GOOGLE}
           customMapStyle={mapStyle}
-        >
-        </MapView>
+        ></MapView>
         <View style={Style.headerGps}>
           <Text style={Style.textGps}>Bem vindo, João!</Text>
         </View>
         <GooglePlacesAutocomplete
-        placeholder="Para onde?"
-        placeholderTextColor="#333"
-        onPress={(data, details) => {
-          console.log(data, details)
-        }}
-        query={{
-          key: 'AIzaSyCVi8UToRxa35GXIConEw7JTIJKQT400CI',
-          language: 'pt'
-        }}
-        textInputProps={{
-          autoCapitalize: 'none',
-          autoCorrect: false
-        }}
-        fetchDetails
-        enablePoweredByContainer={false}
-        styles={{
-          container:{
-            position: 'absolute',
-            top: 80,
-            width: '100%',
+          placeholder="Para onde?"
+          placeholderTextColor="#333"
+          onPress={(data, details) => {
+            console.log(data, details);
+          }}
+          query={{
+            key: "AIzaSyCVi8UToRxa35GXIConEw7JTIJKQT400CI",
+            language: "pt",
+          }}
+          textInputProps={{
+            autoCapitalize: "none",
+            autoCorrect: false,
+          }}
+          fetchDetails
+          enablePoweredByContainer={false}
+          styles={{
+            container: {
+              position: "absolute",
+              top: 80,
+              width: "100%",
             },
-          textInputContainer:{
-            flex: 1,
-            backgroundColor: 'transparent',
-            height: 45,
-            marginHorizontal: 20,
-            borderTopWidth: 0,
-            borderBottomWidth: 0,
-          },
-          textInput:{
-            height: 45,
-            margin: 0,
-            borderRadius: 5,
-            paddingTop: 0,
-            paddingBottom: 0,
-            paddingLeft: 0,
-            paddingRight: 0,
-            marginTop: 0,
-            marginLeft: 0,
-            marginRight: 0,
-            elevation: 5,
-            borderWidth: 1,
-            borderColor: "#DDD",
-            fontSize: 18,
-            fontFamily: 'Rubik-Regular',
-          },
-          listView:{
-            borderWidth: 1,
-            borderColor: '#DDD',
-            backgroundColor: '#fff',
-            elevation: 5,
-            marginTop: 10,
-          },
-          description:{
-            fontSize: 16,
-            fontFamily: 'Rubik-Regular',
-
-          },
-          row:{
-            padding: 20,
-            height: 58,
-          },
-        }}
+            textInputContainer: {
+              flex: 1,
+              backgroundColor: "transparent",
+              height: 45,
+              marginHorizontal: 20,
+              borderTopWidth: 0,
+              borderBottomWidth: 0,
+            },
+            textInput: {
+              height: 45,
+              margin: 0,
+              borderRadius: 5,
+              paddingTop: 0,
+              paddingBottom: 0,
+              paddingLeft: 0,
+              paddingRight: 0,
+              marginTop: 0,
+              marginLeft: 0,
+              marginRight: 0,
+              elevation: 5,
+              borderWidth: 1,
+              borderColor: "#DDD",
+              fontSize: 18,
+              fontFamily: "Rubik-Regular",
+            },
+            listView: {
+              borderWidth: 1,
+              borderColor: "#DDD",
+              backgroundColor: "#fff",
+              elevation: 5,
+              marginTop: 10,
+            },
+            description: {
+              fontSize: 16,
+              fontFamily: "Rubik-Regular",
+            },
+            row: {
+              padding: 20,
+              height: 58,
+            },
+          }}
         />
 
-        <View style={{ flexDirection: "column" }}>
-          <TouchableOpacity
-            style={Style.boxGps}
-            onPress={() => this.props.navigation.navigate("Load")}
-          >
-            <Text style={Style.textBoxTop}>B U S C A R  N O V A M E N T E</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={Style.boxGps}
-            onPress={() => this.props.navigation.navigate("EditarDados")}
-          >
-            <Text style={Style.textBoxBot}>S A I R  D O  A P P</Text>
-          </TouchableOpacity>
+        <View style={{ flex: 1 }}>
+          <View>
+          <ModalGps />
+          <TouchableOpacity style={Style.gpsBtnVermelho}><Text style={Style.textBtnGps}>0</Text></TouchableOpacity>
+          <TouchableOpacity style={Style.gpsBtnVerde}><Text style={Style.textBtnGps}>20</Text></TouchableOpacity>
+          </View>
+          <View style={{flex: 1, justifyContent: 'flex-end', backgroundColor: 'red'}}>
+            <TouchableOpacity
+              style={Style.boxGps}
+              onPress={() => this.props.navigation.navigate("Load")}
+            >
+              <Text style={Style.textBoxTop}>
+                B U S C A R   N O V A M E N T E
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={Style.boxGps}
+              onPress={() => this.props.navigation.navigate("EditarDados")}
+            >
+              <Text style={Style.textBoxBot}>S A I R   D O   A P P</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     );

@@ -48,11 +48,11 @@ export default StyleSheet.create({
     marginTop: 20,
   },
   swiperText: {
-    fontSize: 22,
+    fontSize: 26,
     color: "#fff",
     textAlign: "left",
     alignSelf: "center",
-    marginLeft: 30,
+    marginLeft: 20,
     fontFamily: "Renogare",
   },
   entrarButton: {
@@ -89,7 +89,7 @@ export default StyleSheet.create({
     flexDirection: "row",
   },
   linearGradient: {
-  flex: 1,
+    flex: 1,
   },
   linearGradientConfirm: {
     maxHeight: "100%",
@@ -110,7 +110,7 @@ export default StyleSheet.create({
     borderBottomColor: "#222",
     borderWidth: 1,
     justifyContent: "center",
-    alignItems: 'center'
+    alignItems: "center",
   },
   boxLoginText: {
     color: "#FF311B",
@@ -126,8 +126,8 @@ export default StyleSheet.create({
   },
   containerBoxLogin: {
     flexDirection: "row",
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end'
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
   },
   boxLoginFacebook: {
     width: "50%",
@@ -465,7 +465,7 @@ export default StyleSheet.create({
   },
   boxGps: {
     width: "100%",
-    height: 50,
+    height: 55,
     backgroundColor: "#000",
     borderBottomColor: "#111",
     borderWidth: 1,
@@ -474,7 +474,7 @@ export default StyleSheet.create({
   },
   textBoxTop: {
     fontSize: 16,
-    color: "green",
+    color: "#00d123",
     textAlign: "center",
     fontFamily: "Rubik-Regular",
   },
@@ -487,7 +487,7 @@ export default StyleSheet.create({
   voltarBox: {
     height: 50,
     width: "100%",
-    backgroundColor: "#0da500",
+    backgroundColor: "#00d123",
     justifyContent: "center",
   },
   deletarBox: {
@@ -536,7 +536,7 @@ export default StyleSheet.create({
     borderRadius: 40,
     width: 37,
     height: 37,
-    alignSelf: 'flex-end',
+    alignSelf: "flex-end",
     marginRight: 30,
   },
   buttonFav: {
@@ -569,7 +569,7 @@ export default StyleSheet.create({
     textAlign: "center",
     fontSize: 26,
     fontFamily: "Rubik-Regular",
-    alignSelf: 'center',
+    alignSelf: "center",
     flex: 1,
   },
   topModalTextFav: {
@@ -578,9 +578,9 @@ export default StyleSheet.create({
     textAlign: "center",
     fontSize: 26,
     fontFamily: "Rubik-Regular",
-    alignSelf: 'center',
+    alignSelf: "center",
     flex: 1,
-    marginLeft: '15%',
+    marginLeft: "15%",
   },
   botModalText: {
     color: "white",
@@ -742,74 +742,164 @@ export default StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 16,
   },
-  modalFavoritoText:{
-    color: 'white',
+  modalFavoritoText: {
+    color: "white",
     fontSize: 18,
-    fontFamily: 'Renogare',
+    fontFamily: "Renogare",
     marginTop: 20,
     marginLeft: 30,
     marginBottom: 8,
   },
-  modalFavoritoSmallText:{
-    color: 'white',
+  modalFavoritoSmallText: {
+    color: "white",
     fontSize: 14,
-    fontFamily: 'Renogare',
+    fontFamily: "Renogare",
     marginLeft: 30,
   },
-  checkTextLeft:{
-    color: 'white',
-    fontFamily: 'Renogare',
+  checkTextLeft: {
+    color: "white",
+    fontFamily: "Renogare",
     fontSize: 14,
-    alignSelf: 'center',
-    textAlign: 'center',
-    marginRight: '5%',
+    alignSelf: "center",
+    textAlign: "center",
+    marginRight: "5%",
     bottom: 8,
-
   },
-  checkTextRight:{
-    color: 'white',
-    fontFamily: 'Renogare',
+  checkTextRight: {
+    color: "white",
+    fontFamily: "Renogare",
     fontSize: 14,
-    alignSelf: 'center',
-    textAlign: 'center',
+    alignSelf: "center",
+    textAlign: "center",
     bottom: 8,
-    maxWidth: '35%',
+    maxWidth: "35%",
   },
-  checkTextBottom:{
-    color: 'white',
-    fontFamily: 'Renogare',
+  checkTextBottom: {
+    color: "white",
+    fontFamily: "Renogare",
     fontSize: 14,
-    alignSelf: 'center',
-    textAlign: 'center',
+    alignSelf: "center",
+    textAlign: "center",
     bottom: 8,
-    maxWidth: '75%',
+    maxWidth: "75%",
     marginRight: 30,
   },
-  btnReservar:{
-    width: '100%',
+  btnReservar: {
+    width: "100%",
     height: 50,
-    backgroundColor: 'black',
-    borderColor: '#333',
+    backgroundColor: "black",
+    borderColor: "#333",
     borderTopWidth: 0.8,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
-  btnCancelar:{
-    width: '100%',
+  btnCancelar: {
+    width: "100%",
     height: 50,
-    backgroundColor: 'black',
-    borderColor: '#333',
+    backgroundColor: "black",
+    borderColor: "#333",
     borderBottomWidth: 0.8,
     borderTopWidth: 0.8,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
-  textReservar:{
-   color: 'rgb(0,178,29)', 
-   fontFamily: 'Rubik-Regular',
-   textAlign: 'center',
+  textReservarMap: {
+    color: "#fff",
+    fontFamily: "Rubik-Regular",
+    fontSize: 18,
+    textAlign: "center",
   },
-  textCancelar:{
-    color: 'rgb(241,47,26)',
-    fontFamily: 'Rubik-Regular',
-    textAlign: 'center'
+  textReservar: {
+    color: "#00d123",
+    fontFamily: "Rubik-Regular",
+    fontSize: 18,
+    textAlign: "center",
+  },
+  textCancelar: {
+    color: "rgb(241,47,26)",
+    fontFamily: "Rubik-Regular",
+    fontSize: 18,
+    textAlign: "center",
+  },
+  gpsBtnVerde: {
+    width: 40,
+    height: 40,
+    backgroundColor: "#2ecc71",
+    position: "absolute",
+    bottom: 420,
+    marginLeft: 150,
+    borderRadius: 40,
+    justifyContent: "center",
+  },
+  gpsBtnVermelho: {
+    width: 40,
+    height: 40,
+    backgroundColor: "#e20304",
+    position: "absolute",
+    bottom: 300,
+    alignSelf: "center",
+    borderRadius: 40,
+    justifyContent: "center",
+  },
+  gpsBtnAzul: {
+    width: 40,
+    height: 40,
+    backgroundColor: "#0087ff",
+    position: "absolute",
+    bottom: 160,
+    marginLeft: 90,
+    borderRadius: 40,
+    justifyContent: "center",
+  },
+  textBtnGps: {
+    fontSize: 18,
+    textAlign: "center",
+    color: "#fff",
+    fontFamily: "Rubik-Regular",
+  },
+  textModalGps: {
+    fontFamily: "Rubik-Bold",
+    fontSize: 16,
+    textAlign: "left",
+    marginLeft: 15,
+    marginTop: 20,
+    color: "#fff",
+  },
+  textModalGps1: {
+    fontFamily: "Rubik-Bold",
+    fontSize: 16,
+    textAlign: "left",
+    marginLeft: 24,
+    color: "#fff",
+  },
+  swiperGps: {
+    width: "100%",
+    height: "100%",
+  },
+  swiperGpsText: {
+    fontSize: 32,
+    color: "#fff",
+    textAlign: "left",
+    marginLeft: 20,
+    marginTop: 15,
+    fontFamily: "Renogare",
+  },
+  textModal: {
+    color: "#fff",
+    fontFamily: "Rubik-Regular",
+    textAlign: "right",
+    marginRight: 10,
+    marginBottom: 30,
+    fontSize: 16,
+
+  },
+  viewGpsModal:{
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+    top: 60,
+  },
+  blackBarGps:{
+    width: '100%',
+    height: 75,
+    alignSelf: 'flex-start'
   },
 });

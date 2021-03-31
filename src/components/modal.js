@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   Alert,
   Image,
-  TextInput,
 } from "react-native";
 import Style from "../style/style";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
@@ -14,7 +13,6 @@ import BouncyCheckbox from "react-native-bouncy-checkbox";
 export default function modal() {
   const [check, setCheck] = useState(false);
   const [check1, setCheck1] = useState(false);
-  const [check2, setCheck2] = useState(false);
   if(check1 && check == true){
     alert("Apenas um pode ser selecionado")
   }
