@@ -13,9 +13,11 @@ import BouncyCheckbox from "react-native-bouncy-checkbox";
 export default function modal() {
   const [check, setCheck] = useState(false);
   const [check1, setCheck1] = useState(false);
+  const [check2, setCheck2] = useState(false);
   if(check1 && check == true){
     alert("Apenas um pode ser selecionado")
   }
+
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <View>
