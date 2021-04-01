@@ -582,6 +582,22 @@ export default StyleSheet.create({
     flex: 1,
     marginLeft: "15%",
   },
+  topModalTextGps: {
+    color: "white",
+    marginTop: 15,
+    textAlign: "center",
+    fontSize: 28,
+    fontFamily: "Rubik-Bold",
+    alignSelf: "center",
+  },
+  topModalTextGps1: {
+    color: "white",
+    textAlign: "center",
+    fontSize: 28,
+    fontFamily: "Rubik-Bold",
+    alignSelf: "center",
+    marginBottom: 10,
+  },
   botModalText: {
     color: "white",
     marginTop: 20,
@@ -901,5 +917,19 @@ export default StyleSheet.create({
     width: '100%',
     height: 75,
     alignSelf: 'flex-start'
+  },
+  modalParabens:{
+    fontFamily: "Rubik-Bold",
+    fontSize: 36,
+    textAlign: 'center',
+    color: 'white',
+
+  },
+  modalVaga:{
+    fontFamily: "Rubik-Bold",
+    fontSize: 24,
+    textAlign: 'center',
+    color: 'white',
+    marginTop: 40,
   },
 });
