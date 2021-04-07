@@ -51,7 +51,7 @@ export function DrawerContent(props) {
               }}
               label="BUSCAR VAGA"
               onPress={() => {
-                props.navigation.navigate("BuscarVaga");
+                props.navigation.navigate("Load");
               }}
             />
             <DrawerItem

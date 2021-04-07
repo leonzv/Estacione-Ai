@@ -153,7 +153,8 @@ export default function modal() {
               <TouchableOpacity style={Style.btnReservar}>
                 <Text style={Style.textReservar}> R E S E R V A R   V A G A  </Text>
               </TouchableOpacity>
-              <TouchableOpacity style={Style.btnCancelar}>
+              <TouchableOpacity style={Style.btnCancelar}
+              onPress={() => setModalVisible(false)}>
                 <Text style={Style.textCancelar}> C A N C E L A R </Text>
               </TouchableOpacity>
             </View>

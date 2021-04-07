@@ -31,21 +31,15 @@ const StackDrawer = () => {
       drawerStyle={{ width: '75%' }}
       drawerContent={(props) => <DrawerContent {...props} />}>
       <Drawer.Screen name="Inicio" component={MainStackNavigator}/>   
-      <Drawer.Screen options={{ swipeEnabled: false }} name="Login" component={Login}/>
-      <Drawer.Screen options={{ swipeEnabled: false }} name="Cadastro" component={Cadastro}/>
-      <Drawer.Screen options={{ swipeEnabled: false }} name="CadastroConfirm" component={CadastroConfirm}/>
-      <Drawer.Screen options={{ swipeEnabled: false }} name="LoginConfirm" component={LoginConfirm}/>   
+      <Drawer.Screen options={{ swipeEnabled: false }} name="LoginStackNavigator" component={LoginStackNavigator}/>
     </Drawer.Navigator>
   );
 };
 
 const MainStackNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Login">
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Cadastro" component={Cadastro} />
-      <Stack.Screen name="CadastroConfirm" component={CadastroConfirm} />
-      <Stack.Screen name="LoginConfirm" component={LoginConfirm} />
+    <Stack.Navigator initialRouteName="LoginStackNavigator">
+      <Drawer.Screen name="LoginStackNavigator" component={LoginStackNavigator}/> 
       <Stack.Screen name="LocationEnable" component={LocationEnable} />
       <Stack.Screen name="BuscarVaga" component={BuscarVaga} />
       <Stack.Screen name="Gps" component={Gps} />
@@ -59,4 +53,15 @@ const MainStackNavigator = () => {
     </Stack.Navigator>
   );
 };
-export { MainStackNavigator, StackDrawer };
+
+const LoginStackNavigator = () => {
+  return (
+    <Stack.Navigator initialRouteName="Login">
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Cadastro" component={Cadastro} />
+      <Stack.Screen name="CadastroConfirm" component={CadastroConfirm} />
+      <Stack.Screen name="LoginConfirm" component={LoginConfirm} />
+    </Stack.Navigator>
+  );
+};
+export { MainStackNavigator, StackDrawer, LoginStackNavigator };

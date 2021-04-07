@@ -3,10 +3,11 @@ import { Text, View, Switch, TextInput, TouchableOpacity } from "react-native";
 import Style from "../style/style";
 import Slider from "@react-native-community/slider";
 
-export default function Settings() {
+export default function Settings(props) {
   const [isEnabled, setIsEnabled] = useState(false);
   const [codigo, setCodigo] = useState("");
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+  const {goBack} = props.navigation;
   return (
     <View style={Style.containerDraw}>
       <View style={Style.headerEditar}>
@@ -54,7 +55,8 @@ export default function Settings() {
         </View>
       </View>
         <View style={{flex: 1, justifyContent: 'flex-end',}}>
-          <TouchableOpacity style={Style.voltarBoxCode}>
+          <TouchableOpacity style={Style.voltarBoxCode}
+          onPress={() => goBack()}>
             <Text style={Style.textVoltar}>V O L T A R</Text>
           </TouchableOpacity>
         </View>

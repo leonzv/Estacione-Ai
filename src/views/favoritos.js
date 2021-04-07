@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Text, View, TouchableOpacity, Alert } from "react-native";
+import { Text, View, TouchableOpacity,} from "react-native";
 import Style from "../style/style";
 import Modal from "../components/modal";
 
 
-export default function Favoritos() {
-  const [modalVisible, setModalVisible] = useState(false);
+export default function Favoritos(props) {
+  const {goBack} = props.navigation;
+
   return (
     <View style={Style.container}>
       <View style={Style.headerEditar}>
@@ -36,7 +37,8 @@ export default function Favoritos() {
         </View>
       </View>
       <View style={{justifyContent: "flex-end" }}>
-        <TouchableOpacity style={Style.voltarBoxCode}>
+        <TouchableOpacity style={Style.voltarBoxCode}
+        onPress={() => goBack()}>
           <Text style={Style.textVoltar}>V O L T A R</Text>
         </TouchableOpacity>
       </View>

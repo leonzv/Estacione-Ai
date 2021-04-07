@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import Style from "../style/style.js";
 
-export default function EditarDados( {navigate}, props) {
+export default function EditarDados(props) {
   const [nome, setNome] = useState("");
   const [cpf, setCpf] = useState("");
   const [rg, setRg] = useState("");
@@ -23,6 +23,7 @@ export default function EditarDados( {navigate}, props) {
   const [senha, setSenha] = useState("");
   const [senhaConfirm, setSenhaConfirm] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
+  const {goBack} = props.navigation;
   return (
     <View style={Style.container}>
       <View style={Style.headerEditar}>
@@ -182,7 +183,8 @@ export default function EditarDados( {navigate}, props) {
           <Text style={Style.loginSocialText}>D E L E T A R</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity style={Style.voltarBox}>
+      <TouchableOpacity style={Style.voltarBox}
+      onPress={() => goBack()}>
         <Text style={Style.textVoltar}>V O L T A R</Text>
       </TouchableOpacity>
     </View>

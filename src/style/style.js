@@ -277,12 +277,11 @@ export default StyleSheet.create({
   },
   carOption: {
     backgroundColor: "#000",
-    width: "33.33%",
-    height: 77,
+    width: "33.35%",
+    height: '100%',
     borderRightWidth: 0.5,
     borderLeftWidth: 0.5,
     borderBottomWidth: 0.5,
-    borderTopWidth: 0.5,
     borderColor: "#222",
     flex: 1,
   },
@@ -931,5 +930,13 @@ export default StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     marginTop: 40,
+  },
+  mapDrawerOverlay: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    opacity: 0.0,
+    height: '100%',
+    width: 20,
   },
 });

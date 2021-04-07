@@ -253,6 +253,7 @@ export default class Map extends Component {
           provider={PROVIDER_GOOGLE}
           customMapStyle={mapStyle}
         ></MapView>
+        <View style={Style.mapDrawerOverlay} />
         <View style={Style.headerGps}>
           <Text style={Style.textGps}>Bem vindo, João!</Text>
         </View>
