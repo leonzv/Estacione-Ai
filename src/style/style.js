@@ -52,7 +52,7 @@ export default StyleSheet.create({
     color: "#fff",
     textAlign: "left",
     alignSelf: "center",
-    marginLeft: 20,
+    marginLeft: 30,
     fontFamily: "Renogare",
   },
   entrarButton: {

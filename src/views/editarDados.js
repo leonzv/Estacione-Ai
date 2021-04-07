@@ -12,17 +12,17 @@ import {
 import Style from "../style/style.js";
 
 export default function EditarDados( {navigate}, props) {
-  const [nome, setNome] = React.useState("");
-  const [cpf, setCpf] = React.useState("");
-  const [rg, setRg] = React.useState("");
-  const [cidade, setCidade] = React.useState("");
-  const [estado, setEstado] = React.useState("");
-  const [pais, setPais] = React.useState("");
-  const [modelo, setModelo] = React.useState("");
-  const [placa, setPlaca] = React.useState("");
-  const [senha, setSenha] = React.useState("");
-  const [senhaConfirm, setSenhaConfirm] = React.useState("");
-  const [modalVisible, setModalVisible] = React.useState(false);
+  const [nome, setNome] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [rg, setRg] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [estado, setEstado] = useState("");
+  const [pais, setPais] = useState("");
+  const [modelo, setModelo] = useState("");
+  const [placa, setPlaca] = useState("");
+  const [senha, setSenha] = useState("");
+  const [senhaConfirm, setSenhaConfirm] = useState("");
+  const [modalVisible, setModalVisible] = useState(false);
   return (
     <View style={Style.container}>
       <View style={Style.headerEditar}>

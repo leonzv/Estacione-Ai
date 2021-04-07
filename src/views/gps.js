@@ -4,7 +4,6 @@ import { View, Text, TouchableOpacity } from "react-native";
 import Style from "../style/style.js";
 import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
 import Geolocation from "react-native-geolocation-service";
-import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import ModalGps from "../components/modalGps";
 var mapStyle = [
   {
@@ -257,78 +256,13 @@ export default class Map extends Component {
         <View style={Style.headerGps}>
           <Text style={Style.textGps}>Bem vindo, João!</Text>
         </View>
-        <GooglePlacesAutocomplete
-          placeholder="Para onde?"
-          placeholderTextColor="#333"
-          onPress={(data, details) => {
-            console.log(data, details);
-          }}
-          query={{
-            key: "AIzaSyCVi8UToRxa35GXIConEw7JTIJKQT400CI",
-            language: "pt",
-          }}
-          textInputProps={{
-            autoCapitalize: "none",
-            autoCorrect: false,
-          }}
-          fetchDetails
-          enablePoweredByContainer={false}
-          styles={{
-            container: {
-              position: "absolute",
-              top: 80,
-              width: "100%",
-            },
-            textInputContainer: {
-              flex: 1,
-              backgroundColor: "transparent",
-              height: 45,
-              marginHorizontal: 20,
-              borderTopWidth: 0,
-              borderBottomWidth: 0,
-            },
-            textInput: {
-              height: 45,
-              margin: 0,
-              borderRadius: 5,
-              paddingTop: 0,
-              paddingBottom: 0,
-              paddingLeft: 0,
-              paddingRight: 0,
-              marginTop: 0,
-              marginLeft: 0,
-              marginRight: 0,
-              elevation: 5,
-              borderWidth: 1,
-              borderColor: "#DDD",
-              fontSize: 18,
-              fontFamily: "Rubik-Regular",
-            },
-            listView: {
-              borderWidth: 1,
-              borderColor: "#DDD",
-              backgroundColor: "#fff",
-              elevation: 5,
-              marginTop: 10,
-            },
-            description: {
-              fontSize: 16,
-              fontFamily: "Rubik-Regular",
-            },
-            row: {
-              padding: 20,
-              height: 58,
-            },
-          }}
-        />
-
         <View style={{ flex: 1 }}>
           <View>
           <ModalGps />
           <TouchableOpacity style={Style.gpsBtnVermelho}><Text style={Style.textBtnGps}>0</Text></TouchableOpacity>
           <TouchableOpacity style={Style.gpsBtnVerde}><Text style={Style.textBtnGps}>20</Text></TouchableOpacity>
           </View>
-          <View style={{flex: 1, justifyContent: 'flex-end', backgroundColor: 'red'}}>
+          <View style={{flex: 1, justifyContent: 'flex-end',}}>
             <TouchableOpacity
               style={Style.boxGps}
               onPress={() => this.props.navigation.navigate("Load")}

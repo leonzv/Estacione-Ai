@@ -27,8 +27,10 @@ export default function UpFoto(props) {
           <Text style={Style.boxUp}>B U S C A R</Text>
         </TouchableOpacity>
       </View>
-        <TouchableOpacity style={Style.concluirBox}>
-          <Text style={Style.concluirText}> C O N C L U I R </Text>
+        <TouchableOpacity style={Style.concluirBox}
+        >
+          <Text style={Style.concluirText}
+          onPress={() => props.navigation.navigate("LocationEnable")}> C O N C L U I R </Text>
         </TouchableOpacity>  
     </View>
   );

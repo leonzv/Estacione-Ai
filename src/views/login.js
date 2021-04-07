@@ -29,7 +29,7 @@ export default function Login(props) {
           <Swiper
             style={Style.wrapper}
             loop={false}
-            paginationStyle={{ top: 160, right: 270, marginLeft: 30 }}
+            paginationStyle={{ top: 180, right: 300, marginLeft: 30, }}
             activeDotColor="rgb(255,255,255)"
             dotColor="rgba(255,255,255,0.5)"
             dotStyle={{ width: 30, height: 6, marginHorizontal: 10 }}
