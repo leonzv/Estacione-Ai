@@ -13,8 +13,6 @@ import Style from "../style/style.js";
 
 export default function EditarDados(props) {
   const [nome, setNome] = useState("");
-  const [cpf, setCpf] = useState("");
-  const [rg, setRg] = useState("");
   const [cidade, setCidade] = useState("");
   const [estado, setEstado] = useState("");
   const [pais, setPais] = useState("");
@@ -41,24 +39,6 @@ export default function EditarDados(props) {
           style={{ width: "80%", height: "100%", color: "#fff" }}
           onChangeText={(text) => setNome(text)}
           value={nome}
-          placeholderTextColor="#fff"
-        />
-      </View>
-      <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>C P F:</Text>
-        <TextInput
-          style={{ width: "83%", height: "100%", color: "#fff" }}
-          onChangeText={(text) => setCpf(text)}
-          value={cpf}
-          placeholderTextColor="#fff"
-        />
-      </View>
-      <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>R G:</Text>
-        <TextInput
-          style={{ width: "83%", height: "100%", color: "#fff" }}
-          onChangeText={(text) => setRg(text)}
-          value={rg}
           placeholderTextColor="#fff"
         />
       </View>
@@ -98,6 +78,26 @@ export default function EditarDados(props) {
           placeholderTextColor="#fff"
         />
       </View>
+      <View style={Style.boxLoginConfirm}>
+        <Text style={Style.userText}>A t u a l i z a r  s e n h a:</Text>
+        <TextInput
+          style={{ width: "83%", height: "100%", color: "#fff" }}
+          onChangeText={(text) => setSenha(text)}
+          value={senha}
+          placeholderTextColor="#fff"
+          secureTextEntry={true}
+        />
+      </View>
+      <View style={Style.boxLoginConfirm}>
+        <Text style={Style.userText}>C o n f i r m a r  n o v a  s e n h a:</Text>
+        <TextInput
+          style={{ width: "83%", height: "100%", color: "#fff" }}
+          onChangeText={(text) => setSenhaConfirm(text)}
+          value={senhaConfirm}
+          placeholderTextColor="#fff"
+          secureTextEntry={true}
+        />
+      </View>
       <View style={Style.carModal}>
         <Image style={Style.carBmw1} source={require("../assets/img/carrobmw.png")} />
         <Text style={Style.textCar1}>Bmw Série 3 2020</Text>
@@ -124,7 +124,6 @@ export default function EditarDados(props) {
         animationType="slide"
         visible={modalVisible}
         onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
           setModalVisible(!modalVisible);
         }}
       >
@@ -151,24 +150,6 @@ export default function EditarDados(props) {
           </View>
         </View>
       </Modal>
-      <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>A t u a l i z a r  s e n h a:</Text>
-        <TextInput
-          style={{ width: "83%", height: "100%", color: "#fff" }}
-          onChangeText={(text) => setSenha(text)}
-          value={senha}
-          placeholderTextColor="#fff"
-        />
-      </View>
-      <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>C o n f i r m a r  n o v a  s e n h a:</Text>
-        <TextInput
-          style={{ width: "83%", height: "100%", color: "#fff" }}
-          onChangeText={(text) => setSenhaConfirm(text)}
-          value={senhaConfirm}
-          placeholderTextColor="#fff"
-        />
-      </View>
       <View style={Style.containerBoxLogin}>
         <TouchableOpacity
           style={Style.boxLeftLoginConfirm}
@@ -183,6 +164,10 @@ export default function EditarDados(props) {
           <Text style={Style.loginSocialText}>D E L E T A R</Text>
         </TouchableOpacity>
       </View>
+      <TouchableOpacity style={Style.concluirBoxEditar}
+      onPress={() => props.navigation.navigate("TrocarFoto")}>
+        <Text style={Style.concluirText}>A L T E R A R  F O T O</Text>
+      </TouchableOpacity>
       <TouchableOpacity style={Style.voltarBox}
       onPress={() => goBack()}>
         <Text style={Style.textVoltar}>V O L T A R</Text>

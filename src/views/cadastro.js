@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "react-native-gesture-handler";
 import {
   View,
@@ -12,16 +12,17 @@ import Style from "../style/style.js";
 import react from "react";
 
 export default function Cadastro(props) {
-  const [nome, setNome] = react.useState("");
-  const [cpf, setCpf] = react.useState("");
-  const [rg, setRg] = react.useState("");
-  const [cidade, setCidade] = react.useState("");
-  const [estado, setEstado] = react.useState("");
-  const [pais, setPais] = react.useState("");
-  const [placa, setPlaca] = react.useState("");
-  const [modelo, setModelo] = react.useState("");
-  const [senha, setSenha] = react.useState("");
-  const [senhaConfirm, setSenhaConfirm] = react.useState("");
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [rg, setRg] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [estado, setEstado] = useState("");
+  const [pais, setPais] = useState("");
+  const [placa, setPlaca] = useState("");
+  const [modelo, setModelo] = useState("");
+  const [senha, setSenha] = useState("");
+  const [senhaConfirm, setSenhaConfirm] = useState("");
   return (
     <KeyboardAvoidingView style={Style.container}>
       <View
@@ -44,6 +45,15 @@ export default function Cadastro(props) {
             style={{ width: "80%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setNome(text)}
             value={nome}
+            placeholderTextColor="#fff"
+          />
+        </View>
+        <View style={Style.boxLoginConfirm}>
+          <Text style={Style.userText}>E m a i l:</Text>
+          <TextInput
+            style={{ width: "83%", height: "100%", color: "#fff" }}
+            onChangeText={(text) => setEmail(text)}
+            value={email}
             placeholderTextColor="#fff"
           />
         </View>

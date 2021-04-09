@@ -154,13 +154,13 @@ export default StyleSheet.create({
     justifyContent: "center",
   },
   loginSocialText: {
-    fontSize: 12,
+    fontSize: 14,
     textAlign: "center",
     color: "#fff",
     fontFamily: "Rubik-Regular",
   },
   loginEntrarText: {
-    fontSize: 12,
+    fontSize: 14,
     textAlign: "center",
     color: "#00FF2B",
     fontFamily: "Rubik-Regular",
@@ -700,6 +700,13 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignSelf: "flex-end",
   },
+  concluirBoxEditar: {
+    width: "100%",
+    height: 45,
+    backgroundColor: "#0087ff",
+    justifyContent: "center",
+    alignSelf: "flex-end",
+  },
   blackgroundFoto: {
     backgroundColor: "#000",
     flex: 1,
@@ -708,6 +715,7 @@ export default StyleSheet.create({
     textAlign: "center",
     color: "black",
     fontFamily: "Rubik-Regular",
+    fontSize: 16,
   },
   boxUp: {
     textAlign: "center",
@@ -938,5 +946,10 @@ export default StyleSheet.create({
     opacity: 0.0,
     height: '100%',
     width: 20,
+  },
+  imageStyle: {
+    width: '100%',
+    height: '100%',
+    margin: 5,
   },
 });

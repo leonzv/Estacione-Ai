@@ -1,17 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import 'react-native-gesture-handler';
 import {View, Image, TextInput, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import Style from '../style/style.js';
 import react from 'react';
 
 export default function CadastroConfirm(props) {
-    const [nome, setNome] = react.useState('');
-    const [cpf, setCpf] = react.useState('');
-    const [rg, setRg] = react.useState('');
-    const [cidade, setCidade] = react.useState('');
-    const [estado, setEstado] = react.useState('');
-    const [pais, setPais] = react.useState('');
-    const [placa, setPlaca] = react.useState('');
+    const [nome, setNome] = useState('');
+    const [cpf, setCpf] = useState('');
+    const [rg, setRg] = useState('');
+    const [cidade, setCidade] = useState('');
+    const [estado, setEstado] = useState('');
+    const [pais, setPais] = useState('');
+    const [placa, setPlaca] = useState('');
   return (
     <KeyboardAvoidingView style={Style.container}>
       <View style={{

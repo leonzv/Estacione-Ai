@@ -1,15 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import "react-native-gesture-handler";
 import { View, Image, Text, TouchableOpacity } from "react-native";
 import Style from "../style/style.js";
 
-export default function InserirFoto(props) {
+export default function TrocarFoto(props) {
+   
   return (
     <View style={Style.blackgroundFoto}>
-      <Text style={Style.textFotoTop}>Inserir foto</Text>
+      <Text style={Style.textFotoTop}>Trocar foto</Text>
       <Text style={Style.textFoto}>Escolha uma foto de sua preferência</Text>
       <View style={Style.cameraBox}>
-        <Text>camera aqui</Text>
+        {/* camera aqui */}
       </View>
       <View
         style={{
@@ -20,10 +21,12 @@ export default function InserirFoto(props) {
           flexDirection: 'row',
         }}
       >
-        <TouchableOpacity style={Style.tirarFotoBox}>
+        <TouchableOpacity style={Style.tirarFotoBox}
+        onPress={() => captureImage('photo')}>
           <Text style={Style.boxUp}>T I R A R  F O T O</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={Style.buscarBox}>
+        <TouchableOpacity style={Style.buscarBox}
+        onPress={() => chooseFile('photo')}>
           <Text style={Style.boxUp}>B U S C A R</Text>
         </TouchableOpacity>
       </View>
