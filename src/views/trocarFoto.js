@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import "react-native-gesture-handler";
-import { View, Image, Text, TouchableOpacity } from "react-native";
+import { View, Image, Text, TouchableOpacity, Alert } from "react-native";
 import Style from "../style/style.js";
+
 
 export default function TrocarFoto(props) {
    
@@ -10,7 +11,6 @@ export default function TrocarFoto(props) {
       <Text style={Style.textFotoTop}>Trocar foto</Text>
       <Text style={Style.textFoto}>Escolha uma foto de sua preferência</Text>
       <View style={Style.cameraBox}>
-        {/* camera aqui */}
       </View>
       <View
         style={{

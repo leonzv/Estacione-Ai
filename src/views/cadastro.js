@@ -9,7 +9,6 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import Style from "../style/style.js";
-import react from "react";
 
 export default function Cadastro(props) {
   const [nome, setNome] = useState("");

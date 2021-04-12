@@ -129,6 +129,12 @@ export default StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "flex-end",
   },
+  containerBoxLoginBlack: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
+    backgroundColor: 'black'
+  },
   boxLoginFacebook: {
     width: "50%",
     height: 50,

@@ -2,16 +2,27 @@ import React, {useState} from 'react';
 import 'react-native-gesture-handler';
 import {View, Image, TextInput, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import Style from '../style/style.js';
-import react from 'react';
+import AS_Login from '@react-native-community/async-storage';
 
 export default function CadastroConfirm(props) {
     const [nome, setNome] = useState('');
+    const [email, setEmail] = useState("");
     const [cpf, setCpf] = useState('');
     const [rg, setRg] = useState('');
     const [cidade, setCidade] = useState('');
     const [estado, setEstado] = useState('');
     const [pais, setPais] = useState('');
     const [placa, setPlaca] = useState('');
+
+    const Store = (key,value) => {
+      AS_Login.setItem(key,value)
+    }
+    const Search = async (key) => {
+      const value = await AS_Login.getItem(key)
+      setNome(value)
+    }
+    Store('01', {nome})
+    Search('01')
   return (
     <KeyboardAvoidingView style={Style.container}>
       <View style={{

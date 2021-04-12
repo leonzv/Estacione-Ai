@@ -10,9 +10,9 @@ import {
   Text,
 } from "react-native";
 import Style from "../style/style.js";
-
+import nome from "./cadastroConfirm";
+import AS_Login from '@react-native-community/async-storage';
 export default function EditarDados(props) {
-  const [nome, setNome] = useState("");
   const [cidade, setCidade] = useState("");
   const [estado, setEstado] = useState("");
   const [pais, setPais] = useState("");
