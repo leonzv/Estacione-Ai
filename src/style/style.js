@@ -105,7 +105,7 @@ export default StyleSheet.create({
   },
   boxLogin: {
     width: "100%",
-    height: 50,
+    height: '7%',
     backgroundColor: "#000",
     borderBottomColor: "#222",
     borderWidth: 1,
@@ -189,7 +189,7 @@ export default StyleSheet.create({
   },
   boxLoginConfirm: {
     width: "100%",
-    minHeight: 45,
+    minHeight: '7%',
     backgroundColor: "#000",
     borderBottomColor: "#222",
     borderWidth: 1,
@@ -200,7 +200,7 @@ export default StyleSheet.create({
   },
   boxLoginCadastroConfirm: {
     width: "100%",
-    height: 50,
+    height: '7%',
     backgroundColor: "#000",
     borderBottomColor: "#222",
     borderWidth: 1,
@@ -269,14 +269,14 @@ export default StyleSheet.create({
   },
   userText: {
     color: "#fff",
-    fontSize: 14,
+    fontSize: 16,
     textAlign: "left",
     marginLeft: 12,
     fontFamily: "Rubik-Regular",
   },
   codeText: {
     color: "#fff",
-    fontSize: 14,
+    fontSize: 16,
     textAlign: "left",
     marginLeft: 28,
     fontFamily: "Rubik-Regular",
@@ -373,14 +373,14 @@ export default StyleSheet.create({
   localActive: {
     width: "100%",
     backgroundColor: "#ff1d21",
-    height: 50,
+    height: '7%',
     marginBottom: 40,
     alignContent: "center",
     alignItems: "center",
     justifyContent: "center",
   },
   localActiveText: {
-    fontSize: 12,
+    fontSize: 14,
     color: "#000",
     textAlign: "center",
     fontWeight: "bold",
@@ -442,7 +442,7 @@ export default StyleSheet.create({
   },
   headerGps: {
     width: "85%",
-    height: 60,
+    height: '8%',
     backgroundColor: "black",
     alignSelf: "flex-end",
     justifyContent: "center",
@@ -649,7 +649,7 @@ export default StyleSheet.create({
     marginBottom: 20,
   },
   voltarBoxCode: {
-    height: 50,
+    height: 55,
     width: "100%",
     backgroundColor: "#0da500",
     justifyContent: "center",
@@ -683,7 +683,7 @@ export default StyleSheet.create({
   cameraBox: {
     marginHorizontal: 15,
     width: "85%",
-    height: 300,
+    height: '40%',
     backgroundColor: "white",
     alignSelf: "center",
   },

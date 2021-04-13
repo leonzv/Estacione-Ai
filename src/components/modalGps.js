@@ -137,7 +137,7 @@ export default function modalGps() {
               <Text style={Style.topModalTextGps}>Você escolheu:</Text>
               <Text style={Style.topModalTextGps1}>Star Park</Text>
            
-            <View>
+            <View style={{alignItems: 'center'}}>
               <Text style={Style.modalFavoritoText}> Endereço: </Text>
               <Text style={Style.modalFavoritoSmallText}>
                 {" "}
@@ -149,7 +149,7 @@ export default function modalGps() {
                 Formas de pagamento:{" "}
               </Text>
             </View>
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: 'center' }}>
               <BouncyCheckbox
                 size={28}
                 fillColor="#0087ff"
@@ -181,7 +181,7 @@ export default function modalGps() {
                 Cartão de crédito ou débito
               </Text>
             </View>
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: 'center' }}>
               <BouncyCheckbox
                 size={22}
                 fillColor="#0087ff"

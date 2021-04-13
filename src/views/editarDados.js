@@ -10,9 +10,10 @@ import {
   Text,
 } from "react-native";
 import Style from "../style/style.js";
-import nome from "./cadastroConfirm";
-import AS_Login from '@react-native-community/async-storage';
+import AS_Login from '@react-native-async-storage/async-storage';
+
 export default function EditarDados(props) {
+  const [nome, setNome] = useState("");
   const [cidade, setCidade] = useState("");
   const [estado, setEstado] = useState("");
   const [pais, setPais] = useState("");
@@ -22,6 +23,21 @@ export default function EditarDados(props) {
   const [senhaConfirm, setSenhaConfirm] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
   const {goBack} = props.navigation;
+
+  const Store = (key,value) => {
+    AS_Login.setItem(key,value)
+  }
+  const Search = async (key) => {
+    const value = await AS_Login.getItem(key)
+    setNome(value)
+  }
+  Store('01', {nome})
+  Search('01')
+  AS_Login.getItem('01')
+
+  function restoreData(){
+    AS_Login.clear()
+  }
   return (
     <View style={Style.container}>
       <View style={Style.headerEditar}>
@@ -160,6 +176,7 @@ export default function EditarDados(props) {
         <TouchableOpacity
           style={Style.deletarBox}
           onPress={() => props.navigation.navigate("Login")}
+          onPress={restoreData()}
         >
           <Text style={Style.loginSocialText}>D E L E T A R</Text>
         </TouchableOpacity>

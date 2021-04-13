@@ -85,7 +85,7 @@ export default function modal() {
                 </TouchableOpacity>
               </View>
             </View>
-            <View>
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
               <Text style={Style.modalFavoritoText}> Endereço: </Text>
               <Text style={Style.modalFavoritoSmallText}>
                 {" "}
@@ -97,7 +97,7 @@ export default function modal() {
                 Formas de pagamento:{" "}
               </Text>
             </View>
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: 'center'}}>
               <BouncyCheckbox
                 size={28}
                 fillColor="#0087ff"
@@ -129,7 +129,7 @@ export default function modal() {
                 Cartão de crédito ou débito
               </Text>
             </View>
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: 'center' }}>
               <BouncyCheckbox
                 size={22}
                 fillColor="#0087ff"
@@ -148,7 +148,7 @@ export default function modal() {
                 Repetir o mesmo processo nas próximos vezes
               </Text>
             </View>
-            <View style={{ flex: 1, justifyContent: "flex-end" }}>
+            <View style={{ flex: 1, justifyContent: "flex-end", alignItems: 'center' }}>
               <TouchableOpacity style={Style.btnReservar}>
                 <Text style={Style.textReservar}> R E S E R V A R   V A G A  </Text>
               </TouchableOpacity>

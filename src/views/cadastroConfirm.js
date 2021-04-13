@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import 'react-native-gesture-handler';
 import {View, Image, TextInput, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import Style from '../style/style.js';
-import AS_Login from '@react-native-community/async-storage';
+import AS_Login from '@react-native-async-storage/async-storage';
 
 export default function CadastroConfirm(props) {
     const [nome, setNome] = useState('');
