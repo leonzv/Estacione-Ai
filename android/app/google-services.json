@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "523247607633",
+    "project_id": "estacioneai",
+    "storage_bucket": "estacioneai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523247607633:android:c2b7060c0936317298bd70",
+        "android_client_info": {
+          "package_name": "com.estacioneai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523247607633-joo98pmigrmdvu5vvmuicookacb9n96e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXYiqgUvGYHuPNkSJsfOlNuPjSjLJczdo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523247607633-joo98pmigrmdvu5vvmuicookacb9n96e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
