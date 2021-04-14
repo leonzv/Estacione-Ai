@@ -162,7 +162,6 @@ export default function Cadastro(props) {
             <Text style={Style.loginSocialText}>C A N C E L A R</Text>
           </TouchableOpacity>
         </View>
-
         <View style={Style.containerBoxLogin}>
           <TouchableOpacity style={Style.boxLoginFacebook}>
             <Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text>

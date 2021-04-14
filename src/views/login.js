@@ -4,8 +4,31 @@ import { View, Image, Text, TouchableOpacity } from "react-native";
 import Style from "../style/style.js";
 import LinearGradient from "react-native-linear-gradient";
 import Swiper from "react-native-swiper";
+import auth from '@react-native-firebase/auth';
+import { LoginManager, AccessToken } from 'react-native-fbsdk';
 
 export default function Login(props) {
+  async function onFacebookButtonPress() {
+    // Attempt login with permissions
+    const result = await LoginManager.logInWithPermissions(['public_profile', 'email']);
+  
+    if (result.isCancelled) {
+      throw 'User cancelled the login process';
+    }
+  
+    // Once signed in, get the users AccesToken
+    const data = await AccessToken.getCurrentAccessToken();
+  
+    if (!data) {
+      throw 'Something went wrong obtaining access token';
+    }
+  
+    // Create a Firebase credential with the AccessToken
+    const facebookCredential = auth.FacebookAuthProvider.credential(data.accessToken);
+  
+    // Sign-in the user with the credential
+    return auth().signInWithCredential(facebookCredential);
+  }
   return (
     <View style={Style.container}>
       <View style={Style.topContainer}>
@@ -29,7 +52,7 @@ export default function Login(props) {
           <Swiper
             style={Style.wrapper}
             loop={false}
-            paginationStyle={{marginLeft: 30, height: '38%', justifyContent: 'flex-start'}}
+            paginationStyle={{marginLeft: 30, height: '25%', justifyContent: 'flex-start'}}
             activeDotColor="rgb(255,255,255)"
             dotColor="rgba(255,255,255,0.5)"
             dotStyle={{ width: 30, height: 6, marginHorizontal: 10, alignSelf: 'flex-start' }}
@@ -65,7 +88,8 @@ export default function Login(props) {
           </TouchableOpacity>
         
         <View style={Style.containerBoxLogin}>
-          <TouchableOpacity style={Style.boxLoginFacebook}>
+          <TouchableOpacity style={Style.boxLoginFacebook}
+          onPress={() => onFacebookButtonPress().then(() => console.log('Signed in with Facebook!'))}>
             <Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text>
           </TouchableOpacity>
           <TouchableOpacity style={Style.boxLoginGoogle}>

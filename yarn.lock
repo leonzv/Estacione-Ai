@@ -2364,6 +2364,11 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
+"@react-native-firebase/auth@^11.2.0":
+  version "11.2.0"
+  resolved "https://registry.npmjs.org/@react-native-firebase/auth/-/auth-11.2.0.tgz#84ba11f0ef181d13a4b8daa110c9fbcc7d68eea4"
+  integrity sha512-lySvD0UrhQ+ERTp+ZViGPNWfKRLBZAfdK5RgdudbKyUqxiGS0Wx0lI6XMh0A7yT7yMKbhE2cSWAoJPYsEGG9mg==
+
 "@react-navigation/core@^5.15.2":
   version "5.15.2"
   resolved "https://registry.npmjs.org/@react-navigation/core/-/core-5.15.2.tgz#6aa374c7bcb6ffcaac8e2a7f8bdb2f9aba469b31"
@@ -11672,6 +11677,11 @@ react-native-bouncy-checkbox@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/react-native-bouncy-checkbox/-/react-native-bouncy-checkbox-2.0.0.tgz#00a518e6a31613a48c462b00a6afc42823c37126"
   integrity sha512-T6i4g7TQUGJeoqU2AN70amcrgtzF+0pREju3UpFb43tAGUij+POkIX25g67eXongzLWDz8JrOsppz+q2m6AO7g==
+
+react-native-fbsdk@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/react-native-fbsdk/-/react-native-fbsdk-3.0.0.tgz#07ef41758bb17a0acaff744008af625a45ef9a01"
+  integrity sha512-i0JocuzLlGk13J0xFDjm8GlX7SADAL2kh/syE/HOn5HHdW+PFjC31MNj5AtzIw2TicHXpHGO6VPKNfdWFbxboA==
 
 react-native-geolocation-service@^5.2.0:
   version "5.2.0"
