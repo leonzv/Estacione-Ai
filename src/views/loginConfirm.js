@@ -5,13 +5,14 @@ import Style from "../style/style.js";
 import react from "react";
 import LinearGradient from "react-native-linear-gradient";
 import Swiper from "react-native-swiper";
+import HideWithKeyboard from 'react-native-hide-with-keyboard';
 
 export default function LoginConfirm(props) {
   const [usuario, setUsuario] = react.useState("");
   const [senha, setSenha] = react.useState("");
   return (
     <View style={Style.container}>
-      <View style={Style.topContainer}>
+      <HideWithKeyboard style={Style.topContainer}>
         <Image style={Style.car} source={require("../assets/img/carro.png")} />
         <Text
           style={{
@@ -23,7 +24,7 @@ export default function LoginConfirm(props) {
         >
           Estacione Aí
         </Text>
-      </View>
+      </HideWithKeyboard>
       <View style={Style.botContainer}>
         <LinearGradient
           colors={["#FF002B", "#FF5510"]}
@@ -32,11 +33,27 @@ export default function LoginConfirm(props) {
           <Swiper
             style={Style.wrapper}
             loop={false}
-            paginationStyle={{  top: 180, right: 300, marginLeft: 30 }}
+            paginationStyle={{
+              marginLeft: 30,
+              height: "25%",
+              justifyContent: "flex-start",
+            }}
             activeDotColor="rgb(255,255,255)"
             dotColor="rgba(255,255,255,0.5)"
-            dotStyle={{ width: 30, height: 6, marginHorizontal: 10 }}
-            activeDotStyle={{ width: 50, height: 6, marginHorizontal: 10 }}
+            dotStyle={{
+              width: 30,
+              height: 6,
+              marginHorizontal: 10,
+              alignSelf: "flex-start",
+              top: 30,
+            }}
+            activeDotStyle={{
+              width: 50,
+              height: 6,
+              marginHorizontal: 10,
+              alignSelf: "flex-start",
+              top: 30,
+            }}
           >
             <View style={Style.swiperLogin}>
               <Text style={Style.swiperText}>
@@ -52,31 +69,31 @@ export default function LoginConfirm(props) {
             </View>
           </Swiper>
         </LinearGradient>
+      </View>
+      <View style={{ flexDirection: "row" }}>
+        <View style={Style.boxLoginConfirm}>
+          <Text style={Style.userText}>U s u á r i o:</Text>
+          <TextInput
+            style={{ width: "80%", height: "100%", color: "#fff" }}
+            onChangeText={(text) => setUsuario(text)}
+            value={usuario}
+            placeholderTextColor="#fff"
+            autoCapitalize="words"
+          />
         </View>
-      <View style={{flexDirection: 'row'}}>
-      <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>U s u á r i o:</Text>
-        <TextInput
-          style={{ width: "80%", height: "100%", color: "#fff"}}
-          onChangeText={(text) => setUsuario(text)}
-          value={usuario}
-          placeholderTextColor="#fff"
-          autoCapitalize="words"
-        />
       </View>
-      </View>
-      <View style={{flexDirection: 'row'}}>
-      <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>S e n h a:</Text>
-        <TextInput
-          style={{ width: "83%", height: "100%", color: "#fff" }}
-          onChangeText={(text) => setSenha(text)}
-          value={senha}
-          secureTextEntry={true}
-          placeholderTextColor="#fff"
-          autoCapitalize="words"
-        />
-      </View>
+      <View style={{ flexDirection: "row" }}>
+        <View style={Style.boxLoginConfirm}>
+          <Text style={Style.userText}>S e n h a:</Text>
+          <TextInput
+            style={{ width: "83%", height: "100%", color: "#fff" }}
+            onChangeText={(text) => setSenha(text)}
+            value={senha}
+            secureTextEntry={true}
+            placeholderTextColor="#fff"
+            autoCapitalize="words"
+          />
+        </View>
       </View>
       <View style={Style.containerBoxLogin}>
         <TouchableOpacity
@@ -93,8 +110,8 @@ export default function LoginConfirm(props) {
         </TouchableOpacity>
       </View>
       <View style={Style.boxLoginCadastroConfirm}>
-            <Text style={Style.boxLoginTextConfirm}>C A D A S T R A R</Text>
-          </View>
+        <Text style={Style.boxLoginTextConfirm}>C A D A S T R A R</Text>
+      </View>
       <View style={Style.containerBoxLogin}>
         <TouchableOpacity style={Style.boxLoginFacebook}>
           <Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text>

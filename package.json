@@ -27,6 +27,8 @@
     "react-native-fbsdk": "^3.0.0",
     "react-native-geolocation-service": "^5.2.0",
     "react-native-gesture-handler": "~1.8.0",
+    "react-native-hide-with-keyboard": "^1.2.1",
+    "react-native-image-picker": "^3.5.0",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-maps": "0.27.1",
     "react-native-maps-directions": "^1.8.0",

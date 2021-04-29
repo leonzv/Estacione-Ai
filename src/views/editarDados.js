@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import Style from "../style/style.js";
 import AS_Login from '@react-native-async-storage/async-storage';
+import HideWithKeyboard from "react-native-hide-with-keyboard";
 
 export default function EditarDados(props) {
   const [nome, setNome] = useState("");
@@ -166,7 +167,7 @@ export default function EditarDados(props) {
           </View>
         </View>
       </Modal>
-      <View style={Style.containerBoxLogin}>
+      <HideWithKeyboard style={Style.containerBoxLogin}>
         <TouchableOpacity
           style={Style.boxLeftLoginConfirm}
           onPress={() => props.navigation.navigate("Load")}
@@ -180,7 +181,7 @@ export default function EditarDados(props) {
         >
           <Text style={Style.loginSocialText}>D E L E T A R</Text>
         </TouchableOpacity>
-      </View>
+      </HideWithKeyboard>
       <TouchableOpacity style={Style.concluirBoxEditar}
       onPress={() => props.navigation.navigate("TrocarFoto")}>
         <Text style={Style.concluirText}>A L T E R A R  F O T O</Text>

@@ -1,14 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "react-native-gesture-handler";
-import {
-  View,
-  Image,
-  TextInput,
-  Text,
-  TouchableOpacity,
-  KeyboardAvoidingView,
-} from "react-native";
+import { View, Image, TextInput, Text, TouchableOpacity } from "react-native";
 import Style from "../style/style.js";
+import HideWithKeyboard from "react-native-hide-with-keyboard";
 
 export default function Cadastro(props) {
   const [nome, setNome] = useState("");
@@ -23,13 +17,14 @@ export default function Cadastro(props) {
   const [senha, setSenha] = useState("");
   const [senhaConfirm, setSenhaConfirm] = useState("");
   return (
-    <KeyboardAvoidingView style={Style.container}>
-      <View
+    <View style={Style.container}>
+      <HideWithKeyboard
         style={{
           justifyContent: "center",
           alignItems: "center",
           backgroundColor: "white",
-          height: "19%",
+          minHeight: "0%",
+          maxHeight: "15%",
           flexDirection: "row",
         }}
       >
@@ -37,8 +32,9 @@ export default function Cadastro(props) {
         <Text style={{ fontSize: 24, fontFamily: "Rubik-Bold", color: "#000" }}>
           Estacione Aí
         </Text>
-      </View>
-        <View style={Style.boxLoginConfirm}>
+      </HideWithKeyboard>
+      <View style={{ flex: 1 }}>
+        <View style={Style.boxLoginConfirmCadastro}>
           <Text style={Style.userText}>N o m e:</Text>
           <TextInput
             style={{ width: "80%", height: "100%", color: "#fff" }}
@@ -47,7 +43,7 @@ export default function Cadastro(props) {
             placeholderTextColor="#fff"
           />
         </View>
-        <View style={Style.boxLoginConfirm}>
+        <View style={Style.boxLoginConfirmCadastro}>
           <Text style={Style.userText}>E m a i l:</Text>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
@@ -56,7 +52,7 @@ export default function Cadastro(props) {
             placeholderTextColor="#fff"
           />
         </View>
-        <View style={Style.boxLoginConfirm}>
+        <View style={Style.boxLoginConfirmCadastro}>
           <Text style={Style.userText}>C P F:</Text>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
@@ -65,7 +61,7 @@ export default function Cadastro(props) {
             placeholderTextColor="#fff"
           />
         </View>
-        <View style={Style.boxLoginConfirm}>
+        <View style={Style.boxLoginConfirmCadastro}>
           <Text style={Style.userText}>R G:</Text>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
@@ -74,7 +70,7 @@ export default function Cadastro(props) {
             placeholderTextColor="#fff"
           />
         </View>
-        <View style={Style.boxLoginConfirm}>
+        <View style={Style.boxLoginConfirmCadastro}>
           <Text style={Style.userText}>C i d a d e:</Text>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
@@ -83,7 +79,7 @@ export default function Cadastro(props) {
             placeholderTextColor="#fff"
           />
         </View>
-        <View style={Style.boxLoginConfirm}>
+        <View style={Style.boxLoginConfirmCadastro}>
           <Text style={Style.userText}>E s t a d o:</Text>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
@@ -92,7 +88,7 @@ export default function Cadastro(props) {
             placeholderTextColor="#fff"
           />
         </View>
-        <View style={Style.boxLoginConfirm}>
+        <View style={Style.boxLoginConfirmCadastro}>
           <Text style={Style.userText}>P a í s:</Text>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
@@ -101,7 +97,7 @@ export default function Cadastro(props) {
             placeholderTextColor="#fff"
           />
         </View>
-        <View style={Style.boxLoginConfirm}>
+        <View style={Style.boxLoginConfirmCadastro}>
           <Text style={Style.userText}>P l a c a:</Text>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
@@ -110,7 +106,7 @@ export default function Cadastro(props) {
             placeholderTextColor="#fff"
           />
         </View>
-        <View style={Style.boxLoginConfirm}>
+        <View style={Style.boxLoginConfirmCadastro}>
           <Text style={Style.userText}>M o d e l o:</Text>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
@@ -119,7 +115,7 @@ export default function Cadastro(props) {
             placeholderTextColor="#fff"
           />
         </View>
-        <View style={Style.boxLoginConfirm}>
+        <View style={Style.boxLoginConfirmCadastro}>
           <Text style={Style.userText}>S e n h a:</Text>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
@@ -129,17 +125,8 @@ export default function Cadastro(props) {
             secureTextEntry={true}
           />
         </View>
-        <View style={Style.boxLoginConfirm}>
-          <Text
-            style={{
-              color: "#fff",
-              fontSize: 12,
-              textAlign: "left",
-              marginLeft: 15,
-            }}
-          >
-            C o n f i r m a r  S e n h a:
-          </Text>
+        <View style={Style.boxLoginConfirmCadastro}>
+          <Text style={Style.userText}>C o n f i r m a r  S e n h a:</Text>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setSenhaConfirm(text)}
@@ -148,28 +135,29 @@ export default function Cadastro(props) {
             secureTextEntry={true}
           />
         </View>
-        <View style={Style.containerBoxLogin}>
-          <TouchableOpacity
-            style={Style.boxLeftLoginConfirm}
-            onPress={() => props.navigation.navigate("CadastroConfirm")}
-          >
-            <Text style={Style.loginEntrarText}>A V A N Ç A R</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={Style.boxRightLoginConfirm}
-            onPress={() => props.navigation.navigate("Login")}
-          >
-            <Text style={Style.loginSocialText}>C A N C E L A R</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={Style.containerBoxLogin}>
-          <TouchableOpacity style={Style.boxLoginFacebook}>
-            <Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={Style.boxLoginGoogle}>
-            <Text style={Style.loginSocialText}>LOGIN COM GOOGLE</Text>
-          </TouchableOpacity>
-        </View>
-    </KeyboardAvoidingView>
+      </View>
+      <View style={Style.containerBoxLogin}>
+        <TouchableOpacity
+          style={Style.boxLeftLoginConfirm}
+          onPress={() => props.navigation.navigate("CadastroConfirm")}
+        >
+          <Text style={Style.loginEntrarText}>A V A N Ç A R</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={Style.boxRightLoginConfirm}
+          onPress={() => props.navigation.navigate("Login")}
+        >
+          <Text style={Style.loginSocialText}>C A N C E L A R</Text>
+        </TouchableOpacity>
+      </View>
+      <HideWithKeyboard style={Style.containerBoxLogin}>
+        <TouchableOpacity style={Style.boxLoginFacebook}>
+          <Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={Style.boxLoginGoogle}>
+          <Text style={Style.loginSocialText}>LOGIN COM GOOGLE</Text>
+        </TouchableOpacity>
+      </HideWithKeyboard>
+    </View>
   );
 }

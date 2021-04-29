@@ -55,8 +55,8 @@ export default function Login(props) {
             paginationStyle={{marginLeft: 30, height: '25%', justifyContent: 'flex-start'}}
             activeDotColor="rgb(255,255,255)"
             dotColor="rgba(255,255,255,0.5)"
-            dotStyle={{ width: 30, height: 6, marginHorizontal: 10, alignSelf: 'flex-start' }}
-            activeDotStyle={{ width: 50, height: 6, marginHorizontal: 10, alignSelf: 'flex-start' }}
+            dotStyle={{ width: 30, height: 6, marginHorizontal: 10, alignSelf: 'flex-start', top: 20 }}
+            activeDotStyle={{ width: 50, height: 6, marginHorizontal: 10, alignSelf: 'flex-start', top: 20,}}
           >
             <View style={Style.swiperLogin}>
               <Text style={Style.swiperText}>

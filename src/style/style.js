@@ -9,7 +9,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    backgroundColor: "white",
+    backgroundColor: "black",
   },
   topContainer: {
     justifyContent: "center",
@@ -190,6 +190,17 @@ export default StyleSheet.create({
   boxLoginConfirm: {
     width: "100%",
     minHeight: '7%',
+    backgroundColor: "#000",
+    borderBottomColor: "#222",
+    borderWidth: 1,
+    justifyContent: "flex-start",
+    flexDirection: "row",
+    alignItems: "center",
+    flex: 1,
+  },
+  boxLoginConfirmCadastro: {
+    width: "100%",
+    height: '7%',
     backgroundColor: "#000",
     borderBottomColor: "#222",
     borderWidth: 1,
@@ -683,7 +694,7 @@ export default StyleSheet.create({
   cameraBox: {
     marginHorizontal: 15,
     width: "85%",
-    height: '40%',
+    height: '45%',
     backgroundColor: "white",
     alignSelf: "center",
   },
@@ -956,6 +967,23 @@ export default StyleSheet.create({
   imageStyle: {
     width: '100%',
     height: '100%',
-    margin: 5,
+  },
+  titleText: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    paddingVertical: 20,
+  },
+  textStyleCam: {
+    padding: 10,
+    color: 'black',
+    textAlign: 'center',
+  },
+  buttonStyle: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 5,
+    marginVertical: 10,
+    width: 250,
   },
 });
