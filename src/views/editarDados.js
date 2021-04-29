@@ -41,15 +41,15 @@ export default function EditarDados(props) {
   }
   return (
     <View style={Style.container}>
-      <View style={Style.headerEditar}>
+      <HideWithKeyboard style={Style.headerEditar}>
         <Text style={Style.textGps}>Bem vindo, João!</Text>
-      </View>
-      <View style={Style.editarDados}>
+      </HideWithKeyboard>
+      <HideWithKeyboard style={Style.editarDados}>
         <Text style={{ fontSize: 26, color: "white", marginLeft: 15, fontFamily: "Renogare", }}>
           {" "}
           Editar Dados{" "}
         </Text>
-      </View>
+      </HideWithKeyboard>
       <View style={Style.boxLoginConfirm}>
         <Text style={Style.userText}>N o m e:</Text>
         <TextInput
@@ -115,7 +115,7 @@ export default function EditarDados(props) {
           secureTextEntry={true}
         />
       </View>
-      <View style={Style.carModal}>
+      <HideWithKeyboard style={Style.carModal}>
         <Image style={Style.carBmw1} source={require("../assets/img/carrobmw.png")} />
         <Text style={Style.textCar1}>Bmw Série 3 2020</Text>
         <View style={{alignItems: 'flex-start', flex: 1,}}>
@@ -135,7 +135,7 @@ export default function EditarDados(props) {
           /> 
         </TouchableOpacity>
         </View>
-      </View>
+      </HideWithKeyboard>
       <Modal
         transparent={true}
         animationType="slide"
@@ -167,7 +167,7 @@ export default function EditarDados(props) {
           </View>
         </View>
       </Modal>
-      <HideWithKeyboard style={Style.containerBoxLogin}>
+      <View style={Style.containerBoxLogin}>
         <TouchableOpacity
           style={Style.boxLeftLoginConfirm}
           onPress={() => props.navigation.navigate("Load")}
@@ -181,7 +181,7 @@ export default function EditarDados(props) {
         >
           <Text style={Style.loginSocialText}>D E L E T A R</Text>
         </TouchableOpacity>
-      </HideWithKeyboard>
+      </View>
       <TouchableOpacity style={Style.concluirBoxEditar}
       onPress={() => props.navigation.navigate("TrocarFoto")}>
         <Text style={Style.concluirText}>A L T E R A R  F O T O</Text>
