@@ -174,7 +174,7 @@ export default StyleSheet.create({
   boxLeftLoginConfirm: {
     alignSelf: "flex-end",
     width: "50%",
-    height: 45,
+    height: 50,
     backgroundColor: "#000",
     justifyContent: "center",
     borderRightColor: "#222",
@@ -183,7 +183,7 @@ export default StyleSheet.create({
   boxRightLoginConfirm: {
     alignSelf: "flex-end",
     width: "50%",
-    height: 45,
+    height: 50,
     backgroundColor: "#000",
     justifyContent: "center",
   },
@@ -280,10 +280,11 @@ export default StyleSheet.create({
   },
   userText: {
     color: "#fff",
-    fontSize: 16,
+    fontSize: 14,
     textAlign: "left",
     marginLeft: 12,
     fontFamily: "Rubik-Regular",
+    opacity: 0.8,
   },
   codeText: {
     color: "#fff",
