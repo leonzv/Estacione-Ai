@@ -50,8 +50,8 @@ export default function InserirFoto(props) {
   const captureImage = async (type) => {
     let options = {
       mediaType: type,
-      maxWidth: 300,
-      maxHeight: 300,
+      maxWidth: 600,
+      maxHeight: 600,
       quality: 1,
       videoQuality: 'high',
       durationLimit: 30, //Video max duration in seconds
@@ -91,8 +91,8 @@ export default function InserirFoto(props) {
   const chooseFile = (type) => {
     let options = {
       mediaType: type,
-      maxWidth: 300,
-      maxHeight: 550,
+      maxWidth: 600,
+      maxHeight: 600,
       quality: 1,
     };
     launchImageLibrary(options, (response) => {

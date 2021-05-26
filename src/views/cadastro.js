@@ -16,6 +16,7 @@ export default function Cadastro(props) {
   const [modelo, setModelo] = useState("");
   const [senha, setSenha] = useState("");
   const [senhaConfirm, setSenhaConfirm] = useState("");
+
   return (
     <View style={Style.container}>
       <HideWithKeyboard

@@ -10,6 +10,9 @@ import HideWithKeyboard from 'react-native-hide-with-keyboard';
 export default function LoginConfirm(props) {
   const [usuario, setUsuario] = react.useState("");
   const [senha, setSenha] = react.useState("");
+  const signUp = async (email, senha) => {
+    await app.emailPasswordAuth.registerUser(email, senha);
+  };
   return (
     <View style={Style.container}>
       <HideWithKeyboard style={Style.topContainer}>
@@ -17,9 +20,8 @@ export default function LoginConfirm(props) {
         <Text
           style={{
             fontSize: 24,
-            fontWeight: "bold",
             color: "#000",
-            fontFamily: "Rubik-Regular",
+            fontFamily: "Rubik-Bold",
           }}
         >
           Estacione Aí

@@ -10,7 +10,6 @@ import {
   Text,
 } from "react-native";
 import Style from "../style/style.js";
-import AS_Login from '@react-native-async-storage/async-storage';
 import HideWithKeyboard from "react-native-hide-with-keyboard";
 
 export default function EditarDados(props) {
@@ -25,24 +24,10 @@ export default function EditarDados(props) {
   const [modalVisible, setModalVisible] = useState(false);
   const {goBack} = props.navigation;
 
-  const Store = (key,value) => {
-    AS_Login.setItem(key,value)
-  }
-  const Search = async (key) => {
-    const value = await AS_Login.getItem(key)
-    setNome(value)
-  }
-  Store('01', {nome})
-  Search('01')
-  AS_Login.getItem('01')
-
-  function restoreData(){
-    AS_Login.clear()
-  }
   return (
     <View style={Style.container}>
       <HideWithKeyboard style={Style.headerEditar}>
-        <Text style={Style.textGps}>Bem vindo, João!</Text>
+        <Text style={Style.textGps}>Bem vindo, {nome}!</Text>
       </HideWithKeyboard>
       <HideWithKeyboard style={Style.editarDados}>
         <Text style={{ fontSize: 26, color: "white", marginLeft: 15, fontFamily: "Renogare", }}>

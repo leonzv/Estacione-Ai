@@ -9,7 +9,6 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import Style from "../style/style.js";
-import AS_Login from "@react-native-async-storage/async-storage";
 import HideWithKeyboard from "react-native-hide-with-keyboard";
 
 export default function CadastroConfirm(props) {
@@ -22,15 +21,6 @@ export default function CadastroConfirm(props) {
   const [pais, setPais] = useState("");
   const [placa, setPlaca] = useState("");
 
-  const Store = (key, value) => {
-    AS_Login.setItem(key, value);
-  };
-  const Search = async (key) => {
-    const value = await AS_Login.getItem(key);
-    setNome(value);
-  };
-  Store("01", { nome });
-  Search("01");
   return (
     <KeyboardAvoidingView style={Style.container}>
       <HideWithKeyboard

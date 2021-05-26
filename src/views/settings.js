@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Text, View, Switch, TextInput, TouchableOpacity } from "react-native";
 import Style from "../style/style";
 import Slider from "@react-native-community/slider";
+import {SIZES, COLORS, FONTS} from '../constants';
 
-export default function Settings(props) {
+export default function Settings({route, navigation}) {
   const [isEnabled, setIsEnabled] = useState(false);
   const [codigo, setCodigo] = useState("");
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
-  const {goBack} = props.navigation;
+  const {goBack} = navigation;
   return (
     <View style={Style.containerDraw}>
       <View style={Style.headerEditar}>
@@ -27,10 +28,11 @@ export default function Settings(props) {
               marginBottom: 20,
             }}
             minimumValue={0}
-            maximumValue={1}
+            maximumValue={3}
             minimumTrackTintColor="#1065bd"
             maximumTrackTintColor="#1065bd"
             thumbTintColor="#0087ff"
+            step={1}
           />
         </View>
         <View>

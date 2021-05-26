@@ -36,9 +36,8 @@ export default function Login(props) {
         <Text
           style={{
             fontSize: 24,
-            fontWeight: "bold",
             color: "#000",
-            fontFamily: "Rubik-Regular",
+            fontFamily: "Rubik-Bold",
           }}
         >
           Estacione Aí

@@ -49,7 +49,6 @@ export default function modalGps() {
         animationType="slide"
         visible={modalVisible}
         onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
           setModalVisible(!modalVisible);
         }}
       >
@@ -127,7 +126,6 @@ export default function modalGps() {
         animationType="slide"
         visible={modalVisible1}
         onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
           setModalVisible(!modalVisible1);
         }}
       >
@@ -221,7 +219,6 @@ export default function modalGps() {
         animationType="slide"
         visible={modalVisible2}
         onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
           setModalVisible(!modalVisible2);
         }}
       >
