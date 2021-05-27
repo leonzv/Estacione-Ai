@@ -13,7 +13,6 @@ import LoginConfirm from './loginConfirm';
 import Settings from './settings';
 import Sobre from './sobre';
 import TrocarFoto from './trocarFoto';
-import Vaga from './vaga.js';
 
 export {
   BuscarVaga,
@@ -31,5 +30,4 @@ export {
   Settings,
   Sobre,
   TrocarFoto,
-  Vaga,
 };

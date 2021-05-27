@@ -162,7 +162,6 @@ export default function EditarDados(props) {
         <TouchableOpacity
           style={Style.deletarBox}
           onPress={() => props.navigation.navigate("Login")}
-          onPress={restoreData()}
         >
           <Text style={Style.loginSocialText}>D E L E T A R</Text>
         </TouchableOpacity>
