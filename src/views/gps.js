@@ -318,6 +318,7 @@ const Gps = ({route, navigation}) => {
         anchor={{x: 0.5, y: 0.5}}
         flat={true}
         rotation={angle}
+        onPress={modalOpen}
       >
         <View style={Style.gpsBtnVermelho}>
           <Text style={Style.textBtnGps}> 25 </Text>
@@ -327,6 +328,7 @@ const Gps = ({route, navigation}) => {
     const blueIcon = () => (
       <Marker
         coordinate={blueLoc}
+        onPress={modalOpen}
         anchor={{x: 0.5, y: 0.5}}
         flat={true}
         rotation={angle}

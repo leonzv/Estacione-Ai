@@ -1,6 +1,10 @@
 import { StyleSheet } from "react-native";
 import {SIZES, COLORS, FONTS} from '../constants';
+const getFontStyle = (fontType) => {
+  const { defaultValue, ...fontStyle } = FONTS[fontType];
 
+  return fontStyle;
+}
 export default StyleSheet.create({
   containerDraw: {
     flex: 1,
@@ -33,7 +37,7 @@ export default StyleSheet.create({
   },
   textBox: {
     color: "#fff",
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
     borderBottomColor: "#fff",
     borderBottomWidth: 1,
     marginTop: 10,
@@ -43,7 +47,8 @@ export default StyleSheet.create({
   },
   loginText: {
     color: "#fff",
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
     alignItems: "flex-start",
     marginLeft: 40,
     marginTop: 20,
@@ -79,7 +84,8 @@ export default StyleSheet.create({
   },
   mcgt: {
     color: "#f9f9f9",
-    ...FONTS.h1,
+    ...getFontStyle("h1"),
+
     marginTop: 20,
     justifyContent: "center",
     textAlign: "center",
@@ -115,13 +121,15 @@ export default StyleSheet.create({
   },
   boxLoginText: {
     color: "#FF311B",
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
     textAlign: "center",
     fontFamily: "Rubik-Regular",
   },
   boxLoginTextConfirm: {
     color: "#FF311B",
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
     textAlign: "center",
     opacity: 0.2,
   },
@@ -161,13 +169,15 @@ export default StyleSheet.create({
     justifyContent: "center",
   },
   loginSocialText: {
-    ...FONTS.body4,
+    ...getFontStyle("body4"),
+
     textAlign: "center",
     color: "#fff",
     fontFamily: "Rubik-Regular",
   },
   loginEntrarText: {
-    ...FONTS.body4,
+    ...getFontStyle("body4"),
+
     textAlign: "center",
     color: "#00FF2B",
     fontFamily: "Rubik-Regular",
@@ -281,7 +291,8 @@ export default StyleSheet.create({
   },
   userText: {
     color: "#fff",
-    ...FONTS.body4,
+    ...getFontStyle("body4"),
+
     textAlign: "left",
     marginLeft: 12,
     fontFamily: "Rubik-Regular",
@@ -289,7 +300,8 @@ export default StyleSheet.create({
   },
   codeText: {
     color: "#fff",
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
     textAlign: "left",
     marginLeft: 28,
     fontFamily: "Rubik-Regular",
@@ -345,14 +357,16 @@ export default StyleSheet.create({
   },
   textCar: {
     color: "white",
-    ...FONTS.body5,
+    ...getFontStyle("body5"),
+
     textAlign: "center",
     marginBottom: 2,
     fontFamily: "Rubik-Regular",
   },
   textCar1: {
     color: "white",
-    ...FONTS.body5,
+    ...getFontStyle("body5"),
+
     textAlign: "center",
     alignSelf: "center",
     marginLeft: 15,
@@ -363,14 +377,16 @@ export default StyleSheet.create({
     justifyContent: "space-around",
   },
   activeBigText: {
-    ...FONTS.h1,
+    ...getFontStyle("h1"),
+
     color: "#fff",
     textAlign: "center",
     marginHorizontal: 100,
     fontFamily: "Rubik-Bold",
   },
   activeSmallText: {
-    ...FONTS.h3,
+    ...getFontStyle("h3"),
+
     color: "#fff",
     textAlign: "center",
     marginHorizontal: 100,
@@ -393,7 +409,8 @@ export default StyleSheet.create({
     justifyContent: "center",
   },
   localActiveText: {
-    ...FONTS.body4,
+    ...getFontStyle("body4"),
+
     color: "#000",
     textAlign: "center",
     fontWeight: "bold",
@@ -401,7 +418,8 @@ export default StyleSheet.create({
     fontFamily: "Rubik-Regular",
   },
   buscarSmallText: {
-    ...FONTS.h3,
+    ...getFontStyle("h3"),
+
     color: "#fff",
     textAlign: "center",
     marginHorizontal: 50,
@@ -409,7 +427,8 @@ export default StyleSheet.create({
     fontFamily: "Rubik-Bold",
   },
   buscarBigText: {
-    ...FONTS.h1,
+    ...getFontStyle("h1"),
+
     color: "#fff",
     textAlign: "center",
     marginHorizontal: 70,
@@ -469,14 +488,16 @@ export default StyleSheet.create({
     justifyContent: "center",
   },
   textGps: {
-    ...FONTS.h3,
+    ...getFontStyle("h3"),
+
     color: "white",
     textAlign: "left",
     marginLeft: 20,
     fontFamily: "Renogare",
   },
   textDrawer: {
-    ...FONTS.h3,
+    ...getFontStyle("h3"),
+
     color: "white",
     textAlign: "center",
     fontFamily: "Renogare",
@@ -491,13 +512,15 @@ export default StyleSheet.create({
     alignItems: "center",
   },
   textBoxTop: {
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
     color: "#00d123",
     textAlign: "center",
     fontFamily: "Rubik-Regular",
   },
   textBoxBot: {
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
     color: "red",
     textAlign: "center",
     fontFamily: "Rubik-Regular",
@@ -517,7 +540,8 @@ export default StyleSheet.create({
   },
   textVoltar: {
     color: "#fff",
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
     textAlign: "center",
     fontFamily: "Rubik-Regular",
   },
@@ -623,7 +647,8 @@ export default StyleSheet.create({
     marginBottom: 80,
     textAlign: "center",
     fontFamily: "Rubik-Regular",
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
   },
   editarDados: {
     backgroundColor: "black",
@@ -632,8 +657,9 @@ export default StyleSheet.create({
     justifyContent: "center",
   },
   textSettings: {
-    ...FONTS.body4,
     color: "white",
+    ...getFontStyle("body4"),
+
     textAlign: "left",
     marginLeft: 30,
     marginTop: "10%",
@@ -669,7 +695,8 @@ export default StyleSheet.create({
     justifyContent: "center",
   },
   textFavoritosTop: {
-    ...FONTS.body4,
+    ...getFontStyle("body4"),
+
     color: "white",
     textAlign: "left",
     marginLeft: 30,
@@ -678,7 +705,8 @@ export default StyleSheet.create({
     fontFamily: "Rubik-Regular",
   },
   textFoto: {
-    ...FONTS.body5,
+    ...getFontStyle("body5"),
+
     color: "white",
     textAlign: "left",
     marginLeft: 30,
@@ -737,7 +765,8 @@ export default StyleSheet.create({
     textAlign: "center",
     color: "black",
     fontFamily: "Rubik-Regular",
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
   },
   boxUp: {
     textAlign: "center",
@@ -751,12 +780,14 @@ export default StyleSheet.create({
     paddingLeft: 20,
   },
   title: {
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
     marginTop: 3,
     fontWeight: "bold",
   },
   caption: {
-    ...FONTS.body4,
+    ...getFontStyle("body4"),
+
     lineHeight: 14,
   },
   row: {
@@ -789,7 +820,8 @@ export default StyleSheet.create({
   },
   modalFavoritoText: {
     color: "white",
-    ...FONTS.h4,
+    ...getFontStyle("h4"),
+
     fontFamily: "Renogare",
     marginTop: 20,
     marginLeft: 30,
@@ -797,14 +829,16 @@ export default StyleSheet.create({
   },
   modalFavoritoSmallText: {
     color: "white",
-    ...FONTS.body4,
+    ...getFontStyle("body4"),
+
     fontFamily: "Renogare",
     marginLeft: 30,
   },
   checkTextLeft: {
     color: "white",
     fontFamily: "Renogare",
-    ...FONTS.body4,
+    ...getFontStyle("body4"),
+
     alignSelf: "center",
     textAlign: "center",
     marginRight: "5%",
@@ -813,7 +847,8 @@ export default StyleSheet.create({
   checkTextRight: {
     color: "white",
     fontFamily: "Renogare",
-    ...FONTS.body4,
+    ...getFontStyle("body4"),
+
     alignSelf: "center",
     textAlign: "center",
     bottom: 8,
@@ -822,7 +857,8 @@ export default StyleSheet.create({
   checkTextBottom: {
     color: "white",
     fontFamily: "Renogare",
-    ...FONTS.body4,
+    ...getFontStyle("body4"),
+
     alignSelf: "center",
     textAlign: "center",
     bottom: 8,
@@ -849,19 +885,22 @@ export default StyleSheet.create({
   textReservarMap: {
     color: "#fff",
     fontFamily: "Rubik-Regular",
-    ...FONTS.h4,
+    ...getFontStyle("h4"),
+
     textAlign: "center",
   },
   textReservar: {
     color: "#00d123",
     fontFamily: "Rubik-Regular",
-    ...FONTS.h4,
+    ...getFontStyle("h4"),
+
     textAlign: "center",
   },
   textCancelar: {
     color: "rgb(241,47,26)",
     fontFamily: "Rubik-Regular",
-    ...FONTS.h4,
+    ...getFontStyle("h4"),
+
     textAlign: "center",
   },
   gpsBtnVerde: {
@@ -898,14 +937,16 @@ export default StyleSheet.create({
     justifyContent: "center",
   },
   textBtnGps: {
-    ...FONTS.h4,
+    ...getFontStyle("h4"),
+
     textAlign: "center",
     color: "#fff",
     fontFamily: "Rubik-Regular",
   },
   textModalGps: {
     fontFamily: "Rubik-Bold",
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
     textAlign: "left",
     marginLeft: 15,
     marginTop: 20,
@@ -913,7 +954,8 @@ export default StyleSheet.create({
   },
   textModalGps1: {
     fontFamily: "Rubik-Bold",
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
     textAlign: "left",
     marginLeft: 24,
     color: "#fff",
@@ -936,7 +978,8 @@ export default StyleSheet.create({
     textAlign: "right",
     marginRight: 10,
     marginBottom: 30,
-    ...FONTS.body3,
+    ...getFontStyle("body3"),
+
 
   },
   viewGpsModal:{
@@ -978,7 +1021,8 @@ export default StyleSheet.create({
     top: 28,
   },
   titleText: {
-    ...FONTS.h2,
+    ...getFontStyle("h2"),
+
     fontWeight: 'bold',
     textAlign: 'center',
     paddingVertical: 20,

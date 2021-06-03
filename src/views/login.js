@@ -6,6 +6,8 @@ import LinearGradient from "react-native-linear-gradient";
 import Swiper from "react-native-swiper";
 import auth from '@react-native-firebase/auth';
 import { LoginManager, AccessToken } from 'react-native-fbsdk';
+import {CustomText} from "../components/CustomText";
+
 
 export default function Login(props) {
   async function onFacebookButtonPress() {
@@ -92,7 +94,7 @@ export default function Login(props) {
             <Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text>
           </TouchableOpacity>
           <TouchableOpacity style={Style.boxLoginGoogle}>
-            <Text style={Style.loginSocialText}>LOGIN COM GOOGLE</Text>
+            <CustomText fontType="body4" style={Style.loginSocialText}>LOGIN COM GOOGLE</CustomText>
           </TouchableOpacity>
         </View>
     </View>
