@@ -29,10 +29,10 @@ export default function Settings({route, navigation}) {
   return (
     <View style={Style.containerDraw}>
       <View style={Style.headerEditar}>
-        <Text style={Style.textGps}>Bem vindo, João!</Text>
+        <CustomText fontType="h3" style={Style.textGps}>Bem vindo, João!</CustomText>
       </View>
       <View style={{backgroundColor: 'black'}}>
-        <Text style={Style.textSettingsTop}>Configurações</Text>
+        <CustomText fontType="h1"  style={Style.textSettingsTop}>Configurações</CustomText>
 
         <View>
           <CustomText fontType="body4" style={Style.textSettings}>
@@ -56,7 +56,7 @@ export default function Settings({route, navigation}) {
           />
         </View>
         <View>
-          <Text style={Style.textSettings}>Ativar notificações</Text>
+          <CustomText fontType="body4" style={Style.textSettings}>Ativar notificações</CustomText>
           <Switch
             trackColor={{false: '#999', true: '#1065bd'}}
             thumbColor={isEnabled ? '' : '#0087ff'}
@@ -65,9 +65,9 @@ export default function Settings({route, navigation}) {
             style={Style.switchBtn}
           />
         </View>
-        <Text style={Style.textSettings}>Adicionar código promocional</Text>
+        <CustomText fontType="body4" style={Style.textSettings}>Adicionar código promocional</CustomText>
         <View style={Style.codeBox}>
-          <Text style={Style.codeText}>I n s e r i r c ó d i g o:</Text>
+          <CustomText fontType="body3" style={Style.codeText}>I n s e r i r   c ó d i g o:</CustomText>
           <TextInput
             style={{width: '83%', height: '100%', color: '#fff'}}
             onChangeText={text => setCodigo(text)}
@@ -78,7 +78,7 @@ export default function Settings({route, navigation}) {
       </View>
       <View style={{flex: 1, justifyContent: 'flex-end'}}>
         <TouchableOpacity style={Style.voltarBoxCode} onPress={() => goBack()}>
-          <Text style={Style.textVoltar}>V O L T A R</Text>
+          <CustomText fontType="body3" style={Style.textVoltar}>V O L T A R</CustomText>
         </TouchableOpacity>
       </View>
     </View>

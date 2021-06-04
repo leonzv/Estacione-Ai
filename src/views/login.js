@@ -91,7 +91,7 @@ export default function Login(props) {
         <View style={Style.containerBoxLogin}>
           <TouchableOpacity style={Style.boxLoginFacebook}
           onPress={() => onFacebookButtonPress().then(() => console.log('Signed in with Facebook!'))}>
-            <Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text>
+            <CustomText fontType="body4" style={Style.loginSocialText}>LOGIN COM FACEBOOK</CustomText>
           </TouchableOpacity>
           <TouchableOpacity style={Style.boxLoginGoogle}>
             <CustomText fontType="body4" style={Style.loginSocialText}>LOGIN COM GOOGLE</CustomText>

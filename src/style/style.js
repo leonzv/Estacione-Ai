@@ -629,14 +629,14 @@ export default StyleSheet.create({
     color: "white",
     marginTop: 15,
     textAlign: "center",
-    fontSize: 28,
+    ...getFontStyle("h1"),
     fontFamily: "Rubik-Bold",
     alignSelf: "center",
   },
   topModalTextGps1: {
     color: "white",
     textAlign: "center",
-    fontSize: 28,
+    ...getFontStyle("h1"),
     fontFamily: "Rubik-Bold",
     alignSelf: "center",
     marginBottom: 10,
@@ -666,7 +666,7 @@ export default StyleSheet.create({
     fontFamily: "Rubik-Regular",
   },
   textSettingsTop: {
-    fontSize: 28,
+    ...getFontStyle("h1"),
     color: "white",
     textAlign: "left",
     marginLeft: 30,
@@ -674,7 +674,7 @@ export default StyleSheet.create({
     fontFamily: "Renogare",
   },
   textSobreTop: {
-    fontSize: 28,
+    ...getFontStyle("h1"),
     color: "white",
     textAlign: "left",
     marginLeft: 30,
@@ -715,7 +715,7 @@ export default StyleSheet.create({
     fontFamily: "Rubik-Regular",
   },
   textFotoTop: {
-    fontSize: 28,
+    ...getFontStyle("h1"),
     color: "white",
     textAlign: "left",
     marginLeft: 30,

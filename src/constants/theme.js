@@ -28,7 +28,7 @@ export const SIZES = {
 
   // font sizes
   defaultValue: 0,
-  h1: 30,
+  h1: 28,
   h2: 22,
   h3: 20,
   h4: 18,
@@ -44,7 +44,7 @@ export const SIZES = {
 };
 
 export const FONTS = {
-  h1: {fontSize: SIZES.h1, lineHeight: 36, defaultValue: 30},
+  h1: {fontSize: SIZES.h1, lineHeight: 36, defaultValue: 28},
   h2: {fontSize: SIZES.h2, lineHeight: 30, defaultValue: 22},
   h3: {fontSize: SIZES.h3, lineHeight: 22, defaultValue: 20},
   h4: {fontSize: SIZES.h4, lineHeight: 22, defaultValue: 18},
