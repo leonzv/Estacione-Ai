@@ -2,6 +2,7 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import {View, Image, Text, TouchableOpacity} from 'react-native';
 import Style from '../style/style.js';
+import {CustomText} from "../components/CustomText";
 
 export default function LoadFoto(props) {
     return(

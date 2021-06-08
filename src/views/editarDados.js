@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import Style from "../style/style.js";
 import HideWithKeyboard from "react-native-hide-with-keyboard";
+import {CustomText} from "../components/CustomText";
 
 export default function EditarDados(props) {
   const [nome, setNome] = useState("");
@@ -36,7 +37,7 @@ export default function EditarDados(props) {
         </Text>
       </HideWithKeyboard>
       <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>N o m e:</Text>
+        <CustomText fontType="body4" style={Style.userText}>N o m e:</CustomText>
         <TextInput
           style={{ width: "80%", height: "100%", color: "#fff" }}
           onChangeText={(text) => setNome(text)}
@@ -45,7 +46,7 @@ export default function EditarDados(props) {
         />
       </View>
       <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>C i d a d e:</Text>
+        <CustomText fontType="body4" style={Style.userText}>C i d a d e:</CustomText>
         <TextInput
           style={{ width: "83%", height: "100%", color: "#fff" }}
           onChangeText={(text) => setCidade(text)}
@@ -54,7 +55,7 @@ export default function EditarDados(props) {
         />
       </View>
       <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>E s t a d o:</Text>
+        <CustomText fontType="body4" style={Style.userText}>E s t a d o:</CustomText>
         <TextInput
           style={{ width: "83%", height: "100%", color: "#fff" }}
           onChangeText={(text) => setEstado(text)}
@@ -63,7 +64,7 @@ export default function EditarDados(props) {
         />
       </View>
       <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>P a í s:</Text>
+        <CustomText fontType="body4" style={Style.userText}>P a í s:</CustomText>
         <TextInput
           style={{ width: "83%", height: "100%", color: "#fff" }}
           onChangeText={(text) => setPais(text)}
@@ -72,7 +73,7 @@ export default function EditarDados(props) {
         />
       </View>
       <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>P l a c a:</Text>
+        <CustomText fontType="body4" style={Style.userText}>P l a c a:</CustomText>
         <TextInput
           style={{ width: "83%", height: "100%", color: "#fff" }}
           onChangeText={(text) => setPlaca(text)}
@@ -81,7 +82,7 @@ export default function EditarDados(props) {
         />
       </View>
       <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>A t u a l i z a r  s e n h a:</Text>
+        <CustomText fontType="body4" style={Style.userText}>A t u a l i z a r  s e n h a:</CustomText>
         <TextInput
           style={{ width: "83%", height: "100%", color: "#fff" }}
           onChangeText={(text) => setSenha(text)}
@@ -91,7 +92,7 @@ export default function EditarDados(props) {
         />
       </View>
       <View style={Style.boxLoginConfirm}>
-        <Text style={Style.userText}>C o n f i r m a r  n o v a  s e n h a:</Text>
+        <CustomText fontType="body4" style={Style.userText}>C o n f i r m a r  n o v a  s e n h a:</CustomText>
         <TextInput
           style={{ width: "83%", height: "100%", color: "#fff" }}
           onChangeText={(text) => setSenhaConfirm(text)}
@@ -138,7 +139,7 @@ export default function EditarDados(props) {
             />
             <Text style={Style.botModalText}>Bmw Série 3 2020</Text>
             <View style={Style.editarDadosTextBox}>
-              <Text style={Style.userText}>A t u a l i z a r  M o d e l o:</Text>
+              <CustomText fontType="body4" style={Style.userText}>A t u a l i z a r  M o d e l o:</CustomText>
               <TextInput
                 style={{ width: "83%", height: "100%", color: "#fff" }}
                 onChangeText={(text) => setModelo(text)}
@@ -147,7 +148,7 @@ export default function EditarDados(props) {
               />
             </View>
             <TouchableOpacity style={Style.modalBox}>
-              <Text style={Style.loginEntrarText}>A T U A L I Z A R</Text>
+              <CustomText fontType="body4" style={Style.loginEntrarText}>A T U A L I Z A R</CustomText>
             </TouchableOpacity>
           </View>
         </View>
@@ -157,22 +158,22 @@ export default function EditarDados(props) {
           style={Style.boxLeftLoginConfirm}
           onPress={() => props.navigation.navigate("Load")}
         >
-          <Text style={Style.loginEntrarText}>A T U A L I Z A R</Text>
+          <CustomText fontType="body4" style={Style.loginEntrarText}>A T U A L I Z A R</CustomText>
         </TouchableOpacity>
         <TouchableOpacity
           style={Style.deletarBox}
           onPress={() => props.navigation.navigate("Login")}
         >
-          <Text style={Style.loginSocialText}>D E L E T A R</Text>
+          <CustomText fontType="body4" style={Style.loginSocialText}>D E L E T A R</CustomText>
         </TouchableOpacity>
       </View>
       <TouchableOpacity style={Style.concluirBoxEditar}
       onPress={() => props.navigation.navigate("TrocarFoto")}>
-        <Text style={Style.concluirText}>A L T E R A R  F O T O</Text>
+        <CustomText fontType="body4" style={Style.concluirText}>A L T E R A R  F O T O</CustomText>
       </TouchableOpacity>
       <TouchableOpacity style={Style.voltarBox}
       onPress={() => goBack()}>
-        <Text style={Style.textVoltar}>V O L T A R</Text>
+        <CustomText fontType="body3" style={Style.textVoltar}>V O L T A R</CustomText>
       </TouchableOpacity>
     </View>
   );

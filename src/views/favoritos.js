@@ -2,35 +2,34 @@ import React, { useState } from "react";
 import { Text, View, TouchableOpacity,} from "react-native";
 import Style from "../style/style";
 import Modal from "../components/modal";
-
-
+import {CustomText} from "../components/CustomText";
 export default function Favoritos(props) {
   const {goBack} = props.navigation;
 
   return (
     <View style={Style.container}>
       <View style={Style.headerEditar}>
-        <Text style={Style.textGps}>Bem vindo, João!</Text>
+        <CustomText style={Style.textGps}>Bem vindo, João!</CustomText>
       </View>
       <View style={{ backgroundColor: "black", flex: 1,}}>
-        <Text style={Style.textSettingsTop}>Favoritos</Text>
-        <Text style={Style.textFavoritosTop}>
+        <CustomText fontType="h1" style={Style.textSettingsTop}>Favoritos</CustomText>
+        <CustomText fontType="body4" style={Style.textFavoritosTop}>
           Aqui estão seus estacionamentos salvos
-        </Text>
+        </CustomText>
         <View style={Style.boxFavoritos}>
-          <Text style={Style.userText}>Joia Park</Text>
+          <CustomText fontType="body4" style={Style.userText}>Joia Park</CustomText>
           <View style={{ flex: 1, alignItems: "flex-end" }}>
             <Modal />
           </View>
         </View>
         <View style={Style.boxFavoritos}>
-          <Text style={Style.userText}>Estacionamento do zé</Text>
+          <CustomText fontType="body4" style={Style.userText}>Estacionamento do zé</CustomText>
           <View style={{ flex: 1, alignItems: "flex-end" }}>
             <Modal />
           </View>
         </View>
         <View style={Style.boxFavoritos}>
-          <Text style={Style.userText}>Parkcit</Text>
+          <CustomText fontType="body4" style={Style.userText}>Parkcit</CustomText>
           <View style={{ flex: 1, alignItems: "flex-end" }}>
             <Modal />
           </View>
@@ -39,7 +38,7 @@ export default function Favoritos(props) {
       <View style={{justifyContent: "flex-end" }}>
         <TouchableOpacity style={Style.voltarBoxCode}
         onPress={() => goBack()}>
-          <Text style={Style.textVoltar}>V O L T A R</Text>
+          <CustomText fontType="body3" style={Style.textVoltar}>V O L T A R</CustomText>
         </TouchableOpacity>
       </View>
     </View>

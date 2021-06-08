@@ -3,6 +3,7 @@ import "react-native-gesture-handler";
 import { View, Image, TextInput, Text, TouchableOpacity } from "react-native";
 import Style from "../style/style.js";
 import HideWithKeyboard from "react-native-hide-with-keyboard";
+import {CustomText} from "../components/CustomText";
 
 export default function Cadastro(props) {
   const [nome, setNome] = useState("");
@@ -36,7 +37,7 @@ export default function Cadastro(props) {
       </HideWithKeyboard>
       <View style={{ flex: 1 }}>
         <View style={Style.boxLoginConfirmCadastro}>
-          <Text style={Style.userText}>N o m e:</Text>
+          <CustomText fontType="body4" style={Style.userText}>N o m e:</CustomText>
           <TextInput
             style={{ width: "80%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setNome(text)}
@@ -45,7 +46,7 @@ export default function Cadastro(props) {
           />
         </View>
         <View style={Style.boxLoginConfirmCadastro}>
-          <Text style={Style.userText}>E m a i l:</Text>
+          <CustomText fontType="body4" style={Style.userText}>E m a i l:</CustomText>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setEmail(text)}
@@ -54,7 +55,7 @@ export default function Cadastro(props) {
           />
         </View>
         <View style={Style.boxLoginConfirmCadastro}>
-          <Text style={Style.userText}>C P F:</Text>
+          <CustomText fontType="body4" style={Style.userText}>C P F:</CustomText>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setCpf(text)}
@@ -63,7 +64,7 @@ export default function Cadastro(props) {
           />
         </View>
         <View style={Style.boxLoginConfirmCadastro}>
-          <Text style={Style.userText}>R G:</Text>
+          <CustomText fontType="body4" style={Style.userText}>R G:</CustomText>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setRg(text)}
@@ -72,7 +73,7 @@ export default function Cadastro(props) {
           />
         </View>
         <View style={Style.boxLoginConfirmCadastro}>
-          <Text style={Style.userText}>C i d a d e:</Text>
+          <CustomText fontType="body4" style={Style.userText}>C i d a d e:</CustomText>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setCidade(text)}
@@ -81,7 +82,7 @@ export default function Cadastro(props) {
           />
         </View>
         <View style={Style.boxLoginConfirmCadastro}>
-          <Text style={Style.userText}>E s t a d o:</Text>
+          <CustomText fontType="body4" style={Style.userText}>E s t a d o:</CustomText>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setEstado(text)}
@@ -90,7 +91,7 @@ export default function Cadastro(props) {
           />
         </View>
         <View style={Style.boxLoginConfirmCadastro}>
-          <Text style={Style.userText}>P a í s:</Text>
+          <CustomText fontType="body4" style={Style.userText}>P a í s:</CustomText>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setPais(text)}
@@ -99,7 +100,7 @@ export default function Cadastro(props) {
           />
         </View>
         <View style={Style.boxLoginConfirmCadastro}>
-          <Text style={Style.userText}>P l a c a:</Text>
+          <CustomText fontType="body4" style={Style.userText}>P l a c a:</CustomText>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setPlaca(text)}
@@ -108,7 +109,7 @@ export default function Cadastro(props) {
           />
         </View>
         <View style={Style.boxLoginConfirmCadastro}>
-          <Text style={Style.userText}>M o d e l o:</Text>
+          <CustomText fontType="body4" style={Style.userText}>M o d e l o:</CustomText>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setModelo(text)}
@@ -117,7 +118,7 @@ export default function Cadastro(props) {
           />
         </View>
         <View style={Style.boxLoginConfirmCadastro}>
-          <Text style={Style.userText}>S e n h a:</Text>
+          <CustomText fontType="body4" style={Style.userText}>S e n h a:</CustomText>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setSenha(text)}
@@ -127,7 +128,7 @@ export default function Cadastro(props) {
           />
         </View>
         <View style={Style.boxLoginConfirmCadastro}>
-          <Text style={Style.userText}>C o n f i r m a r  S e n h a:</Text>
+          <CustomText fontType="body4" style={Style.userText}>C o n f i r m a r  S e n h a:</CustomText>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setSenhaConfirm(text)}
@@ -142,21 +143,21 @@ export default function Cadastro(props) {
           style={Style.boxLeftLoginConfirm}
           onPress={() => props.navigation.navigate("CadastroConfirm")}
         >
-          <Text style={Style.loginEntrarText}>A V A N Ç A R</Text>
+          <CustomText fontType="body4" style={Style.loginEntrarText}>A V A N Ç A R</CustomText>
         </TouchableOpacity>
         <TouchableOpacity
           style={Style.boxRightLoginConfirm}
           onPress={() => props.navigation.navigate("Login")}
         >
-          <Text style={Style.loginSocialText}>C A N C E L A R</Text>
+          <CustomText fontType="body4" style={Style.loginSocialText}>C A N C E L A R</CustomText>
         </TouchableOpacity>
       </View>
       <HideWithKeyboard style={Style.containerBoxLogin}>
         <TouchableOpacity style={Style.boxLoginFacebook}>
-          <Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text>
+          <CustomText fontType="body4" style={Style.loginSocialText}>LOGIN COM FACEBOOK</CustomText>
         </TouchableOpacity>
         <TouchableOpacity style={Style.boxLoginGoogle}>
-          <Text style={Style.loginSocialText}>LOGIN COM GOOGLE</Text>
+          <CustomText fontType="body4" style={Style.loginSocialText}>LOGIN COM GOOGLE</CustomText>
         </TouchableOpacity>
       </HideWithKeyboard>
     </View>

@@ -26,6 +26,7 @@ export default function Settings({route, navigation}) {
     updatedFonts.defaultValue = value;
     onChangeFonts(updatedFonts);
   };
+
   return (
     <View style={Style.containerDraw}>
       <View style={Style.headerEditar}>

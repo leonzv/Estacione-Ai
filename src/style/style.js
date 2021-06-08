@@ -532,7 +532,7 @@ export default StyleSheet.create({
     justifyContent: "center",
   },
   deletarBox: {
-    height: 45,
+    height: 50,
     width: "50%",
     backgroundColor: "#ff0000",
     justifyContent: "center",

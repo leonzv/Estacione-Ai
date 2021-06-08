@@ -5,6 +5,7 @@ import Style from "../style/style.js";
 import LinearGradient from "react-native-linear-gradient";
 import Swiper from "react-native-swiper";
 import HideWithKeyboard from 'react-native-hide-with-keyboard';
+import {CustomText} from "../components/CustomText";
 
 export default function LoginConfirm(props) {
   const [usuario, setUsuario] = react.useState("");
@@ -73,7 +74,7 @@ export default function LoginConfirm(props) {
       </View>
       <View style={{ flexDirection: "row" }}>
         <View style={Style.boxLoginConfirm}>
-          <Text style={Style.userText}>U s u á r i o:</Text>
+          <CustomText fontType="body4" style={Style.userText}>U s u á r i o:</CustomText>
           <TextInput
             style={{ width: "80%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setUsuario(text)}
@@ -85,7 +86,7 @@ export default function LoginConfirm(props) {
       </View>
       <View style={{ flexDirection: "row" }}>
         <View style={Style.boxLoginConfirm}>
-          <Text style={Style.userText}>S e n h a:</Text>
+          <CustomText fontType="body4" style={Style.userText}>S e n h a:</CustomText>
           <TextInput
             style={{ width: "83%", height: "100%", color: "#fff" }}
             onChangeText={(text) => setSenha(text)}
@@ -101,24 +102,24 @@ export default function LoginConfirm(props) {
           style={Style.boxLeftLoginConfirm}
           onPress={() => props.navigation.navigate("Load")}
         >
-          <Text style={Style.loginEntrarText}>E N T R A R</Text>
+          <CustomText fontType="body4" style={Style.loginEntrarText}>E N T R A R</CustomText>
         </TouchableOpacity>
         <TouchableOpacity
           style={Style.boxRightLoginConfirm}
           onPress={() => props.navigation.navigate("Login")}
         >
-          <Text style={Style.loginSocialText}>C A N C E L A R</Text>
+          <CustomText fontType="body4" style={Style.loginSocialText}>C A N C E L A R</CustomText>
         </TouchableOpacity>
       </View>
       <View style={Style.boxLoginCadastroConfirm}>
-        <Text style={Style.boxLoginTextConfirm}>C A D A S T R A R</Text>
+        <CustomText fontType="body3" style={Style.boxLoginTextConfirm}>C A D A S T R A R</CustomText>
       </View>
       <View style={Style.containerBoxLogin}>
         <TouchableOpacity style={Style.boxLoginFacebook}>
-          <Text style={Style.loginSocialText}>LOGIN COM FACEBOOK</Text>
+          <CustomText fontType="body4" style={Style.loginSocialText}>LOGIN COM FACEBOOK</CustomText>
         </TouchableOpacity>
         <TouchableOpacity style={Style.boxLoginGoogle}>
-          <Text style={Style.loginSocialText}>LOGIN COM GOOGLE</Text>
+          <CustomText fontType="body4" style={Style.loginSocialText}>LOGIN COM GOOGLE</CustomText>
         </TouchableOpacity>
       </View>
     </View>

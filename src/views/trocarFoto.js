@@ -4,6 +4,7 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import Style from "../style/style.js";
 import { launchCamera, launchImageLibrary } from "react-native-image-picker";
 import { PermissionsAndroid } from 'react-native';
+import {CustomText} from "../components/CustomText";
 
 export default function TrocarFoto(props) {
   const [filePath, setFilePath] = useState({});
