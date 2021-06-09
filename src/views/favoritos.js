@@ -3,13 +3,12 @@ import { Text, View, TouchableOpacity,} from "react-native";
 import Style from "../style/style";
 import Modal from "../components/modal";
 import {CustomText} from "../components/CustomText";
-export default function Favoritos(props) {
-  const {goBack} = props.navigation;
-
+export default function Favoritos({navigation, route}) {
+  const {goBack} = navigation;
   return (
     <View style={Style.container}>
       <View style={Style.headerEditar}>
-        <CustomText style={Style.textGps}>Bem vindo, João!</CustomText>
+        <CustomText style={Style.textGps}>Bem vindo, João </CustomText>
       </View>
       <View style={{ backgroundColor: "black", flex: 1,}}>
         <CustomText fontType="h1" style={Style.textSettingsTop}>Favoritos</CustomText>
@@ -19,19 +18,19 @@ export default function Favoritos(props) {
         <View style={Style.boxFavoritos}>
           <CustomText fontType="body4" style={Style.userText}>Joia Park</CustomText>
           <View style={{ flex: 1, alignItems: "flex-end" }}>
-            <Modal />
+            <Modal navigation={navigation}/>
           </View>
         </View>
         <View style={Style.boxFavoritos}>
           <CustomText fontType="body4" style={Style.userText}>Estacionamento do zé</CustomText>
           <View style={{ flex: 1, alignItems: "flex-end" }}>
-            <Modal />
+            <Modal navigation={navigation}/>
           </View>
         </View>
         <View style={Style.boxFavoritos}>
           <CustomText fontType="body4" style={Style.userText}>Parkcit</CustomText>
           <View style={{ flex: 1, alignItems: "flex-end" }}>
-            <Modal />
+            <Modal navigation={navigation}/>
           </View>
         </View>
       </View>

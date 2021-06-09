@@ -4,6 +4,8 @@ import Style from '../style/style';
 import Slider from '@react-native-community/slider';
 import {CustomText} from '../components/CustomText';
 import {FontContext} from '../contexts/FontContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { onChange } from 'react-native-reanimated';
 
 export default function Settings({route, navigation}) {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -26,7 +28,25 @@ export default function Settings({route, navigation}) {
     updatedFonts.defaultValue = value;
     onChangeFonts(updatedFonts);
   };
+  const storeData = async () => {
+    try {
+      const jsonValue = JSON.stringify(FONTS)
+      await AsyncStorage.setItem('@02', jsonValue)
+    } catch (e) {
+      // erro salvando valor
+    }
+  }
 
+  const getData = async () => {
+    try {
+      const jsonValue = await AsyncStorage.getItem('@02')
+      return jsonValue != null ? JSON.parse(value) : null;
+    } catch(e) {
+      // erro lendo valor
+    }
+  }
+console.log(getData('@02'));
+console.log(storeData('@02'));
   return (
     <View style={Style.containerDraw}>
       <View style={Style.headerEditar}>

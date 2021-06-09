@@ -7,9 +7,9 @@ import Swiper from "react-native-swiper";
 import HideWithKeyboard from 'react-native-hide-with-keyboard';
 import {CustomText} from "../components/CustomText";
 
-export default function LoginConfirm(props) {
-  const [usuario, setUsuario] = react.useState("");
-  const [senha, setSenha] = react.useState("");
+export default function LoginConfirm({route, navigation}) {
+  const [usuario, setUsuario] = React.useState();
+  const [senha, setSenha] = React.useState();
   const signUp = async (email, senha) => {
     await app.emailPasswordAuth.registerUser(email, senha);
   };
@@ -100,13 +100,14 @@ export default function LoginConfirm(props) {
       <View style={Style.containerBoxLogin}>
         <TouchableOpacity
           style={Style.boxLeftLoginConfirm}
-          onPress={() => props.navigation.navigate("Load")}
+          
+          onPress={() => navigation.navigate('Load')}
         >
           <CustomText fontType="body4" style={Style.loginEntrarText}>E N T R A R</CustomText>
         </TouchableOpacity>
         <TouchableOpacity
           style={Style.boxRightLoginConfirm}
-          onPress={() => props.navigation.navigate("Login")}
+          onPress={() => navigation.navigate("Login")}
         >
           <CustomText fontType="body4" style={Style.loginSocialText}>C A N C E L A R</CustomText>
         </TouchableOpacity>

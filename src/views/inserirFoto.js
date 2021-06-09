@@ -64,14 +64,11 @@ export default function InserirFoto(props) {
       launchCamera(options, (response) => {
         console.log('Response = ', response);
 
-        if (response.didCancel) {
-          alert('User cancelled camera picker');
-          return;
-        } else if (response.errorCode == 'camera_unavailable') {
-          alert('Camera not available on device');
+         if (response.errorCode == 'camera_unavailable') {
+          alert('Camera não disponivel nesse dispositivo');
           return;
         } else if (response.errorCode == 'permission') {
-          alert('Permission not satisfied');
+          alert('Sem permissão para abrir a camêra');
           return;
         } else if (response.errorCode == 'others') {
           alert(response.errorMessage);
@@ -98,15 +95,8 @@ export default function InserirFoto(props) {
     };
     launchImageLibrary(options, (response) => {
       console.log('Response = ', response);
-
-      if (response.didCancel) {
-        alert('User cancelled camera picker');
-        return;
-      } else if (response.errorCode == 'camera_unavailable') {
-        alert('Camera not available on device');
-        return;
-      } else if (response.errorCode == 'permission') {
-        alert('Permission not satisfied');
+     if (response.errorCode == 'permission') {
+        alert('Sem permissão para acessar a galeria');
         return;
       } else if (response.errorCode == 'others') {
         alert(response.errorMessage);
@@ -150,7 +140,7 @@ export default function InserirFoto(props) {
         }}
       >
         <TouchableOpacity style={Style.tirarFotoBox} onPress={() => captureImage('photo')}>
-          <Text style={Style.boxUp}>T I R A R F O T O</Text>
+          <Text style={Style.boxUp}>T I R A R  F O T O</Text>
         </TouchableOpacity>
         <TouchableOpacity style={Style.buscarBox} onPress={() => chooseFile('photo')}>
           <Text style={Style.boxUp}>B U S C A R</Text>

@@ -12,7 +12,7 @@ import Style from "../style/style.js";
 import HideWithKeyboard from "react-native-hide-with-keyboard";
 import {CustomText} from "../components/CustomText";
 
-export default function CadastroConfirm(props) {
+export default function CadastroConfirm({route, navigation}) {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [cpf, setCpf] = useState("");
@@ -155,13 +155,13 @@ export default function CadastroConfirm(props) {
       <View style={Style.containerBoxLogin}>
         <TouchableOpacity
           style={Style.boxLeftLoginConfirm}
-          onPress={() => props.navigation.navigate("InserirFoto")}
+          onPress={() => navigation.navigate("InserirFoto")}
         >
           <CustomText fontType="body4" style={Style.loginEntrarText}>A V A N Ç A R</CustomText>
         </TouchableOpacity>
         <TouchableOpacity
           style={Style.boxRightLoginConfirm}
-          onPress={() => props.navigation.navigate("Login")}
+          onPress={() => navigation.navigate("Login")}
         >
           <CustomText fontType="body4" style={Style.loginSocialText}>C A N C E L A R</CustomText>
         </TouchableOpacity>

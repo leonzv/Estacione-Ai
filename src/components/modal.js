@@ -4,20 +4,21 @@ import {
   View,
   Modal,
   TouchableOpacity,
-  Alert,
   Image,
 } from "react-native";
 import Style from "../style/style";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 
-export default function modal() {
+export default function modal({navigation}) {
   const [check, setCheck] = useState(false);
   const [check1, setCheck1] = useState(false);
   const [check2, setCheck2] = useState(false);
-  if(check1 && check == true){
+  if(check1 && check){
     alert("Apenas um pode ser selecionado")
   }
-
+  function goGps(){
+    navigation.navigate('Gps')
+  }
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <View>
@@ -149,7 +150,9 @@ export default function modal() {
               </Text>
             </View>
             <View style={{ flex: 1, justifyContent: "flex-end", alignItems: 'center' }}>
-              <TouchableOpacity style={Style.btnReservar}>
+              <TouchableOpacity style={Style.btnReservar}
+              onPress={goGps}
+              >
                 <Text style={Style.textReservar}> R E S E R V A R   V A G A  </Text>
               </TouchableOpacity>
               <TouchableOpacity style={Style.btnCancelar}
